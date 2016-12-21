@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <title>Hello Cocos2d-JS</title>
+    <style>
+        canvas{
+            /*background:rgba(180, 170, 160, 255);*/
+            /*margin-top: 20px;*/
+        }
+    </style>
+    <script type="text/javascript" src="src/resource.js"></script>
+    <script type="text/javascript" src="cocos2d-js-v3.8.js"></script>
+    <script type="text/javascript" src="src/myApp.js"></script>
+    <script type="text/javascript" src="src/cardSprite.js"></script>
+</head>
+<body style="padding:0; margin: 0; padding-top: 20px; background:rgba(180, 170, 160, 255);">
+    <canvas id="gameCanvas" width="800" height="450"></canvas>
+
+    <script type="text/javascript">
+          window.onload = function(){
+              //使用canvas设置颜色貌似不起作用
+              /*var c=document.getElementById("gameCanvas");
+              var context2D = c.getContext("2d");
+              //context2D.fillStyle = "rgba(180, 170, 160, 255)";
+              //context2D.fillStyle = "#a3a3a3";
+              context2D.fillStyle ="yellow";
+              context2D.fillRect(20,20,800,450);*/
+              cc.game.onStart = function(){
+                  cc.LoaderScene.preload(g_resource, function () {
+                      //开启进入的场景
+                      cc.director.runScene(new HelloWorldScene());
+                  }, this);
+              };
+              cc.game.run("gameCanvas");
+          };
+
+    </script>
+</body>
+</html>

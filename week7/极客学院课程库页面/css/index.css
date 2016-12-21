@@ -1,0 +1,2586 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a,
+a:hover,
+a:link,
+a:visited {
+    border: 0 none;
+}
+
+ol li,
+ul li {
+    list-style: none;
+}
+
+body {
+    font-family: Verdana, "Lantinghei SC", "Hiragino Sans GB", "Microsoft Yahei", "Helvetica", "arial", "宋体", "sans-serif";
+    background: #f5f5f5;
+}
+
+
+/*h1等字体的font-weight在common_sync0_libs_4f30de2.css中有改动。*/
+
+button,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+input,
+select,
+textarea {
+    font-size: 100%;
+    font-weight: 400;
+}
+
+
+/*common_sync0_libs_4f30de2.css*/
+
+a,
+dd,
+div,
+dl,
+i,
+img,
+input,
+li,
+p,
+span,
+ul {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -moz-box-sizing: border-box
+}
+
+
+/*header*/
+
+#header {
+    background: #fff none repeat scroll 0 0;
+    border-bottom: 1px solid #ececec;
+    height: 60px;
+}
+
+
+/*公共样式*/
+
+#header img,
+#header ul,
+#header nav,
+#header div,
+#header span,
+#header a,
+#header i,
+#header h3 {
+    text-decoration: none;
+    /*下面会导致极客学院logo触底*/
+    vertical-align: middle;
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+    font-family: Verdana, "Lantinghei SC", "Hiragino Sans GB", "Microsoft Yahei", Helvetica, arial, \5b8b\4f53, sans-serif;
+}
+
+#header .nav-wrapper {
+    position: relative;
+    width: 1000px;
+    height: 60px;
+    line-height: 60px;
+    margin: 0 auto;
+}
+
+
+/*logo容器*/
+
+#header .nav-wrapper .logo {
+    width: 109px;
+    height: 60px;
+    display: inline-block;
+    margin-right: 60px;
+    float: left;
+}
+
+
+/*logo img*/
+
+#header .nav-wrapper .logo img {
+    /*没有这个float上面公共样式中的vertical-align: middle;会导致这个logo图片下压到底部*/
+    float: left;
+    width: 109px;
+    margin-top: 10px;
+    border: 0 none;
+}
+
+
+/*header nav*/
+
+#header .nav {
+    height: 60px;
+    display: inline-block;
+    float: left;
+}
+
+
+/*有些默认的a标签中的文字是蓝色的,但这样做貌似没效果*/
+
+#header .nav a {
+    color: #333;
+}
+
+
+/*nav中a标签的hover,主要是针对"首页",它并不在li标签中,而是在嵌套的a标签中*/
+
+#header .nav a:hover {
+    color: #35b558;
+}
+
+#header .nav ul li {
+    position: relative;
+    font-size: 14px;
+    display: inline-block;
+    margin-right: 50px;
+    cursor: pointer;
+    height: 60px;
+    float: left;
+}
+
+
+/*小箭头*/
+
+
+/*header的小箭头在nav和icon-box都是一样的。但布局有些区别。把共同样式找出来。*/
+
+.arrow-icon {
+    display: inline-block;
+    height: 8px;
+    width: 8px;
+    border-left: 1px solid #c1c1c1;
+    border-top: 1px solid #c1c1c1;
+    transform: rotate(-135deg);
+    -webkit-transform: rotate(-135deg);
+    -moz-transform: rotate(-135deg);
+    -ms-transform: rotate(-135deg);
+    -o-transform: rotate(-135deg);
+    transform-origin: 4px, 4px, 0;
+    -webkit-transform-origin: 4px, 4px, 0;
+    -moz-transform-origin: 4px, 4px, 0;
+    -ms-transform-origin: 4px, 4px, 0;
+    -o-transform-origin: 4px, 4px, 0;
+    /*官网上没有第3个左坐标*/
+    /*transform-origin: 4px, 4px;*/
+    /*-webkit-transform-origin: 4px, 4px;*/
+    /*-moz-transform-origin: 4px, 4px;*/
+    /*-ms-transform-origin: 4px, 4px;*/
+    /*-o-transform-origin: 4px, 4px;*/
+}
+
+
+/*nav中的小箭头*/
+
+#header .nav ul li .arrow-icon {
+    margin-bottom: 2px;
+}
+
+
+/*斜体字体*/
+
+#header .nav ul li i {
+    margin-left: 5px;
+}
+
+
+/*nav中li标签的hover*/
+
+#header .nav li:hover {
+    color: #35b558;
+    cursor: pointer;
+}
+
+
+/*header 3个下拉菜单样式相同,换做submenu*/
+
+#header .nav .submenu {
+    display: none;
+    opacity: 0;
+    position: absolute;
+    z-index: 1000;
+    background: #fff;
+    font-size: 12px;
+    color: #666;
+    width: 280px;
+}
+
+#header .nav .submenu a {
+    display: block;
+    text-decoration: none;
+    height: 30px;
+    line-height: 30px;
+    padding: 0 15px;
+}
+
+#header .nav .submenu h3 {
+    margin: 10px 0;
+    padding: 0 15px;
+    background: #fafafa;
+    height: 28px;
+    line-height: 28px;
+    font-weight: 300;
+}
+
+
+/*箭头的hover*/
+
+#header .nav .school:hover .arrow-icon,
+#header .nav .vip-hykc:hover .arrow-icon,
+#header .nav .vip-jksq:hover .arrow-icon {
+    /*是-2不是2*/
+    margin-bottom: -2px;
+    display: inline-block;
+    height: 8px;
+    width: 8px;
+    border-top: 1px solid #35b558;
+    border-left: 1px solid #35b558;
+    /*旋转方向*/
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    /*添加动画*/
+    animation: rotate 1s ease normal;
+    -moz-animation: rotate 1s ease normal;
+    -webkit-animation: rotate 1s ease normal;
+    -o-animation: rotate 1s ease normal;
+    -ms-animation: rotate 1s ease normal;
+}
+
+@keyframes rotate {
+    0% {
+        margin-bottom: 2px;
+        transform: rotate(-135deg);
+        -webkit-transform: rotate(-135deg);
+        -moz-transform: rotate(-135deg);
+        -ms-transform: rotate(-135deg);
+        -o-transform: rotate(-135deg);
+    }
+    10% {
+        margin-bottom: -2px;
+    }
+    100% {
+        transform: rotate(45deg);
+        -webkit-transform: rotate(45deg);
+        -moz-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        -o-transform: rotate(45deg);
+    }
+}
+
+
+/*二级下拉菜单前的图标*/
+
+
+/*职业学院*/
+
+#header .nav .school_list i,
+#header .nav .vip-lesson i {
+    background: url(../img/allicon.png) 0 0 no-repeat;
+    background-size: 64px, 64px;
+    width: 14px;
+    height: 14px;
+    display: inline-block;
+    margin-right: 10px !important;
+}
+
+
+/*重写*/
+
+
+/*web前端工程师*/
+
+#header .nav .school_list .web-icon {
+    /*注意下面-15px -27px之间没有逗号*/
+    background-position: -15px -27px;
+}
+
+
+/*i和.python-icon之间不能有空格*/
+
+#header .nav .school_list i.python-icon,
+#header .nav .school_list i.go-icon,
+#header .nav .school_list i.ios-icon {
+    background: url(../img/allicon3.png) 0 0 no-repeat;
+    background-size: 16px 148px;
+}
+
+#header .nav .school_list i.python-icon {
+    background-position: -2px -2px;
+}
+
+#header .nav .school_list i.go-icon {
+    background-position: -2px -38px;
+}
+
+#header .nav .school_list i.ios-icon {
+    background-position: -2px -82px;
+}
+
+
+/*会员课程*/
+
+
+/*div的样式*/
+
+#header .nav .vip-lesson {
+    padding: 10px 0;
+}
+
+
+/*a标签的样式*/
+
+#header .nav .vip-lesson a {
+    display: block;
+    height: 40px;
+    line-height: 40px;
+    color: #666;
+}
+
+
+/*span的样式*/
+
+#header .nav .vip-lesson a span {
+    color: #bbb;
+    float: right;
+}
+
+
+/*vip-lesson下拉菜单中a标签的样式*/
+
+#header .nav .vip-lesson a:hover {
+    display: block;
+    height: 40px;
+    line-height: 40px;
+    background: #fafafa;
+    color: #35b558;
+}
+
+#header .nav .vip-lesson .kck-icon {
+    background-position: 0 -13px;
+}
+
+#header .nav .vip-lesson .zyljt-icon {
+    background-position: -45px 0;
+}
+
+#header .nav .vip-lesson .zstxt-icon {
+    background-position: -30px -13px;
+}
+
+#header .nav .vip-lesson .xlkc-icon
+/*,#header .nav  .school-list .xlkc-icon */
+
+{
+    background: url(../img/xlkc2.png) 0 0 no-repeat;
+    background-position: 0 0;
+    background-size: 12px 12px;
+}
+
+#header .nav .vip-lesson .kcbq-icon
+/*,#header .nav .school-list .kcbq-icon*/
+
+{
+    background-position: -15px -13px;
+}
+
+#header .nav .vip-lesson .vip-icon
+/*,#header .nav  .school-list .vip-icon*/
+
+{
+    background-position: -16px 0;
+}
+
+
+/*极客社区*/
+
+#header .nav .vip-lesson .jswd-icon
+/*,#header .nav .school-list .jswd-icon*/
+
+{
+    background-position: 0 -27px;
+}
+
+#header .nav .vip-lesson .wiki-icon
+/*,#header .nav .school-list .wiki-icon*/
+
+{
+    background-position: -29px -27px;
+}
+
+#header .nav .vip-lesson .sq-icon
+/*,#header .nav .school-list .sq-icon*/
+
+{
+    background-position: 0 2px;
+}
+
+#header .nav .vip-lesson .zygx-icon
+/*,#header .nav .school-list .zygx-icon*/
+
+{
+    background-position: -30px 0;
+}
+
+
+/*nav二级下拉菜单的hover*/
+
+#header .nav li:hover .submenu {
+    display: block;
+    opacity: 1;
+    animation: myfirst 0.8s ease normal;
+    -moz-animation: myfirst 0.8s ease normal;
+    -webkit-animation: myfirst 0.8s ease normal;
+}
+
+@keyframes myfirst {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes myfirst
+/* Firefox */
+
+{
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes myfirst
+/* Safari and Chrome */
+
+{
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@-o-keyframes myfirst
+/* Opera */
+
+{
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+/*右上角图标*/
+
+
+/*容器*/
+
+#header .icon-box {
+    width: 200px;
+    height: 60px;
+    margin-right: 10px;
+    float: right;
+    text-align: right;
+}
+
+
+/*3个图标的公共样式*/
+
+#header .icon-box span {
+    width: 17px;
+    height: 60px;
+    display: inline-block;
+    margin-left: 25px;
+    cursor: pointer;
+}
+
+
+/*搜索图标*/
+
+
+/*在icon-box和searchbox这2个div中都使用了search-icon,可以合写在一处。但注意height: 17px 则是1处用,1处不用,暂时先分开写*/
+
+#header .icon-box .search-icon {
+    background: url(../img/search-icon.png) 0 0 no-repeat;
+    background-size: 17px 17px;
+    background-position: 0, 0;
+    width: 17px;
+    /*下面这个height会重写#header .icon-box span中的height: 60px;会导致搜索按钮不能居中,尚不知源码如何做到不重写的*/
+    /*height: 17px;*/
+    display: inline-block;
+}
+
+
+/*搜索图标的hover*/
+
+#header .icon-box .search-icon:hover {
+    background: url(../img/search-icon2.png) 0 0 no-repeat;
+    background-size: 17px 17px;
+    background-position: 0, 0;
+}
+
+
+/*应用二维码*/
+
+#header .icon-box .app-icon {
+    /*这个span是一个父元素,它还有下拉菜单,所以设为relative*/
+    position: relative;
+    background: url(../img/app-icon.png) 0 0 no-repeat;
+    background-size: 17px;
+    background-position: 0;
+}
+
+
+/*应用二维码的hover*/
+
+#header .icon-box .app-icon:hover {
+    position: relative;
+    background: url(../img/app-icon2.png) 0 0 no-repeat;
+    background-size: 17px;
+    background-position: 0;
+}
+
+
+/*应用二维码的下拉菜单*/
+
+
+/*先是应用二维码和个人中心下拉菜单的公共样式*/
+
+#header .icon-box .loginlist .submenu {
+    display: none;
+    opacity: 0;
+    padding: 10px 0;
+    background: #fff;
+    position: absolute;
+    top: 58px;
+    right: -10px;
+    width: 120px;
+    z-index: 1200;
+}
+
+
+/*应用二维码下拉菜单独立样式*/
+
+#header .icon-box .app-icon .submenu {
+    padding: 0;
+    right: -50px;
+}
+
+
+/*下拉菜单的倒三角箭头*/
+
+
+/*应用二维码以及个人中心下拉面板的倒三角箭头,都用这个样式,需要写在前面*/
+
+#header .icon-box .loginlist .submenu .top-icon {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    position: absolute;
+    top: -8px;
+    right: 10px;
+    width: 15px;
+    height: 15px;
+    border-top: 1px solid #ececec;
+    border-left: 1px solid #ececec;
+    display: inline-block;
+    background: #fff;
+}
+
+
+/*应用二维码的下拉菜单倒三角箭头*/
+
+#header .icon-box .app-icon .submenu .top-icon {
+    right: 50px;
+}
+
+#header .icon-box .app-icon .submenu img {
+    width: 100%;
+}
+
+
+/*个人中心图标*/
+
+#header .icon-box .logged {
+    /*这个span是一个父元素,它还有下拉菜单,所以设为relative*/
+    position: relative;
+    width: 25px ! important;
+    height: 60px ! important;
+}
+
+
+/*个人中心的图片*/
+
+#header .icon-box .logged img {
+    width: 25px;
+    height: 25px;
+    margin-top: 13px;
+    display: block;
+    border-radius: 50%;
+    border: 1px solid #ddd;
+    overflow: hidden;
+}
+
+
+/*内嵌的vip图片*/
+
+#uservip-icon {
+    /*year-icon是相对于logged这个span,后者是个relative*/
+    position: absolute;
+    top: 28px;
+    left: 15px;
+    display: inline-block;
+    background: url(../img/allicon2.png) 0 0 no-repeat;
+    background-size: 64px 64px;
+    width: 13px;
+    height: 13px;
+    /*下面这个可以省略*/
+    margin-right: 10px;
+}
+
+#header .year-icon {
+    background-position: -1px -32px;
+}
+
+
+/*个人中心的下拉菜单面板*/
+
+
+/*上面已经使用应用二维码和个人中心下拉菜单的公共样式,这里先删除*/
+
+
+/*个人中心下拉面板的倒三角箭头*/
+
+#header .icon-box .logged .top-icon {
+    margin-right: 5px !important;
+}
+
+
+/*应用二维码以及个人中心下拉面板的倒三角箭头,都用这个样式,需要写在前面,也可以使用!important*/
+
+
+/*个人中心下拉面板的内容*/
+
+#header .icon-box .loginlist .submenu dd {
+    text-align: left;
+    font-size: 12px;
+    line-height: 35px;
+    /*vertical-align貌似要和line-height配合使用*/
+    vertical-align: middle;
+    margin: 0;
+    padding-left: 10px;
+}
+
+
+/*用户等级,未认证*/
+
+#header .rzno-vip {
+    display: inline-block;
+    margin-right: 10px;
+    width: 45px;
+    height: 14px;
+    background: url(../img/rz-no.png);
+    background-size: 45px 14px;
+}
+
+
+/*年vip小图标*/
+
+#header .year-vip
+/*, #header .ty-vip, #header .rz-vip
+    , #header .month-vip, #header .xf-vip*/
+
+{
+    background: url(../img/allvipicon.png);
+    background-size: 306px 16px;
+    display: inline-block;
+    width: 45px;
+    height: 14px;
+}
+
+#header .year-vip {
+    background-position: -143px -1px;
+}
+
+
+/*一些a标签内容默认是蓝色*/
+
+#header .icon-box .loginlist .submenu dd a {
+    color: #666;
+    /*下面几个加了会影响布局*/
+    /*height: 35px;
+    line-height: 35px;
+    display: block;*/
+}
+
+
+/*学习中心*/
+
+#header .loginlist dd i
+/*前面好像没设置过,这里先注释掉*/
+
+
+/*, #uservip-icon*/
+
+{
+    background: url(../img/allicon2.png) 0 0 no-repeat;
+    background-size: 64px 64px;
+    width: 12px;
+    height: 12px;
+    margin-right: 10px;
+    display: inline-block;
+}
+
+#header .loginlist .xxzx-icon {
+    background-position: -16px -15px;
+}
+
+
+/*个人主页*/
+
+#header .loginlist .grzy-icon {
+    background-position: -45px -1px;
+}
+
+
+/*消息通知*/
+
+#header .loginlist .xxtz-icon {
+    background-position: -16px -30px;
+}
+
+
+/*消息通知中的未读数目*/
+
+#header .loginlist .unread-num {
+    padding-left: 10px;
+}
+
+
+/*账号设置*/
+
+#header .loginlist .zhsz-icon {
+    background-position: -30px -1px;
+}
+
+
+/*退出登录*/
+
+#header .loginlist .tc-icon {
+    background-position: -16px -1px;
+}
+
+
+/*应用二维码和个人中心的hover显示*/
+
+#header .icon-box .loginlist:hover .submenu {
+    display: block;
+    opacity: 1;
+    animation: listshow 0.8s ease normal;
+    -moz-animation: listshow 0.8s ease normal;
+    -webkit-animation: listshow 0.8s ease normal;
+}
+
+@keyframes listshow {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes listshow
+/* Firefox */
+
+{
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes listshow
+/* Safari and Chrome */
+
+{
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@-o-keyframes listshow
+/* Opera */
+
+{
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+/*个人中心下拉菜单内容还有hover*/
+
+#header .icon-box .loginlist .submenu dd:hover {
+    background: #f5f5f5;
+}
+
+#header .icon-box .loginlist .submenu dd a:hover {
+    /*第一句会引起"未认证"和"vip"在hover的时候消失*/
+    /*background: #f5f5f5;*/
+    color: #35b558;
+}
+
+
+/*平时隐藏的搜索框*/
+
+#header .searchbox {
+    display: none;
+    opacity: 0;
+    transform: scale(0.1, 1);
+    -webkit-transform: scale(0.1, 1);
+    -moz-transform: scale(0.1, 1);
+    width: 850px;
+    height: 59px;
+    line-height: 59px;
+    background: #fff;
+    z-index: 11000;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+
+/*搜索图标*/
+
+
+/*在icon-box和searchbox这2个div中都使用了search-icon,可以合写在一处。但注意height: 17px 则是1处用,1处不用,暂时先分开写*/
+
+#header .searchbox .search-icon {
+    background: url(../img/search-icon.png) 0 0 no-repeat;
+    background-size: 17px 17px;
+    background-position: 0, 0;
+    width: 17px;
+    /*下面这个height会重写#header .icon-box span中的height: 60px;会导致搜索按钮不能居中,尚不知源码如何做到不重写的*/
+    height: 17px;
+    display: inline-block;
+}
+
+
+/*搜索图标的hover*/
+
+#header .searchbox .search-icon:hover {
+    background: url(../img/search-icon2.png) 0 0 no-repeat;
+    background-size: 17px 17px;
+    background-position: 0, 0;
+}
+
+
+/*搜索输入框*/
+
+#header .searchbox input {
+    width: 400px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 12px;
+    margin-top: 10px;
+    vertical-align: top;
+    margin-left: 10px;
+    /*源码中下面2句在另一个css文件。是去除输入框的边框(border起作用)的*/
+    outline: 0;
+    border: 0;
+}
+
+
+/*标签盒*/
+
+#header .searchbox .tagbox {
+    width: 300px;
+    text-align: right;
+    display: inline;
+    margin-right: 50px;
+    float: right;
+}
+
+#header .searchbox .tagbox a {
+    font-size: 12px;
+    color: #808080;
+    background: #f5f5f5;
+    padding: 3px 5px;
+    margin-left: 10px;
+}
+
+
+/*关闭按钮*/
+
+#header .searchbox .close-icon {
+    width: 15px;
+    height: 15px;
+    margin-top: 22px;
+    cursor: pointer;
+    background: url(../img/close-icon.png) 0 0 no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    right: 0;
+    z-index: 1200;
+}
+
+
+/*平时隐藏的搜索框的动画,暂时先不用,不然一刷新页面这个搜索框就出现了*/
+
+#header .scale {
+    transform-origin: right center;
+    -moz-transform-origin: right center;
+    /*display: block!important;*/
+    /*调试*/
+    display: none;
+    transform: scale(1, 1) !important;
+    opacity: 1!important;
+    animation: scalerun 0.8s ease normal;
+    -moz-animation: scalerun 2s line normal;
+    -webkit-animation: scalerun 0.8s ease normal;
+}
+
+@keyframes scalerun {
+    0% {
+        opacity: 0;
+        transform: scale(0.1, 1);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1, 1);
+    }
+}
+
+@-moz-keyframes scalerun
+/* Firefox */
+
+{
+    0% {
+        opacity: 0;
+        transform: scale(0.1, 1);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1, 1);
+    }
+}
+
+@-webkit-keyframes scalerun
+/* Safari and Chrome */
+
+{
+    0% {
+        opacity: 0;
+        transform: scale(0.1, 1);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1, 1);
+    }
+}
+
+@-o-keyframes scalerun
+/* Opera */
+
+{
+    0% {
+        opacity: 0;
+        transform: scale(0.1, 1);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1, 1);
+    }
+}
+
+
+/*end  header*/
+
+
+/*pager*/
+
+
+/*pager整体*/
+
+.w-1000 {
+    width: 1000px;
+    margin: 0 auto;
+    clear: both;
+    /*清除浮动,上面模仿官网的clear: both;貌似不起作用*/
+    overflow: hidden;
+}
+
+.mar-t20 {
+    margin-top: 20px;
+}
+
+
+/*右侧主页*/
+
+.f_r {
+    float: right;
+}
+
+#main {
+    width: 776px;
+}
+
+.tagGather>.bd {
+    color: #666;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+
+/*顶部分类列表,含下拉菜单*/
+
+.sort {
+    /*这样设置relative的多是容器*/
+    position: relative;
+    z-index: 500;
+}
+
+.sort>.wrap {
+    box-sizing: content-box;
+    height: 38px;
+    background: #fff;
+    color: gray;
+    line-height: 38px;
+}
+
+.sort .sortMode {
+    overflow: visible;
+    float: left;
+    height: 38px;
+}
+
+
+/*"全部课程"并不是类型选择,仅仅是标题*/
+
+.sort .sortMode h3 {
+    float: left;
+    padding: 0 21px;
+    background: #fff;
+    border-right: 1px solid #f5f5f5;
+    font-size: 12px;
+    font-weight: 400;
+    cursor: default;
+}
+
+
+/*最新*/
+
+.sort .sortMode>dl {
+    position: relative;
+    z-index: 10;
+    overflow: hidden;
+    float: left;
+    height: 36px;
+    margin: 1px 1px 0 -1px;
+    white-space: nowrap;
+}
+
+
+/*标题*/
+
+.sort .sortMode dt {
+    padding: 0 18px;
+    cursor: default;
+}
+
+
+/*标题右侧的小箭头*/
+
+.sort .sortMode dt>.arrow {
+    position: relative;
+    /*这样图标可以和左侧的文字显示在一行*/
+    display: inline-block;
+    margin-left: 5px;
+}
+
+.sort .sortMode dt>.arrow:after,
+.sort .sortMode dt>.arrow:before {
+    display: block;
+    width: 0!important;
+    height: 0!important;
+    padding: 0!important;
+    font-size: 0!important;
+    line-height: 0!important;
+    border: 5px solid transparent;
+    border-bottom-width: 0;
+    border-top-color: gray;
+    content: " ";
+}
+
+.sort .sortMode dt>.arrow:after {
+    position: absolute;
+    left: 1px;
+    bottom: 1px;
+    border-width: 4px;
+    border-bottom-width: 0;
+    border-top-color: #fff;
+    /*content: " ";*/
+}
+
+
+/*下拉菜单*/
+
+.sort .sortMode dd {
+    position: relative;
+    z-index: 12;
+    visibility: hidden;
+    opacity: 0;
+    -webkit-transition: all .1s ease .1s;
+    -moz-transition: all .1s ease .1s;
+    -ms-transition: all .1s ease .1s;
+    transition: all .1s ease .1s;
+}
+
+.sort .sortMode dd a {
+    display: block;
+    padding: 0 32px 0 17px;
+    font-weight: 500;
+    color: gray;
+    /*自己添加的*/
+    text-decoration: none;
+}
+
+
+/*hover设置,二级菜单的显示*/
+
+.sort .sortMode dd a:hover {
+    color: #35B558;
+}
+
+.sort .sortMode>dl:hover {
+    height: auto;
+    overflow: visible;
+    background: #fff;
+    border: 1px solid #e4e4e4;
+    border-width: 0 1px 1px;
+    -webkit-box-shadow: 1px 1px 4px rgba(0, 0, 0, .1);
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, .1)
+}
+
+.sort .sortMode>dl:hover dt {
+    padding: 0 17px
+}
+
+.sort .sortMode>dl:hover dt>.arrow {
+    visibility: hidden
+}
+
+.sort .sortMode>dl:hover dd {
+    visibility: visible;
+    opacity: 1
+}
+
+
+/*右侧的图标按钮*/
+
+.sort .previewMode {
+    float: right;
+}
+
+.previewMode li {
+    position: relative;
+    float: left;
+    width: 36px;
+    height: 38px;
+    border-left: 1px solid #f5f5f5;
+    line-height: 36px;
+    text-align: center;
+    cursor: pointer;
+    -webkit-transition: background-color .2s;
+    -moz-transition: background-color .2s;
+    -ms-transition: background-color .2s;
+    transition: background-color .2s;
+}
+
+.previewMode li.curr,
+.previewMode li:hover {
+    background: #fff;
+}
+
+.previewMode li .icon {
+    position: relative;
+    top: -1px;
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    vertical-align: middle;
+    background: url(../img/preview-icon_2ae2eb9.png) no-repeat 0 0;
+}
+
+
+/*第1个图标*/
+
+.previewMode li.kuai-icon .icon {
+    width: 14px;
+    background: url(../img/icon-kuai_3c1a8cf.png) no-repeat 0 0;
+    background-size: 14px;
+}
+
+
+/*第2个图标*/
+
+.previewMode li.list-icon .icon {
+    width: 19px;
+    background: url(../img/icon-list_6d9f87f.png) no-repeat center;
+    background-size: 16px 12px;
+}
+
+
+/*end顶部分类列表,含下拉菜单*/
+
+
+/*中间课程内容列表*/
+/*方格分栏方式lesson-list*/
+/*垂直分栏方式lesson-list2*/
+.lesson-list {
+    /*调试*/
+    /*display:none;*/
+    display:block;
+}
+.lesson-list2 {
+    /*调试*/
+    /*display:block;*/
+    display:none;
+}
+.lesson-list ul {
+    width: auto;
+    margin-top: 15px;
+    /*下面是行间样式*/
+    display: block;
+    /*清除浮动,不然ul的height为0,下面的div会挤上去*/
+    overflow: hidden;
+}
+
+.lesson-list ul li {
+    width: 250px;
+    height: 225px;
+    float: left;
+    margin-right: 13px;
+    margin-bottom: 13px;
+}
+.lesson-list2 ul li{
+    height: 100px;
+    padding: 0;
+    background-color: #fff;
+    margin-top: 13px;
+}
+
+/*每一排第3(最后一张)张图片margin-left置零*/
+
+.tagGather .lesson-list li:nth-child(3n+3) {
+    margin-right: 0;
+}
+
+.lesson-list .lessonimg-box {
+    width: 100%;
+    height: 135px;
+    position: relative;
+}
+
+.lesson-list2 .lessonimg-box{
+    width: 185px;
+    height: 100px;
+    float: left;
+    margin-right: 15px;
+    position: relative;
+}
+/*hover时的收藏图标*/
+
+.lesson-list .lesson-shoucang,
+.lesson-list2 .lesson-shoucang
+{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 16px;
+    height: 16px;
+    background: url(../img/shoucang-1_76dc56f.png);
+    background-size: 16px 16px;
+    z-index: 101;
+    cursor: pointer;
+    /*调试*/
+    /*使用JQ实现hover时显示*/
+    display: none;
+    /*display: block;*/
+}
+.lesson-list .lesson-shoucang:hover,
+.lesson-list2 .lesson-shoucang:hover{
+    background: url(../img/shoucang-2_3d597dc.png);
+    background-size: 16px 16px
+}
+/*.lesson-list的是通过JS控制的*/
+.lesson-list2 li:hover .lesson-shoucang{
+    display: block;
+}
+
+/*图片上还有课程的链接*/
+
+.lesson-list .lessonimg-box a,
+.lesson-list2 .lessonimg-box a {
+    border: 0 none;
+    text-decoration: none;
+}
+
+
+/*图片img*/
+
+.lesson-list .lessonimg-box .lessonimg {
+    width: 100%;
+    height: 135px;
+    /*img, input, label, select的公共样式,貌似没作用,可以不写*/
+    /*vertical-align: middle;*/
+}
+.lesson-list2 .lessonimg-box .lessonimg {
+    width: 185px;
+    height: 100px;
+}
+
+/*hover时图片中间的play按钮*/
+
+.lesson-list .lessonplay,
+.lesson-list2 .lessonplay
+{
+    background: #000;
+    background: rgba(0, 0, 0, .4);
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    position: absolute;
+    left: 0;
+    top: 0;
+    /*调试*/
+    display: none;
+    /*hover的时候才显示*/
+    /*opacity: 0;*/
+}
+/*.lesson-list的是通过JS控制的*/
+.lesson-list2 li:hover .lessonplay{
+    display: block;
+}
+
+/*play按钮的背景图片*/
+
+.lesson-list .lessonplay .playericon,
+.lesson-list2 .lessonplay .playericon
+{
+    position: absolute;
+    z-index: 120;
+    width: 50px;
+    height: 50px;
+    display: block;
+    left: 50%;
+    margin-left: -25px;
+    top: 50%;
+    margin-top: -25px;
+    background: url(../img/player_icon_5c67475.png) 0 0 no-repeat;
+    cursor: pointer;
+    background-size: 50px 50px;
+}
+
+
+/*底部文字*/
+
+.lesson-list .lesson-infor {
+    padding: 10px;
+    position: relative;
+    z-index: 200;
+    overflow: hidden;
+    background: #fff;
+    /*调试*/
+    /*hover的时候还会有说明文字,下面的height会变大*/
+    height: 88px;
+}
+/*.lesson-list2 的.lesson-infor不参与JS效果*/
+.lesson-list2 .lesson-infor {
+    position: relative;
+    height: 100px;
+    width: 566px;
+    float: left;
+}
+
+/*说明文字中的标题容器*/
+
+.lesson-list .lesson-infor .lesson-info-h2 {
+    font-size: 14px;
+    color: #333;
+    line-height: 18px;
+    margin-bottom: 12px;
+    height: 36px;
+    overflow: hidden;
+}
+.lesson-list2 .lesson-infor .lesson-info-h2{
+    font-size: 14px;
+    color: #333;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    overflow: hidden;
+}
+
+.lesson-list .lesson-infor .lesson-info-h2 a,
+.lesson-list2 .lesson-infor .lesson-info-h2 a
+{
+    color: #333;
+    border: 0 none;
+    text-decoration: none;
+}
+
+
+/*说明文字,平时隐藏,hover时出现,出现的时候父元素lesson-infor的height变大*/
+
+.lesson-list .lesson-infor p {
+    color: gray;
+    font-size: 12px;
+    line-height: 18px;
+    overflow: hidden;
+    margin-bottom: 10px;
+    /*调试*/
+    /*hover的时候会变化*/
+    height: 0;
+    /*opacity: 0;*/
+    display: none;
+}
+/*lesson-list2的p元素不参与JS效果*/
+.lesson-list2 .lesson-infor p {
+    color: gray;
+    font-size: 12px;
+    opacity: 1!important;
+    line-height: 18px;
+    overflow: hidden;
+    margin-bottom: 10px;
+    height: 36px;
+    display: block;
+}
+
+/*时间长度*/
+
+.lesson-list .lesson-infor .timeandicon,
+.lesson-list2 .lesson-infor .timeandicon{
+    font-size: 12px;
+    color: gray;
+    position: relative;
+}
+
+
+/*时间长度容器*/
+
+.lesson-list .lesson-infor .timeandicon dl {
+    width: 120px;
+    float: left;
+    white-space: nowrap;
+}
+
+
+/*时间长度内容*/
+
+.timeandicon dl dd {
+    font-size: 12px;
+    float: left;
+    display: inline-block;
+    margin-right: 15px;
+}
+
+
+/*时间长度左侧图标*/
+
+.lesson-list .lesson-infor .timeandicon .time-icon,
+.lesson-list2 .lesson-infor .timeandicon .time-icon
+{
+    background: url(../img/clok_a413ecf.png) 0 0 no-repeat;
+    width: 14px;
+    height: 14px;
+    display: block;
+    float: left;
+    margin-right: 8px;
+    background-size: 14px 14px;
+}
+
+
+/*等级显示*/
+
+
+/*hover时才会出现*/
+
+.lesson-list .lesson-infor .timeandicon .zhongji {
+    /*调试*/
+    /*display: block;*/
+    display: none;
+}
+/*.lesson-list2不要参与.lesson-list的一些特效*/
+.lesson-list2 .lesson-infor .timeandicon .zhongji {
+    /*调试*/
+    display: block;
+}
+
+/*等级左侧的图标*/
+
+.lesson-infor .timeandicon .xinhao-icon {
+    background: url(../img/one-ji_1731712.png) 0 0 no-repeat;
+    background-size: 14px 14px;
+    width: 14px;
+    height: 14px;
+    display: block;
+    float: left;
+    margin-right: 8px;
+}
+
+
+/*参加学习人数*/
+
+
+/*hover时才会出现*/
+
+.lesson-list .lesson-infor .timeandicon .learn-number {
+    float: right;
+    display: none;
+}
+.lesson-list2 .lesson-infor .timeandicon .learn-number {
+    float: right;
+    display: block;
+}
+
+/*不知何用*/
+
+.lesson-infor .timeandicon .cf:after {
+    content: '';
+    display: block;
+    clear: both;
+    height: 0;
+    overflow: hidden;
+    /* visibility: hidden; */
+}
+
+
+/*hover的时候会变为bottom: -2px;可能是对容器起作用*/
+
+.lesson-list .lesson-infor .lessonicon-box {
+    position: absolute;
+    right: 0;
+    text-align: right;
+    /*hover的的时候会变为bottom: -2px;*/
+    bottom: 4px;
+}
+.lesson-list li:hover .lessonicon-box{
+    bottom: -2px;
+}
+.lesson-list .lesson-infor .lessonicon-box a {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin-left: 3px;
+    border: 0 none;
+    text-decoration: none;
+}
+.lesson-list .lesson-infor .lessonicon-box a img {
+    display: block;
+    width: 16px;
+    height: 16px;
+}
+.lesson-list2 .lesson-infor .lessonicon-box {
+    position: absolute;
+    right: 0;
+    text-align: right;
+    top: -75px;
+}
+.lesson-list2 .lesson-infor .lessonicon-box a {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin-left: 3px;
+    background-size: 16px 16px;
+    -webkit-background-size: 16px 16px;
+    border: 0 none;
+    text-decoration: none;
+}
+/*图片右上角的vip图标,一部分图片有*/
+
+.lesson-list .lessonimg-box .vip-icon,
+.lesson-list2 .lessonimg-box .vip-icon {
+    height: 22px;
+    width: 38px;
+    display: inline-block;
+    position: absolute;
+    top: -2px;
+    right: 8px;
+    z-index: 101;
+    background: url(../img/tag_vip_4d846c2.png) 0 0 no-repeat;
+    background-size: 100% 100%;
+}
+
+
+/*图片右上角的"认证专项"图标,一部分图片有*/
+
+.lesson-list .lessonimg-box .rz-icon,
+.lesson-list2 .lessonimg-box .rz-icon {
+    height: 22px;
+    width: 61px;
+    display: inline-block;
+    position: absolute;
+    top: -2px;
+    right: 8px;
+    z-index: 101;
+    background: url(../img/tag_rz_5a84337.png) 0 0 no-repeat;
+    background-size: 100% 100%;
+}
+/*垂直分栏方式lesson-list2*/
+
+/*end中间课程内容列表*/
+
+
+/*底部页码*/
+
+#page-nav {
+    text-align: center;
+    margin-top: 17px;
+    height: 28px;
+}
+
+ul.pages {
+    display: block;
+    border: 0;
+    text-transform: uppercase;
+    font-size: 12px;
+    margin: 10px 10px 45px;
+    padding: 0;
+    /*清除li的浮动造成的ul height为0*/
+    overflow: hidden;
+}
+
+ul.pages li {
+    display: inline-block;
+    /*不加上float:left,li元素之间不会紧挨着(但间距不是margin)*/
+    float: left;
+    width: 32px;
+    height: 32px;
+    border: 0;
+    margin-left: 5px;
+    line-height: 30px;
+    border: 1px solid #fff;
+    text-align: center;
+    font-size: 12px;
+    background: #fff;
+    color: gray;
+    border: 1px solid #e4e4e4;
+    border-bottom-width: 5px;
+}
+
+
+/*底部页码的hover功能,边框和字体颜色变绿*/
+
+ul.pages li:hover {
+    line-height: 30px;
+    border: 1px solid #35B558;
+    color: #35B558;
+    border-bottom-width: 5px;
+    border-bottom-color: #35B558;
+}
+
+
+/*首页*/
+
+ul.pages li.pgEmpty {
+    border: 1px solid #f0f0f0;
+    color: #d9d6c3;
+    width: 50px;
+    cursor: default;
+}
+
+ul.pages li.pgNext {
+    width: 50px;
+}
+
+ul.pages li:nth-child(2) {
+    width: 72px;
+}
+
+
+/*当前选中的*/
+
+ul.pages li.pgCurrent {
+    background: #35b558;
+    color: #fff;
+    border: 1px solid #35B558;
+}
+
+
+/*省略号*/
+
+ul.pages li.thpoint {
+    border: 0;
+    cursor: auto;
+    color: #000;
+    background: none!important;
+    margin-top: 3px;
+}
+
+
+/*共计多少页*/
+
+ul.pages li.pagetotal {
+    width: 70px;
+    /*来自于行间样式*/
+    margin-top: 3px;
+}
+
+
+/*当前是多少页*/
+
+ul.pages li.pagenow {
+    width: 100px;
+}
+
+#page-nav input {
+    width: 35px!important;
+    height: 22px!important;
+    background: #fff;
+    border: 1px solid #e4e4e4;
+    color: #666;
+    line-height: 22px;
+    margin: 0 10px;
+    vertical-align: middle;
+}
+
+
+/*来自于行间样式*/
+
+ul.pages li.pagenow input {
+    width: 20px;
+    height: 16px;
+    margin-top: -3px;
+    padding-top: 2px;
+    padding-left: 10px;
+}
+
+ul.pages li.go {
+    width: 32px;
+    height: 22px;
+    line-height: 22px;
+    margin-top: 6px;
+}
+
+
+/*但是确定按钮的border-bottom-width是没有问题的。得修复一下。不应设置为5px*/
+
+ul.pages li.go,
+ul.pages li.go:hover {
+    border-bottom-width: 1px;
+}
+
+
+/*end底部页码*/
+
+
+/*左侧菜单*/
+
+.f_l {
+    float: left;
+}
+
+#aside {
+    width: 210px;
+}
+
+
+/*上部*/
+
+.aside-allCategory {
+    margin: 0;
+    border: 1px solid #35b558;
+    background-color: #fff;
+}
+
+
+/*公共样式*/
+
+.aside-allCategory a {
+    color: #666;
+    text-decoration: none;
+}
+
+
+/*标题*/
+
+.aside-allCategory>.hd {
+    height: 45px;
+    line-height: 45px;
+    padding: 0 32px;
+    border-bottom: 1px solid #eee;
+    cursor: default;
+}
+
+.aside-allCategory>.hd h2 {
+    position: relative;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.aside-allCategory>.hd h2 a {
+    color: #35b558;
+    text-decoration: none;
+}
+
+.aside-allCategory>.hd .icon-course-curr {
+    display: block;
+    width: 15px;
+    height: 15px;
+    background: url(../img/icon-course-curr_0743c98.png) no-repeat 0 0 / 15px 15px;
+    position: absolute;
+    margin-left: -20px;
+    margin-top: 14px;
+}
+
+
+/*列表ul,li*/
+
+.aside-cList {
+    position: relative;
+    width: 208px;
+}
+
+.aside-cList li {
+    padding: 0;
+    border-bottom: 0;
+}
+
+
+/*课程库中的某一个div*/
+
+.aside-cList li>div {
+    cursor: pointer;
+    width: 208px;
+    height: 37px;
+    border-bottom: 1px solid #f5f5f5;
+    background: url(../img/icon-more_cd68622.png) 186px center no-repeat;
+    background-size: 6px 10px;
+    padding-left: 32px;
+}
+
+.aside-cList li>div a {
+    font-size: 12px;
+    color: #666;
+    line-height: 36px;
+}
+
+
+/*右侧的二级菜单*/
+
+.aside-cList li .list-show {
+    /*调试*/
+    display: none;
+    -webkit-box-shadow: 2px 2px 4px rgba(0, 0, 0, .1);
+    -moz-box-shadow: 2px 2px 4px rgba(0, 0, 0, .1);
+    box-shadow: 1px 2px 4px rgba(0, 0, 0, .1);
+    overflow: hidden;
+    min-height: 417px;
+    min-width: 401px;
+    background: #fff;
+    border: 1px solid #ddd;
+    position: absolute;
+    left: 209px;
+    top: -46px;
+    z-index: 1101;
+    list-style: none;
+    /*下面margin-left: -1px可以把左侧的绿色边框给覆盖掉*/
+    margin-left: -1px;
+    padding-bottom: 30px;
+    float: left;
+    width: 591px;
+}
+
+
+/*由JS设置*/
+
+.aside-cList li:nth-child(n) .list-show {
+    width: 402px;
+}
+
+
+/*第1个:移动开发*/
+
+.aside-cList li:nth-child(1) .list-show {
+    width: 402px;
+    top: -45px;
+    /*display: block;*/
+    /*调试*/
+    display: none;
+}
+
+
+/*由JS设置*/
+
+.aside-cList li .list-show>div {
+    width: 400px;
+}
+
+
+/*第1行*/
+
+.aside-cList li .list-show dl {
+    margin: 0 15px;
+    overflow: hidden;
+}
+
+
+/*粗体标题*/
+
+.aside-cList li .list-show dt {
+    display: block;
+    border-bottom: 1px solid #f5f5f5;
+    height: 37px;
+    line-height: 45px;
+}
+
+.aside-cList li .list-show dt a {
+    color: #333;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+
+/*具体内容*/
+
+.aside-cList li .list-show dd {
+    list-style: none;
+    /*注意margin为负值的情形*/
+    margin-left: -8px;
+    padding: 3px 0;
+}
+
+.aside-cList li .list-show dd a {
+    height: 14px;
+    line-height: 14px;
+    margin-bottom: 10px;
+    margin-top: 5px;
+    padding: 0 7px;
+    color: #666;
+    display: inline-block;
+    font-size: 12px;
+    border-left: 1px solid #e0e0e0;
+    float: left;
+    white-space: nowrap;
+    font-weight: 400;
+}
+
+
+/*第2个:前端开发*/
+
+.aside-cList li:nth-child(2) .list-show {
+    width: 402px;
+    /*display: block;*/
+    /*调试*/
+    display: none;
+}
+
+
+/*第3个:后端开发*/
+
+.aside-cList li:nth-child(3) .list-show {
+    /*display: block;*/
+    /*调试*/
+    display: none;
+}
+
+
+/*第4个:基础知识*/
+
+.aside-cList li:nth-child(4) .list-show {
+    /*display: block;*/
+    /*调试*/
+    display: none;
+}
+
+
+/*第5个:云计算&大数据*/
+
+.aside-cList li:nth-child(5) .list-show {
+    /*display: block;*/
+    /*调试*/
+    display: none;
+}
+
+
+/*第6个:智能硬件&物联网*/
+
+.aside-cList li:nth-child(6) .list-show {
+    /*display: block;*/
+    /*调试*/
+    display: none;
+}
+
+
+/*第7个:数据库*/
+
+.aside-cList li:nth-child(7) .list-show {
+    /*display: block;*/
+    /*调试*/
+    display: none;
+}
+
+
+/*第8个:认证考试*/
+
+.aside-cList li:nth-child(8) .list-show {
+    /*display: block;*/
+    /*调试*/
+    display: none;
+}
+
+
+/*第9个:企业 IT*/
+
+.aside-cList li:nth-child(9) .list-show {
+    /*display: block;*/
+    /*调试*/
+    display: none;
+}
+
+
+/*第10个:设计&产品&测试*/
+
+.aside-cList li:nth-child(10) .list-show {
+    /*display: block;*/
+    /*调试*/
+    /*display: none;*/
+}
+
+
+/*课程库右侧二级菜单的hover功能*/
+
+
+/*.aside-cList li>div a.active {*/
+
+
+/*color: #35b558*/
+
+
+/*}*/
+
+
+/*课程库自身的hover*/
+
+
+/*使用JS失败*/
+
+.aside-cList li>div:hover {
+    border-left: 1px solid #ddd;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    height: 38px;
+    width: 210px;
+    margin-top: -1px;
+    margin-left: -1px;
+    padding-left: 24px;
+    -webkit-box-shadow: 1px 2px 4px rgba(0, 0, 0, .1);
+    box-shadow: 1px 2px 4px rgba(0, 0, 0, .1)
+}
+
+.aside-cList li>div:hover>a {
+    display: block;
+    width: 188px;
+    background: #fff;
+    position: absolute;
+    z-index: 1102;
+    border-right: 3px solid #fff;
+    color: #35b558;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 36px
+}
+
+
+/*使用JS失败*/
+
+.aside-cList li:last-child>div:hover {
+    border-bottom: 0;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none
+}
+
+
+/*右侧二级菜单的hover*/
+
+.aside-cList li .list-show a:hover {
+    color: #35b558
+}
+
+
+/*右侧二级菜单的显示与隐藏*/
+
+.aside-cList li>div:hover .list-show {
+    display: block
+}
+
+
+/*下部,职业路径图,知识体系图,系列课程,课程标签*/
+
+.hdlist {
+    width: 100%;
+    background-color: #fff;
+}
+
+.hdlist li {
+    height: 45px;
+}
+
+.hdlist li a {
+    display: block;
+    height: 45px;
+    width: 100%;
+    line-height: 45px;
+    color: #333;
+    font-size: 14px;
+    padding-left: 10px;
+    /*border-bottom: 1px solid #eee;*/
+    text-decoration: none;
+}
+
+.hdlist a i {
+    /*这样才能与文字排成一行*/
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    margin-right: 8px;
+    vertical-align: text-bottom;
+}
+
+
+/*职业路径图*/
+
+.hdlist a .icon-zylj {
+    background: url(../img/icon-zylj_6ee6dac.png) no-repeat left center;
+    background-size: 15px 14px;
+}
+
+
+/*知识体系图*/
+
+.hdlist a .icon-zstx {
+    background: url(../img/icon-zstx_a1ae096.png) no-repeat left center;
+    background-size: 15px 12.5px;
+}
+
+
+/*系列课程*/
+
+.hdlist a .icon-xlkc {
+    background: url(../img/icon-xlkc_2e47588.png) no-repeat left center;
+    background-size: 14px 14px;
+}
+
+
+/*课程标签*/
+
+.hdlist a .icon-kcbq {
+    background: url(../img/icon-kcbq_65534c2.png) no-repeat left center;
+    background-size: 15px 13px;
+}
+
+
+/*end pager*/
+
+
+/*footer*/
+
+#footer {
+    /*调试*/
+    /*display: none;*/
+}
+
+#footer a {
+    text-decoration: none;
+    color: #333;
+}
+
+#footer div,
+#footer p,
+#footer dd,
+#footer dl,
+#footer dt {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    font-family: Verdana, "Lantinghei SC", "Hiragino Sans GB", "Microsoft Yahei", Helvetica, arial, \5b8b\4f53, sans-serif;
+}
+
+#footer {
+    min-width: 1000px;
+    border-top: 1px solid #e4e4e4;
+    background: #fff;
+    /*需要有一个外边距*/
+    margin-top: 50px;
+}
+
+#footer .jkinfor-block {
+    background: #fff;
+}
+
+#footer .jkinfor-block .jkinfor {
+    position: relative;
+    width: 1000px;
+    height: 215px;
+    margin: 0 auto;
+    border-bottom: 1px solid #f5f5f5;
+    padding-left: 224px;
+    padding-top: 25px;
+    box-sizing: border-box;
+}
+
+#footer .jkinfor-block .jkinfor .jk-logo {
+    position: absolute;
+    left: 0;
+    top: 25px;
+    display: inline-block;
+    width: 160px;
+}
+
+#footer .jkinfor-block .jkinfor .jk-logo img {
+    width: 109px;
+    height: 40px;
+    display: block;
+}
+
+#footer .jkinfor-block .jkinfor .jk-logo p {
+    font-size: 12px;
+    color: #999;
+    margin-top: 20px;
+}
+
+
+/*#footer .jkinfor-block .jkinfor dl{*/
+
+#footer .jkinfor dl {
+    float: left;
+    width: 135px;
+    color: #808080;
+}
+
+
+/*#footer .jkinfor-block .jkinfor dl dt{*/
+
+#footer .jkinfor dl dt {
+    font-size: 14px;
+    line-height: 30px;
+}
+
+#footer .jkinfor dl dd {
+    font-size: 12px;
+    line-height: 30px;
+}
+
+
+/*前面还没设置color*/
+
+#footer .jkinfor dl dt a {
+    color: #808080;
+}
+
+#footer .jkinfor dl dd a {
+    color: #999999;
+    /*不设置这个鼠标为箭头,而非手型*/
+    cursor: pointer;
+}
+
+#footer .jkinfor a:hover {
+    color: #35b558;
+}
+
+#footer .jk-down {
+    position: absolute;
+    right: 0;
+    top: 25px;
+    display: inline-block;
+    width: 175px;
+    text-align: left;
+}
+
+#footer .jk-down .hot-tel {
+    color: #808080;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+#footer .jk-down .downCon {
+    /*一般这样都要作为容器使用*/
+    position: relative;
+    display: inline-block;
+    width: 140px;
+    height: 30px;
+    line-height: 30px;
+    border: 1px solid #eeeeee;
+    margin-bottom: 10px;
+    font-size: 13px;
+    color: #808080;
+    padding-left: 40px;
+    cursor: pointer;
+}
+
+#footer .jk-down .down-ios {
+    background: url(../img/icon-down-ios.png) no-repeat 0 0;
+    background-size: 30px 30px;
+}
+
+#footer .jk-down .down-and {
+    background: url(../img/icon-down-and.png) no-repeat 0 0;
+    background-size: 30px 30px;
+}
+
+#footer .jk-down .downCon img {
+    /*display: inline-block;*/
+    width: 115px;
+    height: 153px;
+    position: absolute;
+    top: -157px;
+    left: 12px;
+    z-index: 2;
+    /*覆盖前面的display?*/
+    display: none;
+}
+
+
+/*hover的时候才显示图片*/
+
+#footer .jk-down .downCon:hover img {
+    display: block;
+}
+
+#footer .copyright {
+    font-size: 12px;
+    color: #999;
+    width: 1000px;
+    margin: 0 auto;
+    padding: 15px 0;
+    text-align: center;
+}
+
+#footer .copyright strong {
+    font-weight: 400;
+}
+
+#footer .copyright a {
+    color: #999;
+}
+
+#footer .copyright a:hover {
+    color: #35B558;
+}
+
+
+/*a.down-sina之间不能有空格*/
+
+#footer .copyright a.down-sina {
+    float: right;
+    width: 20px;
+    height: 15px;
+    margin-right: 10px;
+    background: url(../img/icon-down-sina.png) no-repeat 0 0;
+    background-size: 20px 15px;
+}
+
+#footer .copyright a.down-wechat {
+    float: right;
+    width: 20px;
+    height: 15px;
+    background: url(../img/icon-down-wechat.png) no-repeat 0 0;
+    background-size: 18px 15px;
+}
+
+#footer .copyright .sincerity {
+    display: block;
+    margin: 15px auto 0;
+}
+
+
+/*end footer*/
+
+
+/*gotop按钮*/
+
+.gotop {
+    position: fixed;
+    left: 50%;
+    margin-left: 510px;
+    bottom: 50px;
+    width: 34px;
+    text-align: center;
+    z-index: 2000;
+}
+
+.gotop span {
+    cursor: pointer;
+}
+
+.gotop span.top {
+    display: block;
+    background: url(../img/gotop.jpg) no-repeat 0 0;
+    background-size: 34px 103px;
+    width: 34px;
+    height: 34px;
+}
+
+.gotop span.top:hover {
+    background: url(../img/gotop2.jpg) no-repeat 0 0;
+    background-position: 0 0;
+    background-size: 34px 103px;
+}
+
+.gotop span.erwma {
+    position: relative;
+    display: block;
+    background: url(../img/gotop.jpg) 0 -34px no-repeat;
+    background-size: 34px 103px;
+    width: 34px;
+    height: 35px;
+}
+
+
+/*把img的行间样式改到css文件中*/
+
+.gotop span.erwma img {
+    display: none;
+}
+
+.gotop span.jk-app {
+    position: relative;
+    display: block;
+    background: #f7f7f7 url(../img/phone-1.png)center center no-repeat;
+    background-size: 12px 24px;
+    width: 34px;
+    height: 35px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.gotop span.jk-app:hover {
+    background: #f7f7f7 url(../img/phone-2.png)center center no-repeat;
+    background-size: 12px 24px;
+}
+
+.gotop .appewm {
+    background: url(../img/appewm.png) center center no-repeat;
+    background-size: 100%;
+    width: 126px;
+    height: 159px;
+    position: absolute;
+    z-index: 2100;
+    left: -126px;
+    top: -70px;
+    display: none;
+}
+
+.gotop span.jk-app:hover .appewm {
+    display: block;
+}
+
+.gotop a.qq-online {
+    position: relative;
+    display: block;
+    background: #f7f7f7 url(../img/kfu.png) center center no-repeat;
+    width: 35px;
+    height: 35px;
+    border-top: 1px solid #e0e0e0;
+}
+
+.gotop a.qq-online1 {
+    position: relative;
+    display: block;
+    background: #f7f7f7 url(../img/kfu1.png) center center no-repeat;
+    width: 34px;
+    height: 35px;
+    border-top: 1px solid #e0e0e0;
+}
+
+.gotop a.qq-online .kefu {
+    position: absolute;
+    padding: 5px;
+    background: #f7f7f7;
+    color: #333;
+    font-size: 12px;
+    text-align: center;
+    width: 180px;
+    left: -190px;
+    display: none;
+}
+
+.gotop a.qq-online .kefu i {
+    /*height: 20px;*/
+    width: 0;
+    height: 0;
+    border-top: 8px solid transparent;
+    border-left: 10px solid #f7f7f7;
+    border-bottom: 8px solid transparent;
+    position: absolute;
+    right: -10px;
+    top: 12px
+}
+
+
+/*客服的hover显示*/
+
+.gotop a.qq-online:hover .kefu {
+    display: block
+}
+
+.gotop span.erwma img,
+.gotop span.jk-app img {
+    width: 126px;
+    height: 159px;
+    position: absolute;
+    z-index: 2100;
+    left: -126px;
+    top: -70px;
+    display: none
+}
+
+.gotop a.diaocha {
+    display: block;
+    width: 34px;
+    height: 34px
+}
+
+
+/*二维码的hover显示,左侧图片hover时的显示用JS完成*/
+
+.gotop span.erwma:hover {
+    background: url(../img/gotop2.jpg) 0 -34px no-repeat;
+    background-size: 34px 103px;
+}
+
+
+/*end gotop按钮*/

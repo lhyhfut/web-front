@@ -1,0 +1,150 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-size: 13px;
+}
+
+.column {
+    -webkit-column-count: 3;
+    -moz-column-count: 3;
+    column-count: 3;
+    -moz-column-rule-style: dotted;
+    -webkit-column-rule-style: dotted;
+    column-rule-width: dotted;
+    -webkit-column-width: 270px;
+    -moz-column-width: 270px;
+    /*微软*/
+    -ms-column-width: 270px;
+    /*opera*/
+    -ocolumn-width: 270px;;
+    /*原生的*/
+    column-width: 270px;
+}
+
+
+/*旧版弹性盒子居中布局*/
+
+.OldflexBox {
+    /*显示为webkit内核的盒子*/
+    display: -webkit-box;
+    display: -moz-box;
+    /*水平居中*/
+    -webkit-box-pack: center;
+    -moz-box-pack: center;
+    /*分布的方向*/
+    -webkit-box-orient: horizontal;
+    -moz-box-orient: horizontal;
+    /*垂直居中*/
+    -webkit-box-align: center;
+    -moz-box-align: center;
+    background-color: orange;
+    height: 300px;
+    width: 500px;
+}
+
+
+/*标题*/
+
+.title {
+    padding: 5px;
+    font-size: 14px;
+    background: #7CFC00;
+    color: #EEE;
+    font-weight: bold;
+}
+
+
+/*Column level水平分栏*/
+
+.first {
+    height: 50px;
+    /*-webkit-flex:1;*/
+    -webkit-box-flex: 1;
+    -webkit-order: 1;
+    background-color: orange;
+}
+
+.second {
+    height: 50px;
+    background-color: blanchedalmond;
+    -webkit-order: 2;
+    -webkit-box-flex: 1;
+}
+
+.third {
+    height: 50px;
+    background-color: #7D9EC0;
+    -webkit-order: 3;
+    -webkit-box-flex: 1;
+}
+
+
+/*Vertical level竖直分栏*/
+
+.first1 {
+    height: 50px;
+    width: 200px;
+    -webkit-box-flex: 1;
+    -webkit-order: 1;
+    background-color: orange;
+    display: inline_block;
+}
+
+.second1 {
+    height: 50px;
+    width: 200px;
+    background-color: blanchedalmond;
+    -webkit-order: 2;
+    -webkit-box-flex: 1;
+    display: inline_block;
+}
+
+.third1 {
+    height: 50px;
+    /*剩余的100%?*/
+    width: 100%;
+    background-color: #7D9EC0;
+    -webkit-order: 3;
+    -webkit-box-flex: 1;
+    display: inline_block;
+}
+
+
+/*flex-order 排序*/
+
+.first2 {
+    height: 50px;
+    -webkit-box-flex: 1;
+    -webkit-order: 2;
+    background-color: orange;
+}
+
+.second2 {
+    height: 50px;
+    background-color: blanchedalmond;
+    -webkit-order: 3;
+    -webkit-box-flex: 1;
+}
+
+.third2 {
+    height: 50px;
+    background-color: #7D9EC0;
+    -webkit-order: 1;
+    -webkit-box-flex: 1;
+}
+
+.con {
+    display: -webkit-flex;
+    -webkit-flex-direction: column;
+    width: 100%;
+    background-color: #FFFFFF;
+}
+
+.con1 {
+    display: -webkit-flex;
+    -webkit-flex-direction: row;
+    width: 100%;
+}

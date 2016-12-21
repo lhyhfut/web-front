@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>标准弹性盒模型与怪异盒模型</title>
+    <link rel="stylesheet" href="./stylesheets/box.css" />
+</head>
+
+<body>
+    <!-- 标准盒模型 -->
+    <div class="bag">
+        <div class="box">
+            <div class="shoe">
+                标准盒模型
+                <br>100px*100px
+            </div>
+            padding:25px
+        </div>
+        margin:25px
+        <br>
+        <br>
+        <br>border:25px
+    </div>
+    <!-- 标准盒模型-文字比较多的情况 -->
+    <div class="bag1">
+        <div class="box1">
+            <div class="shoe1">
+                标准盒模型
+                <br>100px*100px标准盒模型
+                <br>100px*100px标准盒模型
+                <br>100px*100px标准盒模型
+                <br>100px*100px标准盒模型
+                <br>100px*100px标准盒模型
+                <br>100px*100px标准盒模型
+                <br>100px*100px标准盒模型
+                <br>100px*100px标准盒模型
+                <br>100px*100px标准盒模型
+                <br>100px*100px标准盒模型
+                <br>100px*100px标准盒模型
+                <br>100px*100px标准盒模型
+                <br>100px*100px标准盒模型
+                <br>100px*100px标准盒模型
+                <br>100px*100px
+            </div>
+            padding:25px
+        </div>
+        margin:25px
+        <br>
+        <br>
+        <br>border:25px
+    </div>
+    <!-- 怪异盒模型 -->
+    <div class="strange_bag">
+        <div class="strang_box">
+            <div class="strang_shoe">
+                怪异盒模型
+                <br>100px*100px
+            </div>
+            padding:25px
+        </div>
+        margin:25px
+        <br>
+        <br>
+        <br>border:25px
+    </div>
+</body>
+<!-- 文字说明 -->
+<div class="understand1">
+    <ul>
+        <li class="bold">备注</li>
+        <li>下面以shoe, box ,bag来说明盒子模型</li>
+        <li>shoea是内容
+            <br> shoe的宽高+2*padding+2*boder=box的宽高
+            <br> box的宽高+2*margin=bag的宽高
+        </li>
+    </ul>
+</div>
+<div class="understand2">
+    <ul>
+        <li class="bold">标准盒模型</li>
+        <li>目前常用的盒模型有块级元素，和行内元素两大类，可以分别使用block，和inline来改变原有标签的块或行内属性。inline-block则同时具备块级元素和行内元素的特点。既能够在一行,又能够设置宽高</li>
+        <li>块级元素可以设置宽高，而行内元素则不能。如果块级元素不设置宽高，默认情况下宽度是父元素的宽度</li>
+        <li>标准盒模型设置宽高时，指的是设置内容(如上面的shoe)的部分的区块大小。而设置padding，border，margin后，盒子会向外延展。</li>
+        <li>当box中有很多内容的时候,按照上面所说会撑大box,但box已经设置了宽高,所以内容会溢出(如果父级元素只设置width,则会向height方向撑大,如果父级元素则设置height,则会向width方向撑大),这时候可以通过 overflow:scroll;来对溢出进行处理</li>
+    </ul>
+</div>
+<div class="understand3">
+    <ul>
+        <li class="bold">标准盒模型和怪异盒模型的区别</li>
+        <li>怪异盒模型用 box-sizing:border-box进行声明</li>
+        <li>标准盒模型和怪异盒模型的区别在于:
+            <br>
+            <br> 上面标准盒模型box的width: 100px; height: 100px;与shoe的width和height是一样的,但在浏览器中实际测量的box宽高为200px,也就是box的宽高加上2*padding+2*border。但在设置box的宽高时只需和shoe设为一样就可以了,它能够自适应padding和border。对于PC段等大屏幕设备,这种方式比较好。
+            <br>
+            <br> 怪异盒模型在设置box的样式时,就需要先把宽高设定好 ,也就是box的宽高加上2*padding+2*border。如上图怪异盒模型的样式中为width: 200px;height: 200px;。对于移动端等小屏幕的设备,适合用怪异盒模型。
+        </li>
+    </ul>
+</div>
+</body>
+
+</html>

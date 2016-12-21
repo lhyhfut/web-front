@@ -1,0 +1,82 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-size: 13px;
+    line-height: 200%;
+}
+
+
+/*标准盒模型*/
+
+.shoe,
+.shoe1,
+.strang_shoe {
+    width: 100px;
+    height: 100px;
+    background-color: orange;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.shoe1 {
+    overflow: scroll;
+}
+
+.box,
+.box1 {
+    width: 100px;
+    height: 100px;
+    background-color: aqua;
+    padding: 25px;
+    margin: 25px;
+    border: 25px solid #c0ff00;
+    border-radius: 10px;
+}
+
+.strang_box {
+    width: 200px;
+    height: 200px;
+    background-color: aqua;
+    padding: 25px;
+    margin: 25px;
+    border: 25px solid #c0ff00;
+    border-radius: 10px;
+     /*box-sizing要加上前缀,兼容*/
+    box-sizing: border-box;
+}
+
+.bag,
+.bag1,
+.strange_bag {
+    position: relative;
+    width: 250px;
+    margin: 50px;
+    height: 250px;
+    background-color: orange;
+    display: -webkit-box;
+    -webkit-box-pack: center;
+    -webkit-box-align: center;
+    border-radius: 10px;
+}
+
+
+/*说明文字*/
+
+.understand1,
+.understand2,
+.understand3 {
+    width: 600px;
+    margin-left: 50px;
+    margin-top: 20px;
+}
+
+
+/*标题字体样式*/
+
+.bold {
+    font-size: 20px;
+    font-weight: bold;
+}

@@ -1,0 +1,447 @@
+body {
+    padding-top: 50px;
+}
+
+.glyphicon-cloud {
+    top: 4px;
+}
+
+.subHeaderWrap {
+    border-bottom: 1px solid #eee;
+    /*margin-bottom: 10px;*/
+    /*使用padding而不使用margin会让Section title子标题内容看起来居中*/
+    padding-bottom: 5px;
+}
+
+
+/*Section title子标题*/
+
+.sub-header {
+    /*padding-bottom: 10px;*/
+    /*border-bottom: 1px solid #eee;*/
+    margin-top: 10px;
+    display: inline-block;
+}
+
+
+/*数据的增删查改功能*/
+
+.dataOperate {
+    list-style: none;
+    /*清除浮动*/
+    overflow: hidden;
+    display: inline-block;
+    float: right;
+    margin-top: 24px;
+    margin-right: 10px;
+}
+
+.dataOperate li {
+    display: inline-block;
+    float: left;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.mytable {
+    table-layout: fixed;
+}
+
+.mytable>thead>tr>th,
+.mytable>tbody>tr>td:nth-child(1) {
+    text-align: center;
+}
+
+.mytable>thead>tr>th:nth-child(1),
+.mytable>tbody>tr>td:nth-child(1),
+.mytable>thead>tr>th:nth-child(10),
+.mytable>tbody>tr>td:nth-child(10) {
+    width: 5%;
+}
+
+.mytable>thead>tr>th:nth-child(2),
+.mytable>thead>tr>th:nth-child(3),
+.mytable>thead>tr>th:nth-child(4),
+.mytable>thead>tr>th:nth-child(5),
+.mytable>thead>tr>th:nth-child(6),
+.mytable>thead>tr>th:nth-child(7),
+.mytable>tbody>tr>td:nth-child(2),
+.mytable>tbody>tr>td:nth-child(3),
+.mytable>tbody>tr>td:nth-child(4),
+.mytable>tbody>tr>td:nth-child(5),
+.mytable>tbody>tr>td:nth-child(6),
+.mytable>tbody>tr>td:nth-child(7) {
+    width: 11%;
+}
+
+.mytable>thead>tr>th:nth-child(8),
+.mytable>thead>tr>th:nth-child(9),
+.mytable>thead>tr>th:nth-child(11),
+.mytable>tbody>tr>td:nth-child(8),
+.mytable>tbody>tr>td:nth-child(9),
+.mytable>tbody>tr>td:nth-child(11){
+    width: 6%;
+}
+
+.mytable>tbody>tr>td {
+    /*overflow:hidden;*/
+    /*overflow:scroll;*/
+    /*表格本来就紧凑,尽量少一些滚动条*/
+    /*overflow-x:scroll;*/
+    word-break: break-all;
+    /*下面2项会导致即使有overflow-x:scroll超出的部分依然显示为...*/
+    /*white-space:nowrap;*/
+    /*text-overflow:ellipsis;*/
+}
+
+.tdDelete,.tdEdit{
+    /*display: inline-block;*/
+    cursor: pointer;
+}
+
+/*数据管理面板*/
+
+.dataOperatePannel {
+    /*display: block;*/
+    display: none;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    margin-left: -330px;
+    margin-top: -250px;
+    width: 660px;
+    height: 600px;
+    height: auto;
+    z-index: 999;
+    padding: 10px;
+    background: rgba(0, 0, 0, .2);
+}
+
+.dataOperatePannel .inner {
+    position: relative;
+    display: block;
+    width: 100%;
+    /*height: 100%;*/
+    background: #fff;
+    height: 500px;
+    overflow: scroll;
+}
+
+.dataOperateHeader {
+    padding: 10px 30px 0 30px;
+    position: relative;
+    height: 40px;
+    padding: 0 30px 0 0;
+    background: #f3f3f3;
+    line-height: 40px;
+    cursor: default;
+    font-size: 16px;
+    font-weight: 700;
+    color: #666;
+}
+
+.dataOperateHeader .dataOperateItem {
+    font-size: 12px;
+}
+
+.dataOperateHeader .dataOperateClose {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: block;
+    width: 20px;
+    height: 20px;
+    background: url(../img/close.png) no-repeat center center /14px 14px;
+}
+
+.form-position {
+    margin: 10px 15px 10px 10px;
+}
+
+
+/*额外信息*/
+
+.extrInfo {
+    /*padding: 0 22px;*/
+    margin-bottom: 8px;
+}
+
+.extrInfo span {
+    padding-right: 54px;
+}
+
+
+/*提交按钮*/
+
+.mybtn {
+    width: 150px;
+    margin-left: 245px;
+    /*margin : 0 auto;*/
+}
+
+
+/*登出提示面板*/
+
+.warnPannelLogin {
+    /*display: block;*/
+    display: none;
+    position: fixed;
+    left: 50%;
+    top: 10%;
+    /*margin-left:-250px;*/
+    z-index: 999;
+    width: 500px;
+}
+
+
+/*确定按钮*/
+
+.warnULogin {
+    width: 80px;
+    /*这样写不对,但有没办法让它居中*/
+    /*margin-left:45%;*/
+    margin-left: 210px;
+    margin-bottom: 15px;
+}
+
+
+/*删除数据部分*/
+
+
+/*删除数据面板*/
+
+.dataUpdatePannel {
+    /*display: block;*/
+    display: none;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    margin-left: -330px;
+    margin-top: -250px;
+    width: 660px;
+    height: 600px;
+    height: auto;
+    z-index: 999;
+    padding: 10px;
+    background: rgba(0, 0, 0, .2);
+}
+
+.dataUpdatePannel .inner {
+    position: relative;
+    display: block;
+    width: 100%;
+    /*height: 100%;*/
+    background: #fff;
+    height: 500px;
+    overflow: scroll;
+}
+
+.dataUpdateHeader {
+    padding: 10px 30px 0 30px;
+    position: relative;
+    height: 40px;
+    padding: 0 30px 0 0;
+    background: #f3f3f3;
+    line-height: 40px;
+    cursor: default;
+    font-size: 16px;
+    font-weight: 700;
+    color: #666;
+}
+
+.dataUpdateHeader .dataUpdateItem {
+    font-size: 12px;
+}
+
+.dataUpdateHeader .dataUpdateClose {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: block;
+    width: 20px;
+    height: 20px;
+    background: url(../img/close.png) no-repeat center center /14px 14px;
+}
+
+.form-position {
+    margin: 10px 15px 10px 10px;
+}
+
+
+/*提交更新按钮*/
+
+.mybtn {
+    width: 150px;
+    margin-left: 245px;
+    /*margin : 0 auto;*/
+}
+
+
+/*更新警告面板*/
+
+.warnPannelUpdate {
+    /*display: block;*/
+    display: none;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    margin-left: -250px;
+    z-index: 999;
+    width: 500px;
+}
+
+
+/*更新确定按钮*/
+
+.warnUpdate {
+    width: 80px;
+    /*这样写不对,但有没办法让它居中*/
+    /*margin-left:45%;*/
+    margin-left: 210px;
+}
+
+/*删除警告面板*/
+
+.warnPannelDelete {
+    /*display: block;*/
+    display: none;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    margin-left: -250px;
+    z-index: 999;
+    width: 500px;
+}
+
+
+/*删除确定按钮*/
+
+.warnDelete {
+    width: 80px;
+    margin-left: 120px;
+    margin-bottom: 15px;
+}
+.warnDeleteWait {
+    width: 80px;
+    margin-left: 80px;
+    margin-bottom: 15px;
+}
+
+/*end删除数据部分*/
+
+
+/*导航栏*/
+
+.navbar-fixed-top {
+    border: 0;
+}
+
+
+/*侧栏*/
+
+
+/* Hide for mobile, show later */
+
+.sidebar {
+    display: none;
+}
+
+@media(min-width:768px) {
+    .sidebar {
+        position: fixed;
+        /*给fixed用top合适,用margin不合适*/
+        top: 51px;
+        bottom: 0;
+        left: 0;
+        z-index: 1000;
+        display: block;
+        padding: 20px;
+        overflow-x: hidden;
+        /* Scrollable contents if viewport is shorter than content. */
+        /*y轴有滚动条*/
+        overflow-y: auto;
+        background-color: #f5f5f5;
+        border-right: 1px solid #eee;
+    }
+}
+
+
+/*侧边栏Overview*/
+
+.nav-sidebar {
+    /* 20px padding + 1px border */
+    margin-right: -21px;
+    margin-bottom: 20px;
+    margin-left: -20px;
+}
+
+.nav-sidebar>li>a {
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+.nav-sidebar>.active>a,
+.nav-sidebar>.active>a:hover,
+.nav-sidebar>.active> a:focus {
+    /*字体颜色*/
+    color: #fff;
+    /*背景颜色*/
+    background-color: #428bca;
+}
+
+
+/*主体*/
+
+.main {
+    padding: 20px;
+}
+
+@media (min-width: 768px) {
+    .main {
+        padding-right: 40px;
+        padding-left: 40px;
+    }
+}
+
+.pageHeaderWrap {
+    border-bottom: 1px solid #eee;
+    margin-bottom: 5px;
+}
+
+
+/*重写了上面的main的padding:20px*/
+
+.main .page-header {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+
+/*dashboard项目*/
+
+
+/*行*/
+
+.placeholders {
+    margin-bottom: 0;
+    text-align: center;
+}
+
+
+/*标签*/
+
+.placeholders h4 {
+    margin-bottom: 0;
+}
+
+
+/*列*/
+
+.placeholder {
+    margin-bottom: 20px;
+}
+
+.placeholder img {
+    display: inline-block;
+    border-radius: 50%;
+}

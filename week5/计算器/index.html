@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>计算器</title>
+    <link rel="stylesheet" href="./css/index.css" />
+    <script type="text/javascript" src="./js/index.js">
+    </script>
+</head>
+
+<body>
+    <div id="calculator">
+        <div id="calcu-head">
+            <h6>简单的计算器</h6></div>
+        <form id="calculator1" name="calculator" action="" method="get">
+            <!-- 输入输出显示框 -->
+            <div id="calcu-screen">
+                <!--配置显示窗口，使用onfocus="this.blur();"避免键盘输入-->
+                <input type="text" id="numScreen1" name="numScreen" class="screen" value="0" onfocus="this.blur();" />
+            </div>
+            <!-- 按钮 -->
+            <div id="calcu-btn">
+                <ul>
+                    <li onclick="command(7)">7</li>
+                    <li onclick="command(8)">8</li>
+                    <li onclick="command(9)">9</li>
+                    <!-- 删除 -->
+                    <li class="tool" onclick="del()">←</li>
+                    <!-- 清屏 -->
+                    <li class="tool" onclick="clearscreen()">C</li>
+                    <li onclick="command(4)">4</li>
+                    <li onclick="command(5)">5</li>
+                    <li onclick="command(6)">6</li>
+                    <!-- 乘法 -->
+                    <li class="tool" onclick="times()">×</li>
+                    <!-- 除法 -->
+                    <li class="tool" onclick="divide()">÷</li>
+                    <li onclick="command(1)">1</li>
+                    <li onclick="command(2)">2</li>
+                    <li onclick="command(3)">3</li>
+                    <!-- 加法 -->
+                    <li class="tool" onclick="plus()">+</li>
+                    <!-- 减法 -->
+                    <li class="tool" onclick="minus()">-</li>
+                    <li onclick="command(0)">0</li>
+                    <!-- 2个0 -->
+                    <li onclick="dzero()">00</li>
+                    <!-- 小数点 -->
+                    <li onclick="dot()">.</li>
+                    <!-- 百分号 -->
+                    <li class="tool" onclick="persent()">%</li>
+                    <!-- 等于 -->
+                    <li class="tool" onclick="equal()">=</li>
+                </ul>
+            </div>
+            <div id="calcu-foot">
+                <span id="note"></span>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

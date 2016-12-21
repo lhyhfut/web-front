@@ -1,0 +1,92 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Comic Sans MS";
+    color: green;
+    font-style: italic;
+    font-weight: bold;
+}
+
+
+/*相同的样式*/
+
+.top,
+.left,
+.middle,
+.right,
+.down {
+    display: -webkit-box;
+    -webkit-box-pack: center;
+    -webkit-box-align: center;
+    border-radius: 10px;
+}
+
+.con {
+    position: absolute;
+    height: 300px;
+    width: 300px;
+    background-color: #FFD39B;
+    top: 50%;
+    left: 50%;
+    margin-left: -150px;
+    margin-top: -150px;
+}
+
+.top {
+    position: relative;
+    height: 100px;
+    width: 100px;
+    margin: 0 auto;
+    background-color: #B8860B;
+    -webkit-box-shadow: 0 0 2px 2px rgba(0, 0, 0, .6);
+    box-shadow: 0 0 2px 2px rgba(0, 0, 0, .6);
+}
+
+.left {
+    position: relative;
+    height: 100px;
+    width: 100px;
+    float: left;
+    background-color: #FFFF00;
+    -webkit-box-shadow: 0 0 2px 2px rgba(0, 0, 0, .6);
+    box-shadow: 0 0 2px 2px rgba(0, 0, 0, .6);
+}
+
+.middle {
+    position: relative;
+    height: 100px;
+    width: 100px;
+    float: left;
+    background-color: #D1EEEE;
+    -webkit-box-shadow: 0 0 2px 2px rgba(0, 0, 0, .6) inset;
+    box-shadow: 0 0 2px 2px rgba(0, 0, 0, .6) inset;
+}
+
+.icon {
+    height: 24px;
+    width: 24px;
+}
+
+.right {
+    position: relative;
+    height: 100px;
+    width: 100px;
+    float: left;
+    background-color: #FF0000;
+    -webkit-box-shadow: 0 0 2px 2px rgba(0, 0, 0, .6);
+    /*要写2个不然会出现兼容性问题*/
+    box-shadow: 0 0 2px 2px rgba(0, 0, 0, .6);
+}
+
+.down {
+    position: relative;
+    height: 100px;
+    width: 100px;
+    margin: 0 auto;
+    background-color: #D02090;
+    -webkit-box-shadow: 0 0 2px 2px rgba(0, 0, 0, .6);
+    box-shadow: 0 0 2px 2px rgba(0, 0, 0, .6);
+}

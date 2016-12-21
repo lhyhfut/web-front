@@ -1,0 +1,1469 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scale=0" name="viewport" />
+    <title>百度首页</title>
+    <!--[if lte IE 6]>
+       <style type="text/css">
+       body { behavior:url("./stylesheets/csshover3.htc"); }
+       </style>
+<![endif]-->
+    <link rel="stylesheet" href="./stylesheets/css.css" />
+</head>
+
+<body>
+    <div class="container">
+        <!-- top -->
+        <div id="hd-header">
+            <!-- 左上角 -->
+            <div class="left-menus">
+                <!-- 天气 -->
+                <div id="weather-wrapper" class="weather-wrapper">
+                    <!-- 左上角天气链接 -->
+                    <a id="city-wather" class="city-wather" href="//www.baidu.com/s?tn=baidutop10&rsv_idx=2&wd=%E6%B7%B1%E5%9C%B3%E5%A4%A9%E6%B0%94%E9%A2%84%E6%8A%A5" target="_blank">
+                        <!-- 天气 -->
+                        <span id="show-city" class="show-city"> 深圳：</span>
+                        <span id="show-icon" class="show-icon"></span>
+                        <span id="show-temp" class="show-temp">25℃</span>
+                        <!-- 空气质量 -->
+                        <span id="show-polution-name" class="show-polution-name">优</span>
+                        <span id="show-polution-num" class="show-polution-num">28</span>
+                        <span id="show-vertical" class="show-vertical">|</span>
+                    </a>
+                    <!-- 隐藏天气面板 -->
+                    <div id="weather-panel" class="weather-panel">
+                        <div class="weather-setting-content">
+                            <div id="weather-content" class="weather-content">
+                                <!-- 暴雨等警告信息,不是每天都有 -->
+                                <div class="warn-msg">
+                                    <div class="warn-img-bg">
+                                        <!-- 雷电图片的图片,暂时放在这里 -->
+                                        <a class="warn-icon-link" href="http://www.weather.com.cn/alarm/newalarmcontent.shtml?file=1012806-20160906001518-0902.html" hidefocus="" target="_blank">
+                                        </a>
+                                    </div>
+                                    <a target="_blank" hidefocus="" href="" class="warn-title">广东省深圳市发布雷电黄色预警</a>
+                                </div>
+                                <!-- 农历日期,又是一行,又是套路 -->
+                                <div class="lunar-msg">
+                                    <span class="lunar-calendar" title="09月05日">09月05日</span>
+                                    <span class="lunar-festival" title="农历 八月初五">农历 八月初五</span>
+                                    <!-- 注意下面不直接用a标签,而是用span包裹a标签,是为了与相邻的a标签保持一致 -->
+                                    <span class="lunar-sevenday">
+                                    <a class="lunar-sevenday-link" target="_blank" hidefocus ="" href="http://www.weather.com.cn/weather/101280601.shtml#7d">未来七天天气</a>
+                                </span>
+                                    <span id="lunar-setting-btn" class="lunar-setting-btn">设置</span>
+                                </div>
+                                <!-- 每天天气信息,一行 -->
+                                <div class="everyday-msg">
+                                    <div class="everyday-item today is-today" day-name="today">
+                                        <!-- 每个块里又有一列,总的是一个a标签,但没有直接用,还是用div在外面包裹了一下 -->
+                                        <a class="everyday-link" target="_blank" hidefocus="" href="//www.baidu.com/s?tn=baidutop10&rsv_idx=2&wd=%E6%B7%B1%E5%9C%B3%E5%A4%A9%E6%B0%94%E9%A2%84%E6%8A%A5">
+                                            <p class="everyday-title" title="今天(周一)">今天(周一)</p>
+                                            <img class="everyday-icon" src="./images/a7-48.jpg" />
+                                            <p class="everyday-temp" title="26℃">26℃</p>
+                                            <p class="everyday-condition" title="阵雨">阵雨</p>
+                                            <p class="everyday-wind" title="微风">微风</p>
+                                        </a>
+                                    </div>
+                                    <div class="everyday-item tomorrow" day-name="tomorrow">
+                                        <a class="everyday-link" target="_blank" hidefocus="" href="//www.baidu.com/s?tn=baidutop10&rsv_idx=2&wd=%E6%B7%B1%E5%9C%B3%E5%A4%A9%E6%B0%94%E9%A2%84%E6%8A%A5">
+                                            <p class="everyday-title" title="明天(周二)">明天(周二)</p>
+                                            <img class="everyday-icon" src="./images/a7-48.jpg" />
+                                            <p class="everyday-temp" title="26℃">26℃</p>
+                                            <p class="everyday-condition" title="阵雨">阵雨</p>
+                                            <p class="everyday-wind" title="微风">微风</p>
+                                        </a>
+                                    </div>
+                                    <div class="everyday-item thirdday" day-name="thirdday">
+                                        <a class="everyday-link" target="_blank" hidefocus="" href="//www.baidu.com/s?tn=baidutop10&rsv_idx=2&wd=%E6%B7%B1%E5%9C%B3%E5%A4%A9%E6%B0%94%E9%A2%84%E6%8A%A5">
+                                            <p class="everyday-title" title="后天(周三)">后天(周三)</p>
+                                            <img class="everyday-icon" src="./images/a7-48.jpg" />
+                                            <p class="everyday-temp" title="31 ~ 26℃">31 ~ 26℃</p>
+                                            <p class="everyday-condition" title="小雨转阵雨">小雨转阵雨</p>
+                                            <p class="everyday-wind" title="微风">微风</p>
+                                        </a>
+                                    </div>
+                                    <div class="everyday-item fourthday" day-name="fourthday">
+                                        <a class="everyday-link" target="_blank" hidefocus="" href="//www.baidu.com/s?tn=baidutop10&rsv_idx=2&wd=%E6%B7%B1%E5%9C%B3%E5%A4%A9%E6%B0%94%E9%A2%84%E6%8A%A5">
+                                            <p class="everyday-title" title="周四">周四</p>
+                                            <img class="everyday-icon" src="./images/a7-48.jpg" />
+                                            <p class="everyday-temp" title="32 ~ 27℃">32 ~ 27℃</p>
+                                            <p class="everyday-condition" title="阵雨">阵雨</p>
+                                            <p class="everyday-wind" title="微风">微风</p>
+                                        </a>
+                                    </div>
+                                    <div class="everyday-item fifthday" day-name="fifthday">
+                                        <a class="everyday-link" target="_blank" hidefocus="" href="//www.baidu.com/s?tn=baidutop10&rsv_idx=2&wd=%E6%B7%B1%E5%9C%B3%E5%A4%A9%E6%B0%94%E9%A2%84%E6%8A%A5">
+                                            <p class="everyday-title" title="周五">周五</p>
+                                            <img class="everyday-icon" src="./images/a7-48.jpg" />
+                                            <p class="everyday-temp" title="32 ~ 26℃">32 ~ 26℃</p>
+                                            <p class="everyday-condition" title="阵雨转雷阵雨">阵雨转雷阵雨</p>
+                                            <p class="everyday-wind" title="微风">微风</p>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 点击设置按钮才会出现 -->
+                            <div id="weather-setting" class="weather-setting">
+                                <p class="setting-city-title">选择您所在的地区：</p>
+                                <div class="setting-city-select">
+                                    <select class="setting-city-province">
+                                        <option value="本地天气">本地天气</option>
+                                        <option value="北京">北京</option>
+                                        <option value="上海">上海</option>
+                                        <option value="天津">天津</option>
+                                        <option value="重庆">重庆</option>
+                                        <option value="安徽">安徽</option>
+                                        <option value="福建">福建</option>
+                                        <option value="甘肃">甘肃</option>
+                                        <option value="广东" selected="selected">广东</option>
+                                        <option value="广西">广西</option>
+                                        <option value="贵州">贵州</option>
+                                        <option value="海南">海南</option>
+                                        <option value="河北">河北</option>
+                                        <option value="河南">河南</option>
+                                        <option value="黑龙江">黑龙江</option>
+                                        <option value="湖北">湖北</option>
+                                        <option value="湖南">湖南</option>
+                                        <option value="吉林">吉林</option>
+                                        <option value="江苏">江苏</option>
+                                        <option value="江西">江西</option>
+                                        <option value="辽宁">辽宁</option>
+                                        <option value="内蒙古">内蒙古</option>
+                                        <option value="宁夏">宁夏</option>
+                                        <option value="青海">青海</option>
+                                        <option value="山东">山东</option>
+                                        <option value="山西">山西</option>
+                                        <option value="陕西">陕西</option>
+                                        <option value="四川">四川</option>
+                                        <option value="西藏">西藏</option>
+                                        <option value="新疆">新疆</option>
+                                        <option value="云南">云南</option>
+                                        <option value="浙江">浙江</option>
+                                        <option value="香港">香港</option>
+                                        <option value="澳门">澳门</option>
+                                        <option value="台湾">台湾</option>
+                                    </select>
+                                    <select class="setting-city-county">
+                                        <option value="本地天气">本地天气</option>
+                                        <option value="广州">广州</option>
+                                        <option value="博罗">博罗</option>
+                                        <option value="潮安">潮安</option>
+                                        <option value="潮阳">潮阳</option>
+                                        <option value="潮州">潮州</option>
+                                        <option value="澄海">澄海</option>
+                                        <option value="赤坎">赤坎</option>
+                                        <option value="从化">从化</option>
+                                        <option value="大埔">大埔</option>
+                                        <option value="德庆">德庆</option>
+                                        <option value="电白">电白</option>
+                                        <option value="东莞">东莞</option>
+                                        <option value="东源">东源</option>
+                                        <option value="斗门">斗门</option>
+                                        <option value="恩平">恩平</option>
+                                        <option value="番禺">番禺</option>
+                                        <option value="丰顺">丰顺</option>
+                                        <option value="封开">封开</option>
+                                        <option value="佛冈">佛冈</option>
+                                        <option value="佛山">佛山</option>
+                                        <option value="高明">高明</option>
+                                        <option value="高要">高要</option>
+                                        <option value="高州">高州</option>
+                                        <option value="广宁">广宁</option>
+                                        <option value="海丰">海丰</option>
+                                        <option value="和平">和平</option>
+                                        <option value="河源">河源</option>
+                                        <option value="鹤山">鹤山</option>
+                                        <option value="花都">花都</option>
+                                        <option value="化州">化州</option>
+                                        <option value="怀集">怀集</option>
+                                        <option value="惠东">惠东</option>
+                                        <option value="惠来">惠来</option>
+                                        <option value="惠阳">惠阳</option>
+                                        <option value="惠州">惠州</option>
+                                        <option value="江门">江门</option>
+                                        <option value="蕉岭">蕉岭</option>
+                                        <option value="揭东">揭东</option>
+                                        <option value="揭西">揭西</option>
+                                        <option value="揭阳">揭阳</option>
+                                        <option value="金湾">金湾</option>
+                                        <option value="开平">开平</option>
+                                        <option value="乐昌">乐昌</option>
+                                        <option value="雷州">雷州</option>
+                                        <option value="荔城">荔城</option>
+                                        <option value="连南">连南</option>
+                                        <option value="连平">连平</option>
+                                        <option value="连山">连山</option>
+                                        <option value="连州">连州</option>
+                                        <option value="廉江">廉江</option>
+                                        <option value="龙川">龙川</option>
+                                        <option value="龙门">龙门</option>
+                                        <option value="陆丰">陆丰</option>
+                                        <option value="陆河">陆河</option>
+                                        <option value="罗定">罗定</option>
+                                        <option value="麻章">麻章</option>
+                                        <option value="茂港">茂港</option>
+                                        <option value="茂名">茂名</option>
+                                        <option value="梅县">梅县</option>
+                                        <option value="梅州">梅州</option>
+                                        <option value="南澳">南澳</option>
+                                        <option value="南海">南海</option>
+                                        <option value="南沙">南沙</option>
+                                        <option value="南雄">南雄</option>
+                                        <option value="蓬江">蓬江</option>
+                                        <option value="平远">平远</option>
+                                        <option value="坡头">坡头</option>
+                                        <option value="普宁">普宁</option>
+                                        <option value="清新">清新</option>
+                                        <option value="清远">清远</option>
+                                        <option value="曲江">曲江</option>
+                                        <option value="饶平">饶平</option>
+                                        <option value="仁化">仁化</option>
+                                        <option value="乳源">乳源</option>
+                                        <option value="三水">三水</option>
+                                        <option value="汕头">汕头</option>
+                                        <option value="汕尾">汕尾</option>
+                                        <option value="韶关">韶关</option>
+                                        <option value="深圳" selected="selected">深圳</option>
+                                        <option value="始兴">始兴</option>
+                                        <option value="顺德">顺德</option>
+                                        <option value="四会">四会</option>
+                                        <option value="遂溪">遂溪</option>
+                                        <option value="台山">台山</option>
+                                        <option value="翁源">翁源</option>
+                                        <option value="吴川">吴川</option>
+                                        <option value="五华">五华</option>
+                                        <option value="武江">武江</option>
+                                        <option value="霞山">霞山</option>
+                                        <option value="新丰">新丰</option>
+                                        <option value="新会">新会</option>
+                                        <option value="新兴">新兴</option>
+                                        <option value="信宜">信宜</option>
+                                        <option value="兴宁">兴宁</option>
+                                        <option value="徐闻">徐闻</option>
+                                        <option value="阳春">阳春</option>
+                                        <option value="阳东">阳东</option>
+                                        <option value="阳江">阳江</option>
+                                        <option value="阳山">阳山</option>
+                                        <option value="阳西">阳西</option>
+                                        <option value="英德">英德</option>
+                                        <option value="郁南">郁南</option>
+                                        <option value="云安">云安</option>
+                                        <option value="云浮">云浮</option>
+                                        <option value="增城">增城</option>
+                                        <option value="湛江">湛江</option>
+                                        <option value="肇庆">肇庆</option>
+                                        <option value="浈江">浈江</option>
+                                        <option value="中山">中山</option>
+                                        <option value="珠海">珠海</option>
+                                        <option value="紫金">紫金</option>
+                                    </select>
+                                </div>
+                                <!-- 极端天气提醒 -->
+                                <div class="setting-extreme-weather">
+                                    <input type="checkbox" checked onfocus="blur()" id="s_mod_setweather_extreme" />
+                                    <label for="s_mod_setweather_extreme" onfocus="blur()">极端天气提醒</label>
+                                    <span>（出现大雨、大雪、冰雹等极端天气时，我们将提前在百度首页通知您）</span>
+                                </div>
+                                <!-- 保存,取消按钮 -->
+                                <div class="setting-save-or-cancel">
+                                    <a href="#" id="setting-save" onclick="return false;" hidefocus="" class="setting-save">保 存</a>
+                                    <a href="#" id="setting-cancel" onclick="return false;" hidefocus="" class="setting-cancel">取 消</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 雷电图片的图片,放在这里不能显示,官方可能用JS做的,现在移到了warn-img-bg这个div里面 -->
+                        <!-- <a class="warn-icon-link" href="http://www.weather.com.cn/alarm/newalarmcontent.shtml?file=1012806-20160906001518-0902.html" hidefocus="" target="_blank">
+        </a> -->
+                        <!-- 隐藏天气信息面板上面的箭头 -->
+                        <div class="weather-setting-arraw">
+                        </div>
+                    </div>
+                </div>
+                <!-- 图标 -->
+                <div class="icons">
+                    <a class="treasure" href="http://vip.baidu.com/act/xuyuan" target="_blank">宝箱</a>
+                    <a id="skin-area" class="skin" href="#">换肤</a>
+                    <a class="message" href="#">消息</a>
+                </div>
+            </div>
+            <!-- 右上角 -->
+            <div class="u1">
+                <a class="mnav" href="https://www.nuomi.com/?cid=002540" title="百度糯米" target="_blank">糯米</a>
+                <a class="mnav" href="http://news.baidu.com/" title="百度糯米" target="_blank">新闻</a>
+                <a class="mnav" href="https://www.hao123.com/" title="hao123" target="_blank">hao123</a>
+                <a class="mnav" href="http://map.baidu.com/" title="百度地图" target="_blank">地图</a>
+                <a class="mnav" href="http://v.baidu.com/" title="百度视频" target="_blank">视频</a>
+                <a class="mnav" href="http://tieba.baidu.com/" title="百度贴吧" target="_blank">贴吧</a>
+                <!-- <a class="lb" href="https://passport.baidu.com/v2/?login&tpl=mn&u=http%3A%2F%2Fwww.baidu.com%2F" title="登录百度帐号" target="_blank">lhyhfut</a>
+            <a class="pf" href="https://www.baidu.com/gaoji/preferences.html" title="搜索设置" target="_blank">
+                <span class="config">设置
+                            <ul class="config_list">
+                                <li class="config_item">搜索设置</li>
+                                <li class="config_item">高级搜索</li>
+                                <li class="config_item">关闭预测</li>
+                                <li class="config_item">搜索历史</li>
+                            </ul>
+            </span>
+            </a> -->
+                <!-- 登录信息及其下拉菜单 -->
+                <span id="account" class="account">
+                <a class="lb" href="https://passport.baidu.com/v2/?login&tpl=mn&u=http%3A%2F%2Fwww.baidu.com%2F" title="登录百度帐号" target="_blank">lhyhfut</a>
+                <ul id="account_list" class="account_list">
+                    <li class="account_item">
+                        <a href="http://vip.baidu.com/pcui/show/ucenterindex?vip_frm=super_account">我的vip</a>
+                    </li>
+                    <li class="account_item">
+                        <a href="http://i.baidu.com/">个人中心</a>
+                    </li>
+                    <li class="account_item">
+                        <a href="https://passport.baidu.com/center?_t=1472652110">帐号设置</a>
+                    </li>
+                    <li class="account_item">
+                        <a href="https://www.baidu.com/#">意见反馈</a>
+                    </li>
+                    <li class="account_item">
+                        <a href="https://www.baidu.com/#">退出</a>
+                    </li>
+                </ul>
+            </span>
+                <!-- 设置及其下拉菜单 -->
+                <span id="config" class="config">
+                <a class="pf" href="https://www.baidu.com/gaoji/preferences.html" title="搜索设置" target="_blank">设置</a>
+                 <ul id="config_list" class="config_list">
+                    <li class="config_item">搜索设置</li>
+                    <li class="config_item">高级搜索</li>
+                    <li class="config_item">关闭预测</li>
+                    <li class="config_item"><a href="http://i.baidu.com/my/history?from=ps">搜索历史</a></li>
+                </ul>
+            </span>
+                <!-- 更多产品及其下拉菜单 -->
+                <a id="bri" class="bri" href="http://www.baidu.com/more/" title="更多产品" target="_blank" style="display: block;">更多产品</a>
+                <div id="more" class="more">
+                    <div class="nav_more_title">
+                        <span>更多产品</span>
+                    </div>
+                    <div class="nav_more">
+                        <ul>
+                            <li>
+                                <a href="">
+                                    <div class="icon3"></div>
+                                    <span>音乐</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <div class="icon4"></div>
+                                    <span>图片</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <div class="icon2"></div>
+                                    <span>知道</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <div class="icon5"></div>
+                                    <span>文库</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <div class="icon6"></div>
+                                    <span>风云榜</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <div class="icon7"></div>
+                                    <span>百度推广</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <span>全部产品>></span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end top -->
+        <!-- Logo and search -->
+        <div id="middle">
+            <div class="middle_up">
+                <div class="middle_up_img">
+                    <img id="logoImg" hidefocus="true" src="images/bd_logo1.png" title="百度" alt="百度logo" width="270" height="129" />
+                </div>
+                <form id="form" class="fm" action="get" name="f">
+                    <span class="input_total">
+                <span class="input_voice" style="display: block;"></span>
+                    <span class="input_camera"></span>
+                    <input id="text_input" class="input_text" name="wd" value="" maxlength="255" autocomplete="off" />
+                    </span>
+                    <span class="bd_submit">
+                <input id="search_btn" class="bd_submit_btn" value="百度一下" type="submit"/>
+            </span>
+                </form>
+            </div>
+            <!--换肤区域,与hd-header,middle-up分开-->
+            <div class="s-skin-layer" id="s_skin_layer">
+                <!--下部边框-->
+                <div class="s-skin-border">
+                </div>
+                <!--具体内容-->
+                <div class="s-skin-layer-cell show-nav-1001 show-page-0" id="s_skin_layer_cell">
+                    <!--顶部文字-->
+                    <div class="s-skin-header">
+                        <!--选择文字-->
+                        <ul class="s-skin-nav">
+                            <li navtype="1000" istowtab="" israndom="" class="skin-nav nav-1000 "><span class="skinnav-nav-name">热门</span></li>
+                            <li navtype="1012" istowtab="1" israndom="1" class="skin-nav nav-1012 "><span class="skinnav-nav-name">游戏</span><span class="skinnav-new-icon"></span></li>
+                            <li navtype="1011" istowtab="1" israndom="1" class="skin-nav nav-1011 "><span class="skinnav-nav-name">卡通</span><span class="skinnav-new-icon"></span></li>
+                            <li navtype="1010" istowtab="" israndom="" class="skin-nav nav-1010 "><span class="skinnav-nav-name">女神降临</span><span class="skinnav-new-icon"></span></li>
+                            <li navtype="1009" istowtab="" israndom="" class="skin-nav nav-1009 "><span class="skinnav-nav-name">明星</span><span class="skinnav-new-icon"></span></li>
+                            <li navtype="1001" istowtab="" israndom="" class="skin-nav nav-1001  choose-nav"><span class="skinnav-nav-name">风景</span></li>
+                            <li navtype="1002" istowtab="" israndom="" class="skin-nav nav-1002 "><span class="skinnav-nav-name">简约</span></li>
+                            <li navtype="1004" istowtab="" israndom="" class="skin-nav nav-1004 "><span class="skinnav-nav-name">小清新</span></li>
+                            <li class="nav-vertial">
+                                <div class="nav-vertial-border"></div>
+                            </li>
+                            <li navtype="8888" istowtab="" israndom="" class="skin-nav nav-8888 "><span class="skinnav-nav-name">自定义</span></li>
+                            <li navtype="9999" istowtab="" israndom="" class="skin-nav nav-9999 "><span class="skinnav-nav-name">最近使用</span></li>
+                        </ul>
+                        <!--收起按钮区域-->
+                        <div class="s-skin-setting">
+                            <!--背景透明度-->
+                            <div class="s-skin-opacity-set" id="s_skin_opacity_set">
+                                <span class="bg-hideOrShowAjax">
+                                <span class="bg-alphaBarTitle">背景透明度</span>
+                                <!--下方控件-->
+                                <span class="bg-alphaBar" id="s_bg_ajust_bar">
+                                    <!--滑块-->
+                                    <span class="bg-alphaBarMoveBtn" id="s_bg_ajust_btn">
+                                        <!--百分比文字-->
+                                        <em class="bg-alphaBarOpacity" id="s_bg_ajust_txt">50%</em>
+                                    </span>
+                                </span>
+                                </span>
+                            </div>
+                            <!--不使用换肤-->
+                            <div class="s-skin-set skin-no-bg">
+                                <!--貌似不显示-->
+                                <span class="skinset-hasBg skin-bg-icon"></span>
+                                <!--文字-->
+                                <span class="skinset-title">不使用换肤</span>
+                            </div>
+                            <!--收起按钮-->
+                            <div class="s-skin-up skin-bg-icon">
+                                <!--左侧箭头-->
+                                <span class="bg"></span>
+                                <!--右侧文字-->
+                                <span class="title">收起</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!--下部图片选择区域-->
+                    <div class="s-skin-photo-body">
+                        <!--具体图片选择区域,注:这里本有7个div和1个ul,但只选择做一个,并且这个ul li选择区域有很多图片,选择做6张,其余的见官网-->
+                        <div id="s_skin_img_content" class="s-skin-border-content">
+                            <ul class="s-skin-content">
+                                <li class="skin-img-item page-0 pos-0 big-img-li nav-1001"><img class="skin-img-item-img" width="140" height="150" src="images/bg1.jpg" /></li>
+                                <li class="skin-img-item page-0 pos-0 big-img-li nav-1001"><img class="skin-img-item-img" width="140" height="150" src="images/bg2.jpg" /></li>
+                                <li class="skin-img-item page-0 pos-0 big-img-li nav-1001"><img class="skin-img-item-img" width="140" height="150" src="images/bg3.jpg" /></li>
+                                <li class="skin-img-item page-0 pos-0 big-img-li nav-1001"><img class="skin-img-item-img" width="140" height="150" src="images/bg4.jpg" /></li>
+                                <li class="skin-img-item page-0 pos-0 big-img-li nav-1001"><img class="skin-img-item-img" width="140" height="150" src="images/bg5.jpg" /></li>
+                                <li class="skin-img-item page-0 pos-0 big-img-li nav-1001"><img class="skin-img-item-img" width="140" height="150" src="images/bg6.jpg" /></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--end换肤区域-->
+            <!-- 个人信息选项卡切换容器 -->
+            <div class="middle_down">
+                <!-- 个人信息选项卡切换 -->
+                <div class="tab-Con">
+                    <!-- 导航 -->
+                    <div class="tab-ConNav">
+                        <div id="myAttention" class="myAttention">
+                            <div id="my-icon" class="my-icon">
+                            </div>
+                            <div class="my-text">我的关注</div>
+                        </div>
+                        <div id="recommend" class="recommend">推荐</div>
+                        <div id="navigation" class="navigation">导航</div>
+                        <div id="video" class="video">视频</div>
+                        <div id="shopping" class="shopping">购物</div>
+                        <!-- 空白区域右上角有一个设置按钮 -->
+                        <div class="setting">
+                            <div id="setting" class="setting-icon">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 内容区域,也是一个容器,5个显示面板,根据导航TAB切换显示,上面的space div没有对应的内容面板 -->
+                    <div class="content-Con">
+                        <!-- 我的关注 -->
+                        <div id="att-content" class="att-content">
+                            <!-- 我的导航 -->
+                            <div class="myNavBlock">
+                                <div class="title-content">
+                                    <!-- 源码中有个隐藏的edit-tool,需要绑定事件才能触发,暂时先不做  -->
+                                    <span class="mine-title">
+                                    <div class="mine-title-icon">
+                                        <!-- <em></em> -->
+                                        <div class="arrow"></div>
+                                    </div>
+                                    <span class="mine-title-text"> 我的导航 </span>
+                                    <span class="mine-title-num"> (<span>0</span>) </span>
+                                    </span>
+                                </div>
+                                <!-- 返利模式等 -->
+                                <div id="setbar" class="setbar">
+                                    <!-- 添加 -->
+                                    <div class="set-btn set-add" title="添加">添加</div>
+                                    <!-- 返利模式 -->
+                                    <div class="set-btn fanli-class classed">
+                                        <span class="class-icon"></span>
+                                        <span class="class-text">返利模式</span>
+                                    </div>
+                                    <!-- 置顶 -->
+                                    <div class="set-btn set-totop" title="置顶">置顶
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 自定义 -->
+                            <div class="customBlockWraper">
+                                <div class="customBlock">
+                                    <span class="custom-icon"></span>
+                                    <span class="custom-text">自定义</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 推荐内容 -->
+                        <div id="rec-content" class="rec-content">
+                            <!-- 实时热点 -->
+                            <div class="s-news-rank-wrapper s-news-special-rank-wrapper">
+                                <!-- 实时热点标题 -->
+                                <div class="s-rank-title">
+                                    <!-- 实时热点 -->
+                                    <div class="title-text">
+                                        <a href="http://top.baidu.com/?fr=mhd_card" target="_blank">实时热点</a>
+                                    </div>
+                                    <!-- 换一换 -->
+                                    <a class="hot-refresh">
+                                        <span class="hot-refresh-icon"></span>
+                                        <span class="hot-refresh-text">换一换</span>
+                                    </a>
+                                </div>
+                                <!-- 实时热点内容 -->
+                                <ul class="s-news-rank-content">
+                                    <li class="news-meta-item news-artist" data-index="0">
+                                        <span class="news-title">
+                                        <span class="title-link">
+                                            <a class="title-content" href="https://www.baidu.com/s?cl=3&tn=baidutop10&fr=top1000&wd=%E7%94%98%E8%82%83%E9%AB%98%E5%8F%B0%E9%93%B2%E7%9B%90%E5%BF%99&rsv_idx=2" target="_blank">甘肃高台铲盐忙</a>
+                                            <span class="new-identity"></span>
+                                        </span>
+                                        </span>
+                                    </li>
+                                    <li class="news-meta-item news-artist" data-index="1">
+                                        <span class="news-title">
+                                        <span class="title-link">
+                                            <a class="title-content" href="https://www.baidu.com/s?cl=3&tn=baidutop10&fr=top1000&wd=%E5%8D%96%E9%9D%9E%E7%A2%98%E7%9B%90%E8%A2%AB%E6%8B%98&rsv_idx=2" target="_blank">卖非碘盐被拘</a>
+                                            <span class="new-identity"></span>
+                                        </span>
+                                        </span>
+                                    </li>
+                                    <li class="news-meta-item news-artist" data-index="2">
+                                        <span class="news-title">
+                                        <span class="title-link">
+                                            <a class="title-content" href="https://www.baidu.com/s?cl=3&tn=baidutop10&fr=top1000&wd=%E7%9B%B8%E5%A4%84%E5%9B%9B%E5%B0%8F%E6%97%B6%E5%90%8E%E9%97%AA%E5%A9%9A&rsv_idx=2" target="_blank">相处四小时后闪婚</a>
+                                            <span class="new-identity"></span>
+                                        </span>
+                                        </span>
+                                    </li>
+                                    <li class="news-meta-item news-artist" data-index="3">
+                                        <span class="news-title">
+                                        <span class="title-link">
+                                            <a class="title-content" href="https://www.baidu.com/s?cl=3&tn=baidutop10&fr=top1000&wd=%E4%B8%BA%E5%A5%B3%E5%84%BF%E9%80%A0%E8%A1%80%E7%94%9F3%E5%AD%90&rsv_idx=2" target="_blank">为女儿造血生3子</a>
+                                            <span class="new-identity"></span>
+                                        </span>
+                                        </span>
+                                    </li>
+                                    <li class="news-meta-item news-artist" data-index="4">
+                                        <span class="news-title">
+                                        <span class="title-link">
+                                            <a class="title-content" href="https://www.baidu.com/s?cl=3&tn=baidutop10&fr=top1000&wd=%E8%8B%B1%E8%88%AA%E7%94%B5%E8%84%91%E7%B3%BB%E7%BB%9F%E6%95%85%E9%9A%9C&rsv_idx=2" target="_blank">英航电脑系统故障</a>
+                                            <span class="new-identity"></span>
+                                        </span>
+                                        </span>
+                                    </li>
+                                    <li class="news-meta-item news-artist" data-index="5">
+                                        <span class="news-title">
+                                        <span class="title-link">
+                                            <a class="title-content" href="https://www.baidu.com/s?cl=3&tn=baidutop10&fr=top1000&wd=%E6%9B%9D%E9%9C%89%E9%9C%89%E6%8A%96%E6%A3%AE%E5%88%86%E6%89%8B&rsv_idx=2" target="_blank">曝霉霉抖森分手</a>
+                                        </span>
+                                        </span>
+                                    </li>
+                                    <li class="news-meta-item news-artist" data-index="6">
+                                        <span class="news-title">
+                                        <span class="title-link">
+                                            <a class="title-content" href="https://www.baidu.com/s?cl=3&tn=baidutop10&fr=top1000&wd=%E7%8E%8B%E8%8F%B2%E6%BC%94%E5%94%B1%E4%BC%9A%E7%96%91%E5%AE%9A%E5%90%8D&rsv_idx=2" target="_blank">王菲演唱会疑定名</a>
+                                        </span>
+                                        </span>
+                                    </li>
+                                    <li class="news-meta-item news-artist" data-index="7">
+                                        <span class="news-title">
+                                        <span class="title-link">
+                                            <a class="title-content" href="https://www.baidu.com/s?cl=3&tn=baidutop10&fr=top1000&wd=%E6%97%A5%E6%9C%AC%E5%8C%97%E6%B5%B7%E9%81%93%E6%9A%B4%E9%9B%A8&rsv_idx=2" target="_blank">日本北海道暴雨</a>
+                                        </span>
+                                        </span>
+                                    </li>
+                                    <li class="news-meta-item news-artist" data-index="8">
+                                        <span class="news-title">
+                                        <span class="title-link">
+                                            <a class="title-content" href="https://www.baidu.com/s?cl=3&tn=baidutop10&fr=top1000&wd=%E5%A5%B3%E7%AB%A5%E5%9D%A0%E6%A5%BC%E5%A5%87%E8%BF%B9%E5%B9%B8%E5%AD%98&rsv_idx=2" target="_blank">女童坠楼奇迹幸存</a>
+                                        </span>
+                                        </span>
+                                    </li>
+                                    <li class="news-meta-item news-artist" data-index="9">
+                                        <span class="news-title">
+                                        <span class="title-link">
+                                            <a class="title-content" href="https://www.baidu.com/s?cl=3&tn=baidutop10&fr=top1000&wd=%E6%9D%91%E5%AE%98%E9%95%87%E6%94%BF%E5%BA%9C%E5%86%85%E4%BA%A1&rsv_idx=2" target="_blank">村官镇政府内亡</a>
+                                        </span>
+                                        </span>
+                                    </li>
+                                    <li class="news-meta-item news-artist" data-index="10">
+                                        <span class="news-title">
+                                        <span class="title-link">
+                                            <a class="title-content" href="https://www.baidu.com/s?cl=3&tn=baidutop10&fr=top1000&wd=%E5%BC%A0%E5%BA%AD%E5%9B%9E%E5%BA%94%E6%8A%95%E8%AF%89&rsv_idx=2" target="_blank">张庭回应投诉</a>
+                                        </span>
+                                        </span>
+                                    </li>
+                                    <li class="news-meta-item news-artist" data-index="11">
+                                        <span class="news-title">
+                                        <span class="title-link">
+                                            <a class="title-content" href="https://www.baidu.com/s?cl=3&tn=baidutop10&fr=top1000&wd=%E5%86%92%E8%87%AA%E6%9D%A5%E6%B0%B4%E5%85%AC%E5%8F%B8%E8%AF%88%E9%AA%97&rsv_idx=2" target="_blank">冒自来水公司诈骗</a>
+                                        </span>
+                                        </span>
+                                    </li>
+                                    <li class="news-meta-item news-artist" data-index="12">
+                                        <span class="news-title">
+                                        <span class="title-link">
+                                            <a class="title-content" href="https://www.baidu.com/s?cl=3&tn=baidutop10&fr=top1000&wd=%E4%BF%84%E5%90%A6%E8%AE%A4%E4%BE%B5%E7%8A%AF%E9%A2%86%E7%A9%BA&rsv_idx=2" target="_blank">俄否认侵犯领空</a>
+                                        </span>
+                                        </span>
+                                    </li>
+                                    <li class="news-meta-item news-artist" data-index="13">
+                                        <span class="news-title">
+                                        <span class="title-link">
+                                            <a class="title-content" href="https://www.baidu.com/s?cl=3&tn=baidutop10&fr=top1000&wd=%E8%8B%B1%E4%BA%8C%E6%AC%A1%E8%84%B1%E6%AC%A7%E8%BE%A9%E8%AE%BA&rsv_idx=2" target="_blank">英二次脱欧辩论</a>
+                                        </span>
+                                        </span>
+                                    </li>
+                                    <li class="news-meta-item news-artist" data-index="14">
+                                        <span class="news-title">
+                                        <span class="title-link">
+                                            <a class="title-content" href="https://www.baidu.com/s?cl=3&tn=baidutop10&fr=top1000&wd=%E5%AE%89%E5%80%8D%E4%BC%9A%E6%99%A4%E8%8F%B2%E6%80%BB%E7%BB%9F&rsv_idx=2" target="_blank">安倍会晤菲总统</a>
+                                        </span>
+                                        </span>
+                                    </li>
+                                    <li class="news-meta-item news-artist" data-index="15">
+                                        <span class="news-title">
+                                        <span class="title-link">
+                                            <a class="title-content" href="https://www.baidu.com/s?cl=3&tn=baidutop10&fr=top1000&wd=%E7%8E%8B%E5%AE%9D%E5%BC%BA%E8%B4%A2%E4%BA%A7%E5%88%86%E5%89%B2&rsv_idx=2" target="_blank">王宝强财产分割</a>
+                                        </span>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!--兴趣推荐信息-->
+                            <div class="news-flash-tips">
+                                <div class="left-line s-opacity-blank8"></div>
+                                <div class="tips-content">
+                                    <div class="tips-icon"></div>
+                                    <span>以下信息根据您的兴趣推荐</span>
+                                </div>
+                                <div class="right-line s-opacity-blank8"></div>
+                            </div>
+                            <!--推荐的具体内容容器-->
+                            <div class="rec-content-container">
+                                <!--每一栏,可用于分页加载,瀑布流等-->
+                                <div class="s-news-list-wrapper">
+                                    <!--第一栏,含图片-->
+                                    <div class="s-news-special s-news-item s-news-special-item-tpl-2 s-opacity-blank8 first">
+                                        <!--图片容器-->
+                                        <div class="s-pic-content">
+                                            <!--可能有多组图片-->
+                                            <ul class="s-news-content-imgs clearfix">
+                                                <li class="item-img-wrap">
+                                                    <a href="http://sports.qq.com/a/20160907/014067.htm" target="_blank" title="球技爆棚！澳8岁女童打高尔夫一杆击落无人机">
+                                                        <img class="s-news-img" src="./images/recommand1.jpeg" height="119" width="179" />
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <!--文字内容-->
+                                        <div class="s-block-container">
+                                            <div class="s-text-content">
+                                                <h2>
+                                                <a href="http://sports.qq.com/a/20160907/014067.htm" title="球技爆棚！澳8岁女童打高尔夫一杆击落无人机"
+                                                   target="_blank" class="s-title-yahei">球技爆棚！澳8岁女童打高尔夫一杆击落无人机</a>
+                                            </h2>
+                                            </div>
+                                            <div class="from">
+                                                <!--网址来源-->
+                                                <span class="src-net">
+                                                <a href="http://sports.qq.com"> 腾讯体育 </a>
+                                            </span>
+                                                <!--时间-->
+                                                <span class="src-time">
+                                                09-07 08:31
+                                            </span>
+                                                <!--热点-->
+                                                <span class="hot-point">热点</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--end第一栏,含图片-->
+                                    <!--第二栏新闻-->
+                                    <div class="s-news-special s-news-item s-news-special-item-tpl-3 s-opacity-blank8">
+                                        <h2>
+                                        <a href="http://world.huanqiu.com/exclusive/2016-09/9409113.html" title="韩美不顾中俄反对 维持包括部署“萨德”在内对朝威慑力"
+                                           target="_blank" class="s-title-yahei">韩美不顾中俄反对 维持包括部署“萨德”在内对朝威慑力</a>
+                                    </h2>
+                                        <div class="from">
+                                            <span class="src-net">
+                                            <a href="http://world.huanqiu.com/" target="_blank">环球新闻</a>
+                                        </span>
+                                            <span class="src-time">
+                                            09-06 20:10
+                                        </span>
+                                            <span class="hot-point">热点</span>
+                                        </div>
+                                    </div>
+                                    <!--end第二栏新闻-->
+                                    <!--第三栏新闻-->
+                                    <div class="s-news-special s-news-item s-news-special-item-tpl-3 s-opacity-blank8">
+                                        <h2>
+                                        <a href="http://news.ifeng.com/a/20160907/49927500_0.shtml" title="普京专车发生事故 司机当场死亡" class="s-title-yahei">普京专车发生事故 司机当场死亡</a>
+                                    </h2>
+                                        <div class="from">
+                                            <span class="src-net">
+                                            <a href="http://world.huanqiu.com/" target="_blank">环球新闻</a>
+                                        </span>
+                                            <span class="src-time">
+                                            09-06 20:10
+                                        </span>
+                                            <span class="hot-point">热点</span>
+                                        </div>
+                                    </div>
+                                    <!--end第三栏新闻-->
+                                </div>
+                            </div>
+                        </div>
+                        <!--导航内容-->
+                        <div id="nav-content" class="nav-content">
+                            <!--导航容器-->
+                            <div class="nav-content-container">
+                                <!--第一栏:猜你喜欢-->
+                                <!--s-nav-wrapper是一栏-->
+                                <div class="s-nav-wrapper guessYouLike">
+                                    <h1>猜你喜欢</h1>
+                                    <ul>
+                                        <!--带返利的-->
+                                        <li class="fanli-nav nav-item">
+                                            <a href="http://www.nuomi.com/?vip_frm=super_nav_vip" title="百度糯米" class="nav-block" target="_blank">
+                                                <img src="./images/nav-nuomi.png" />
+                                                <span class="nav-txt">百度糯米</span>
+                                            </a>
+                                            <!--下方返利标识-->
+                                            <div class="rebate">
+                                                <a href="http://vip.baidu.com/m_112?vip_frm=super_mynav_mall" target="_blank">最高返利50.25%</a>
+                                            </div>
+                                            <!--右上角返利标识-->
+                                            <div class="fanli-tag">
+                                                <a class="fanli-tagCon" href="http://vip.baidu.com/m_112?vip_frm=super_mynav_mall" target="_blank"></a>
+                                            </div>
+                                        </li>
+                                        <li class="fanli-nav nav-item">
+                                            <a href="http://www.jd.com/?vip_frm=super_nav_vip" title="京东商城" class="nav-block" target="_blank">
+                                                <img src="./images/95541.png" />
+                                                <span class="nav-txt">京东商城</span>
+                                            </a>
+                                            <!--下方返利标识-->
+                                            <div class="rebate">
+                                                <a href="http://vip.baidu.com/m_112?vip_frm=super_mynav_mall" target="_blank">最高返利50.25%</a>
+                                            </div>
+                                            <!--右上角返利标识-->
+                                            <div class="fanli-tag">
+                                                <a class="fanli-tagCon" href="http://vip.baidu.com/m_112?vip_frm=super_mynav_mall" target="_blank"></a>
+                                            </div>
+                                        </li>
+                                        <li class="fanli-nav nav-item">
+                                            <a href="http://www.yhd.com/?vip_frm=super_nav_vip" title="1号店" class="nav-block" target="_blank">
+                                                <img src="./images/95780.png" />
+                                                <span class="nav-txt">1号店</span>
+                                            </a>
+                                            <!--下方返利标识-->
+                                            <div class="rebate">
+                                                <a href="http://vip.baidu.com/m_112?vip_frm=super_mynav_mall" target="_blank">最高返利50.25%</a>
+                                            </div>
+                                            <!--右上角返利标识-->
+                                            <div class="fanli-tag">
+                                                <a class="fanli-tagCon" href="http://vip.baidu.com/m_112?vip_frm=super_mynav_mall" target="_blank"></a>
+                                            </div>
+                                        </li>
+                                        <li class="fanli-nav nav-item">
+                                            <a href="http://www.suning.com/?vip_frm=super_nav_vip" title="苏宁易购" class="nav-block" target="_blank">
+                                                <img src="./images/95537.png" />
+                                                <span class="nav-txt">苏宁易购</span>
+                                            </a>
+                                            <!--下方返利标识-->
+                                            <div class="rebate">
+                                                <a href="http://vip.baidu.com/m_112?vip_frm=super_mynav_mall" target="_blank">最高返利50.25%</a>
+                                            </div>
+                                            <!--右上角返利标识-->
+                                            <div class="fanli-tag">
+                                                <a class="fanli-tagCon" href="http://vip.baidu.com/m_112?vip_frm=super_mynav_mall" target="_blank"></a>
+                                            </div>
+                                        </li>
+                                        <li class="fanli-nav nav-item">
+                                            <a href="http://www.vip.com/?vip_frm=super_nav_vip" title="唯品会" class="nav-block" target="_blank">
+                                                <img src="./images/95693.png" />
+                                                <span class="nav-txt">唯品会</span>
+                                            </a>
+                                            <!--下方返利标识-->
+                                            <div class="rebate">
+                                                <a href="http://vip.baidu.com/m_112?vip_frm=super_mynav_mall" target="_blank">最高返利50.25%</a>
+                                            </div>
+                                            <!--右上角返利标识-->
+                                            <div class="fanli-tag">
+                                                <a class="fanli-tagCon" href="http://vip.baidu.com/m_112?vip_frm=super_mynav_mall" target="_blank"></a>
+                                            </div>
+                                        </li>
+                                        <li class="fanli-nav nav-item">
+                                            <a href="http://www.dangdang.com/?vip_frm=super_nav_vip" title="当当网" class="nav-block" target="_blank">
+                                                <img src="./images/95517.png" />
+                                                <span class="nav-txt">当当网</span>
+                                            </a>
+                                            <!--下方返利标识-->
+                                            <div class="rebate">
+                                                <a href="http://vip.baidu.com/m_112?vip_frm=super_mynav_mall" target="_blank">最高返利50.25%</a>
+                                            </div>
+                                            <!--右上角返利标识-->
+                                            <div class="fanli-tag">
+                                                <a class="fanli-tagCon" href="http://vip.baidu.com/m_112?vip_frm=super_mynav_mall" target="_blank"></a>
+                                            </div>
+                                        </li>
+                                        <!--不带返利的-->
+                                        <li class="nav-item">
+                                            <a href="http://fanyi.baidu.com/" title="百度翻译" class="nav-block" target="_blank">
+                                                <img src="./images/95524.png" />
+                                                <span class="nav-txt">百度翻译</span>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="http://github.com/github" title="GitHub · GitHub" class="nav-block" target="_blank">
+                                                <img src="./images/6000.png" />
+                                                <span class="nav-txt">GitHub · GitHub</span>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="http://www.taobao.com/" title="淘宝网" class="nav-block" target="_blank">
+                                                <img src="./images/95487.png" />
+                                                <span class="nav-txt">淘宝网</span>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="https://wx.qq.com/" title="微信" class="nav-block" target="_blank">
+                                                <img src="./images/95753.png" />
+                                                <span class="nav-txt">微信</span>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="http://www.douyutv.com/" title="斗鱼" class="nav-block" target="_blank">
+                                                <img src="./images/200001.png" />
+                                                <span class="nav-txt">斗鱼</span>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="http://www.qq.com/" title="腾讯" class="nav-block" target="_blank">
+                                                <img src="./images/95511.png" />
+                                                <span class="nav-txt">腾讯</span>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="http://www.iqiyi.com/" title="爱奇艺" class="nav-block" target="_blank">
+                                                <img src="./images/95502.png" />
+                                                <span class="nav-txt">爱奇艺</span>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="http://www.12306.cn/mormhweb/" title="铁路客户服务中心" class="nav-block" target="_blank">
+                                                <img src="./images/81407.png" />
+                                                <span class="nav-txt">铁路客户服务中心</span>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="http://www.youku.com/" title="优酷网" class="nav-block" target="_blank">
+                                                <img src="./images/95489.png" />
+                                                <span class="nav-txt">优酷网</span>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="http://www.163.com/" title="网易" class="nav-block" target="_blank">
+                                                <img src="./images/95504.png" />
+                                                <span class="nav-txt">网易</span>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="http://www.58.com/" title="58同城" class="nav-block" target="_blank">
+                                                <img src="./images/95510.png" />
+                                                <span class="nav-txt">58同城</span>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="http://weibo.com/" title="新浪微博" class="nav-block" target="_blank">
+                                                <img src="./images/95488.png" />
+                                                <span class="nav-txt">新浪微博</span>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="http://www.alipay.com/" title="支付宝" class="nav-block" target="_blank">
+                                                <img src="./images/7591.png" />
+                                                <span class="nav-txt">支付宝</span>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="http://www.4399.com/" title="4399小游戏" class="nav-block" target="_blank">
+                                                <img src="./images/95497.png" />
+                                                <span class="nav-txt">4399小游戏</span>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="http://www.autohome.com.cn/" title="汽车之家" class="nav-block" target="_blank">
+                                                <img src="./images/95512.png" />
+                                                <span class="nav-txt">汽车之家</span>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="http://www.bilibili.com/" title="哔哩哔哩" class="nav-block" target="_blank">
+                                                <img src="./images/6000.png" />
+                                                <span class="nav-txt">哔哩哔哩</span>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="http://vip.baidu.com/?vip_frm=super_nav_vip" title="百度VIP" class="nav-block" target="_blank">
+                                                <img src="./images/7656.png" />
+                                                <span class="nav-txt">百度VIP</span>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="http://vip.baidu.com/?vip_frm=super_nav_vip" title="百度VIP" class="nav-block" target="_blank">
+                                                <img src="./images/9321.png" />
+                                                <span class="nav-txt">百度VIP</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!--视频内容-->
+                        <div id="video-content" class="video-content">
+                            <!--视频内容容器-->
+                            <div class="video-container">
+                                <!--一页内容-->
+                                <div class="s-video-wrapper clearfix">
+                                    <!--每一列的容器1-->
+                                    <div class="video-col clearfix">
+                                        <!--每一列的内容-->
+                                        <div class="video-item video-item-1">
+                                            <!--图片-->
+                                            <div class="v-pic v-pic-1">
+                                                <!--右上角垃圾箱,暂时不做-->
+                                                <!--<div class="subscribe" data-click="LOG_BTN_SUB">-->
+                                                <!--<div class="dustbin" data-click="LOG_BTN_DUSTBIN"></div>-->
+                                                <!--图片存放区-->
+                                                <a class="pic" href="http://www.iqiyi.com/a_19rrifrm2n.html?vfm=2008_aldbd" title="爱情公寓第四季">
+                                                    <img class="img" width="195" height="267" src="./images/loverhouse.jpeg" />
+                                                </a>
+                                                <!--底部渐变区-->
+                                                <a class="bg img-click" href="http://www.iqiyi.com/a_19rrifrm2n.html?vfm=2008_aldbd" target="_blank" title="爱情公寓第四季"></a>
+                                                <!--24集全-->
+                                                <a class="img-click" href="http://www.iqiyi.com/a_19rrifrm2n.html?vfm=2008_aldbd" target="_blank" title="爱情公寓第四季">
+                                                    <span class="v-tag">24集全</span>
+                                                </a>
+                                                <!--右上角电视剧标签-->
+                                                <a href="http://www.iqiyi.com/a_19rrifrm2n.html?vfm=2008_aldbd" class="img-click tag-sort tag-sort3" target="_blank"></a>
+                                            </div>
+                                            <!--文本-->
+                                            <div class="v-txt s-opacity-background1 s-opacity-blank3">
+                                                <!--视频名称-->
+                                                <div class="text">
+                                                    <a class="s-opacity-blank3" href="http://www.iqiyi.com/a_19rrifrm2n.html?vfm=2008_aldbd" target="_blank" title="爱情公寓第四季">爱情公寓第四季</a>
+                                                </div>
+                                                <!--视频分数-->
+                                                <div class="score">
+                                                    <span class="score-star">
+                                                    <span class="star-active"></span>
+                                                    </span>
+                                                    7.4
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--每一列的容器2-->
+                                    <div class="video-col clearfix">
+                                        <!--每一列的内容-->
+                                        <div class="video-item video-item-1">
+                                            <!--图片-->
+                                            <div class="v-pic v-pic-1">
+                                                <!--右上角垃圾箱,暂时不做-->
+                                                <!--<div class="subscribe" data-click="LOG_BTN_SUB">-->
+                                                <!--<div class="dustbin" data-click="LOG_BTN_DUSTBIN"></div>-->
+                                                <!--图片存放区-->
+                                                <a class="pic" href="http://www.iqiyi.com/a_19rrhaen1h.html?vfm=2008_aldbd" title="奔跑吧兄弟第四季">
+                                                    <img class="img" width="195" height="267" src="./images/runbrother.jpeg" />
+                                                </a>
+                                                <!--底部渐变区-->
+                                                <a class="bg img-click" href="http://www.iqiyi.com/a_19rrifrm2n.html?vfm=2008_aldbd" target="_blank" title="奔跑吧兄弟第四季"></a>
+                                                <!--07-08期-->
+                                                <a class="img-click" href="http://www.iqiyi.com/a_19rrifrm2n.html?vfm=2008_aldbd" target="_blank" title="奔跑吧兄弟第四季">
+                                                    <span class="v-tag">07-08期</span>
+                                                </a>
+                                                <!--右上角电视剧标签-->
+                                                <a href="http://www.iqiyi.com/a_19rrifrm2n.html?vfm=2008_aldbd" class="img-click tag-sort tag-sort2" target="_blank"></a>
+                                            </div>
+                                            <!--文本-->
+                                            <div class="v-txt s-opacity-background1 s-opacity-blank3">
+                                                <!--视频名称-->
+                                                <div class="text">
+                                                    <a class="s-opacity-blank3" href="http://www.iqiyi.com/a_19rrifrm2n.html?vfm=2008_aldbd" target="_blank" title="奔跑吧兄弟第四季">奔跑吧兄弟第四季</a>
+                                                </div>
+                                                <!--视频分数-->
+                                                <div class="score">
+                                                    <span class="score-star">
+                                                    <span class="star-active"></span>
+                                                    </span>
+                                                    3.3
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--每一列的容器3-->
+                                    <div class="video-col clearfix">
+                                        <!--每一列的内容,后面2个图片由2个video-item-2而非1个video-item-1组成-->
+                                        <!--第一个video-item-2-->
+                                        <div class="video-item video-item-2">
+                                            <!--图片-->
+                                            <div class="v-pic v-pic-2">
+                                                <!--右上角垃圾箱,暂时不做-->
+                                                <!--<div class="subscribe" data-click="LOG_BTN_SUB">-->
+                                                <!--<div class="dustbin" data-click="LOG_BTN_DUSTBIN"></div>-->
+                                                <!--图片存放区-->
+                                                <a class="pic" href="http://www.iqiyi.com/v_19rrm49rsg.html?vfm=f_109_bdxs" title="穿上能踢死一头牛 60年来解放军穿过的10双鞋">
+                                                    <img class="img" width="195" height="101" src="./images/10shoe.png" />
+                                                </a>
+                                                <!--底部渐变区-->
+                                                <a class="bg img-click" href="http://www.iqiyi.com/v_19rrm49rsg.html?vfm=f_109_bdxs" target="_blank" title="穿上能踢死一头牛 60年来解放军穿过的10双鞋"></a>
+                                                <!--视频时间-->
+                                                <a class="img-click" href="http://www.iqiyi.com/v_19rrm49rsg.html?vfm=f_109_bdxs" target="_blank" title="穿上能踢死一头牛 60年来解放军穿过的10双鞋">
+                                                    <span class="v-tag">06:52</span>
+                                                </a>
+                                            </div>
+                                            <!--文本-->
+                                            <div class="v-txt s-opacity-background1 s-opacity-blank3">
+                                                <!--视频名称-->
+                                                <div class="text">
+                                                    <a class="s-opacity-blank3" href="http://www.iqiyi.com/v_19rrm49rsg.html?vfm=f_109_bdxs" target="_blank" title="穿上能踢死一头牛 60年来解放军穿过的10双鞋">穿上能踢死一头牛 60年来解放军穿过的10双鞋</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--第2个video-item-2-->
+                                        <div class="video-item video-item-2">
+                                            <!--图片-->
+                                            <div class="v-pic v-pic-2">
+                                                <!--右上角垃圾箱,暂时不做-->
+                                                <!--<div class="subscribe" data-click="LOG_BTN_SUB">-->
+                                                <!--<div class="dustbin" data-click="LOG_BTN_DUSTBIN"></div>-->
+                                                <!--图片存放区-->
+                                                <a class="pic" href="http://www.iqiyi.com/v_19rrm43qm4.html?vfm=f_109_bdxs" title="美国老太太坐F-15巡逻俄罗斯边境">
+                                                    <img class="img" width="195" height="101" src="./images/airportf22.png" />
+                                                </a>
+                                                <!--底部渐变区-->
+                                                <a class="bg img-click" href="http://www.iqiyi.com/v_19rrm43qm4.html?vfm=f_109_bdxs" target="_blank" title="美国老太太坐F-15巡逻俄罗斯边境"></a>
+                                                <!--视频时间-->
+                                                <a class="img-click" href="http://www.iqiyi.com/v_19rrm43qm4.html?vfm=f_109_bdxs" target="_blank" title="美国老太太坐F-15巡逻俄罗斯边境">
+                                                    <span class="v-tag">01:41</span>
+                                                </a>
+                                            </div>
+                                            <!--文本-->
+                                            <div class="v-txt s-opacity-background1 s-opacity-blank3">
+                                                <!--视频名称-->
+                                                <div class="text">
+                                                    <a class="s-opacity-blank3" href="http://www.iqiyi.com/v_19rrm43qm4.html?vfm=f_109_bdxs" target="_blank" title="美国老太太坐F-15巡逻俄罗斯边境">美国老太太坐F-15巡逻俄罗斯边境</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--每一列的容器4-->
+                                    <div class="video-col clearfix">
+                                        <!--每一列的内容,后面2个图片由2个video-item-2而非1个video-item-1组成-->
+                                        <!--第一个video-item-2-->
+                                        <div class="video-item video-item-2">
+                                            <!--图片-->
+                                            <div class="v-pic v-pic-2">
+                                                <!--右上角垃圾箱,暂时不做-->
+                                                <!--<div class="subscribe" data-click="LOG_BTN_SUB">-->
+                                                <!--<div class="dustbin" data-click="LOG_BTN_DUSTBIN"></div>-->
+                                                <!--图片存放区-->
+                                                <a class="pic" href="http://www.iqiyi.com/v_19rrm47g28.html?vfm=f_109_bdxs" title="印买潜艇发现家底被掏空">
+                                                    <img class="img" width="195" height="101" src="./images/India.png" />
+                                                </a>
+                                                <!--底部渐变区-->
+                                                <a class="bg img-click" href="http://www.iqiyi.com/v_19rrm47g28.html?vfm=f_109_bdxs" target="_blank" title="印买潜艇发现家底被掏空"></a>
+                                                <!--视频时间-->
+                                                <a class="img-click" href="http://www.iqiyi.com/v_19rrm47g28.html?vfm=f_109_bdxs" target="_blank" title="印买潜艇发现家底被掏空">
+                                                    <span class="v-tag">05:48</span>
+                                                </a>
+                                            </div>
+                                            <!--文本-->
+                                            <div class="v-txt s-opacity-background1 s-opacity-blank3">
+                                                <!--视频名称-->
+                                                <div class="text">
+                                                    <a class="s-opacity-blank3" href="http://www.iqiyi.com/v_19rrm47g28.html?vfm=f_109_bdxs" target="_blank" title="印买潜艇发现家底被掏空">印买潜艇发现家底被掏空</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--第2个video-item-2-->
+                                        <div class="video-item video-item-2">
+                                            <!--图片-->
+                                            <div class="v-pic v-pic-2">
+                                                <!--右上角垃圾箱,暂时不做-->
+                                                <!--<div class="subscribe" data-click="LOG_BTN_SUB">-->
+                                                <!--<div class="dustbin" data-click="LOG_BTN_DUSTBIN"></div>-->
+                                                <!--图片存放区-->
+                                                <a class="pic" href="http://www.iqiyi.com/v_19rrhuvtq4.html?vfm=f_109_bdxs" title="明星大制作 小P老师 千鸟格绅士看秀">
+                                                    <img class="img" width="195" height="101" src="./images/mingxing.png" />
+                                                </a>
+                                                <!--底部渐变区-->
+                                                <a class="bg img-click" href="http://www.iqiyi.com/v_19rrhuvtq4.html?vfm=f_109_bdxs" target="_blank" title="明星大制作 小P老师 千鸟格绅士看秀"></a>
+                                                <!--视频时间-->
+                                                <a class="img-click" href="http://www.iqiyi.com/v_19rrhuvtq4.html?vfm=f_109_bdxs" target="_blank" title="明星大制作 小P老师 千鸟格绅士看秀">
+                                                    <span class="v-tag">01:17</span>
+                                                </a>
+                                            </div>
+                                            <!--文本-->
+                                            <div class="v-txt s-opacity-background1 s-opacity-blank3">
+                                                <!--视频名称-->
+                                                <div class="text">
+                                                    <a class="s-opacity-blank3" href="http://www.iqiyi.com/v_19rrhuvtq4.html?vfm=f_109_bdxs" target="_blank" title="明星大制作 小P老师 千鸟格绅士看秀">明星大制作 小P老师 千鸟格绅士看秀</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--购物内容-->
+                        <div id="shop-content" class="shop-content">
+                            <!--购物容器-->
+                            <div class="shop-container">
+                                <!--一行购物信息-->
+                                <div class="shopping-card-wrapper clearfix">
+                                    <!--第1个栏商品-->
+                                    <div class="shopping-card-item">
+                                        <div class="shopping-card-imgwrapper">
+                                            <a class="img" href="http://vip.baidu.com/pcui/show/itemindex?id=30397%3Fvip_frm&vip_frm=mhd_gouwu_zt" target="_blank">
+                                                <img src="./images/baowenhu.jpg" />
+                                                <!--说明文字上-->
+                                                <div class="mask top">
+                                                    <span class="bsTitle">合口美保温壶</span>
+                                                </div>
+                                                <div class="cover"></div>
+                                                <div class="cover right"></div>
+                                                <!--说明文字下-->
+                                                <div class="mask">
+                                                    <span class="bsTitle">下单立减130</span>
+                                                    <span class="percentdesc">再返现36%</span>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <!--第2个栏商品-->
+                                    <div class="shopping-card-item">
+                                        <div class="shopping-card-imgwrapper">
+                                            <a class="img" href="http://re.jd.com/cps/item/10241650687.html?cu=true&utm_source=vip.baidu.com&utm_medium=tuiguang&utm_campaign=t_298046589_&utm_term=f81b5ba20bc24b7aba98d263cb7a47e4&abt=3%3Fvip_frm&vip_frm=mhd_gouwu_zt" target="_blank">
+                                                <img src="./images/xueyaji.jpg" />
+                                                <!--说明文字上-->
+                                                <div class="mask top">
+                                                    <span class="bsTitle">BPUMP电子血压计</span>
+                                                </div>
+                                                <div class="cover"></div>
+                                                <div class="cover right"></div>
+                                                <!--说明文字下-->
+                                                <div class="mask">
+                                                    <span class="bsTitle">百度臻选</span>
+                                                    <span class="percentdesc">中秋送礼佳品</span>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <!--第3个栏商品-->
+                                    <div class="shopping-card-item">
+                                        <div class="shopping-card-imgwrapper">
+                                            <a class="img" href="http://hui.baidu.com/detail.html?id=132203&hmsr=mhd&hmpl=mhd&hmcu=&hmkw=&hmci=&vip_frm=mhd_gouwu_zt" target="_blank">
+                                                <img src="./images/upan.jpg" />
+                                                <!--说明文字上-->
+                                                <div class="mask top">
+                                                    <span class="bsTitle">闪迪 U盘 128G</span>
+                                                </div>
+                                                <div class="cover"></div>
+                                                <div class="cover right"></div>
+                                                <!--说明文字下-->
+                                                <div class="mask">
+                                                    <span class="bsTitle">近期好价</span>
+                                                    <span class="percentdesc">品牌直降</span>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <!--第4栏是文字-->
+                                    <div class="shopping-card-item">
+                                        <!--文字第1栏-->
+                                        <a class="shopping-bsword s-opacity-blank8" href="http://vip.baidu.com/act/xuyuan?=&vip_frm=mhd_gouwu_wzl" target="_blank">
+                                            <p>1元得iPhone SE</p>
+                                            <span>其他超值商品 1元可得</span>
+                                            <div class="buttondesc">去看看</div>
+                                        </a>
+                                        <!--文字第2栏-->
+                                        <div class="shopping-bsmall">
+                                            <a class="fanmall" target="_blank" href="http://vip.baidu.com/mall?vip_frm=mhd_gouwu_sc">
+                                                <p>返利商城</p>
+                                            </a>
+                                            <ul>
+                                                <li data-index="0">
+                                                    <a href="http://vip.baidu.com/cps/show/goto?mallid=101&product_id=0&disable_goto_flag=0&url=181aeUpbZ%252FHcX7fe5egIuRfuG3KCUU29AhTqs%252F1HmdR9%252Bu30fUiw3wxU4CvAzg&sharekey=&statkey=zw_mhdgouwusc_m_101&vip_frm=mhd_gouwu_sc" target="_blank">
+                                                    京东商城
+                                                </a>
+                                                </li>
+                                                <li data-index="1">
+                                                    <a href="http://vip.baidu.com/cps/show/goto?mallid=112&product_id=0&disable_goto_flag=0&url=c9c6nOKgkEZV9Azz0swFAtDSfHraD2JBF8zYf33bOrFt4k%252BvFI8eKbN9MrPEoJvmBmE&sharekey=&statkey=zw_mhdgouwusc_m_112&vip_frm=mhd_gouwu_sc" target="_blank">
+                                                    百度糯米
+                                                </a>
+                                                </li>
+                                                <li data-index="2">
+                                                    <a href="http://vip.baidu.com/cps/show/goto?mallid=102&product_id=0&disable_goto_flag=0&url=6bd1P7agT9iTVDb09awtA2Ie68T133EdAXoEnSmwe3XP%252Be%252BBxUzVsEfdRkIcrAg&sharekey=&statkey=zw_mhdgouwusc_m_102&vip_frm=mhd_gouwu_sc" target="_blank">
+                                                    1号店
+                                                </a>
+                                                </li>
+                                                <li data-index="3">
+                                                    <a href="http://vip.baidu.com/cps/show/goto?mallid=105&product_id=0&disable_goto_flag=0&url=3b40JuhnT%252FLa%252BNPRz14WevjDCLIIryoOkOtA%252F8aukIGI5aSaYV92NXjulszhDkAqT3yMLhQ&sharekey=&statkey=zw_mhdgouwusc_m_105&vip_frm=mhd_gouwu_sc" target="_blank">
+                                                    当当网
+                                                </a>
+                                                </li>
+                                                <li data-index="4">
+                                                    <a href="http://vip.baidu.com/cps/show/goto?mallid=151&product_id=0&disable_goto_flag=0&url=32f6glcaL7mmhWzCdrY48yt6T5UnVOBsbv601xa0m6CKuNch01PphGUQ42EflCVN62Tobw&sharekey=&statkey=zw_mhdgouwusc_m_151&vip_frm=mhd_gouwu_sc" target="_blank">
+                                                    蘑菇街
+                                                </a>
+                                                </li>
+                                                <li data-index="5">
+                                                    <a href="http://vip.baidu.com/cps/show/goto?mallid=104&product_id=0&disable_goto_flag=0&url=56adbpa3V%252BVTY7jAekwuGM3zY1px%252FrNWU4%252BnKtyiUR6XNkDZ1%252FD%252Be0aN0AInC%252B2z&sharekey=&statkey=zw_mhdgouwusc_m_104&vip_frm=mhd_gouwu_sc" target="_blank">
+                                                    唯品会
+                                                </a>
+                                                </li>
+                                                <li data-index="6">
+                                                    <a href="http://vip.baidu.com/cps/show/goto?mallid=478&product_id=0&disable_goto_flag=0&url=d1f8KUeXm6wMetKEP7uBBXtCxVJjJLP1ProPnlWMP89Pz5plP2OMlQX2J%252FYfl7H0dqI&sharekey=&statkey=zw_mhdgouwusc_m_478&vip_frm=mhd_gouwu_sc" target="_blank">
+                                                    聚美优品
+                                                </a>
+                                                </li>
+                                                <li data-index="7">
+                                                    <a href="http://vip.baidu.com/cps/show/goto?mallid=150&product_id=0&disable_goto_flag=0&url=25baOfsxDSNYcIRw6s%252Fb9UGpuSMQMoKnrnw9Mcajf6%252FUnwLcEHTlsHO9fkAIhvbmvSiB&sharekey=&statkey=zw_mhdgouwusc_m_150&vip_frm=mhd_gouwu_sc" target="_blank">
+                                                    苏宁易购
+                                                </a>
+                                                </li>
+                                                <li data-index="8">
+                                                    <a href="http://vip.baidu.com/cps/show/goto?mallid=103&product_id=0&disable_goto_flag=0&url=b320RxdSXWDXimNJ%252Fzd4W8VWu19uh4uxac9aYPXw5xCtYy%252Fe6lfZBkCLxFHSrVojRWXyuw&sharekey=&statkey=zw_mhdgouwusc_m_103&vip_frm=mhd_gouwu_sc" target="_blank">
+                                                    国美在线
+                                                </a>
+                                                </li>
+                                                <li data-index="9">
+                                                    <a class="last" href="http://vip.baidu.com/mall?=&vip_frm=mhd_gouwu_sc" target="_blank">
+                                                    更多
+                                                </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--一些促销信息-->
+                                <ul class="card-tab-shopping">
+                                    <!--超级返-->
+                                    <li class="tab-name-shopping tab_0 s-opacity-blank8 tab-name-cur taball">
+                                        <a class="chaoji">超级返</a>
+                                        <div class="arrow"></div>
+                                        <!--二级菜单-->
+                                        <div class="wrap-subtab">
+                                            <a target="_blank" class="tab-name-shopping sub  tab-name-cur" data-rid="" data-childid="1_1">全部</a>
+                                            <a target="_blank" class="tab-name-shopping sub" data-rid="" data-childid="1_2">食品酒水</a>
+                                            <a target="_blank" class="tab-name-shopping sub" data-rid="" data-childid="1_3">数码家电</a>
+                                            <a target="_blank" class="tab-name-shopping sub" data-rid="" data-childid="1_10">百货</a>
+                                            <a target="_blank" class="tab-name-shopping sub" data-rid="" data-childid="1_11">运动户外</a>
+                                            <a target="_blank" class="tab-name-shopping sub" data-rid="" data-childid="1_12">家居家纺</a>
+                                            <a target="_blank" class="tab-name-shopping lasttab" data-rid="" href="http://vip.baidu.com/super?vip_frm=mhd_gouwu_cjf">更多</a>
+                                        </div>
+                                    </li>
+                                    <!--9块9-->
+                                    <li class="tab-name-shopping tab_1 s-opacity-blank8">
+                                        <a>9块9</a>
+                                    </li>
+                                    <!--糯米团购,暂时没看到-->
+                                    <li class="tab-name-shopping tab_2 s-opacity-blank8">
+                                        <a>糯米团购</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!--设置面板,设置按钮触发-->
+                        <div id="config-content" class="config-content">
+                            <div class="config-container">
+                                <!--上栏-->
+                                <div class="s-cardsetting-wrap clearfix">
+                                    <!--已订阅-->
+                                    <div class="s-cardsetting-left">
+                                        <h3>已订阅频道</h3>
+                                        <div class="config-special">我的关注</div>
+                                        <div class="s-cardsetting-content sui-componentWrap">
+                                            <div id="s_moditem_2" class="s-mod-item">
+                                                <div class="s-mod-icon"></div>
+                                                <div class="s-mod-title">推荐</div>
+                                            </div>
+                                            <div id="s_moditem_1" class="s-mod-item">
+                                                <div class="s-mod-icon"></div>
+                                                <div class="s-mod-title">导航</div>
+                                            </div>
+                                            <div class="s-mod-item" id="s_moditem_15">
+                                                <div class="s-mod-icon"></div>
+                                                <div class="s-mod-title">视频</div>
+                                            </div>
+                                            <div class="s-mod-item" id="s_moditem_5">
+                                                <div class="s-mod-icon"></div>
+                                                <div class="s-mod-title">购物</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--未订阅-->
+                                    <div class="s-cardsetting-right">
+                                        <h3>未订阅频道</h3>
+                                        <div class="s-cardsetting-content sui-componentWrap">
+                                            <div id="s_moditem_23" class="s-mod-item">
+                                                <div class="s-mod-icon"></div>
+                                                <div class="s-mod-title">体育</div>
+                                            </div>
+                                            <div id="s_moditem_20" class="s-mod-item">
+                                                <div class="s-mod-icon"></div>
+                                                <div class="s-mod-title">小说</div>
+                                            </div>
+                                            <div class="s-mod-item" id="s_moditem_3">
+                                                <div class="s-mod-icon"></div>
+                                                <div class="s-mod-title">音乐</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--底栏-->
+                                <div class="s-cardsetting-set clearfix">
+                                    <!--问号-->
+                                    <span class="scene-recomm-unknown"></span>
+                                    <!--情景推荐-->
+                                    <a class="hide-mods content-mod" href="#">
+                                        <span class="choice-border checked" id="conRecommend_mod"></span>
+                                        <span>情景推荐</span>
+                                    </a>
+                                    <!--隐藏频道-->
+                                    <a class="hide-mods" id="s_hide_allmods" href="#">
+                                        <span class="bg"></span>
+                                        <span>隐藏频道</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 回到顶部按钮 -->
+            <div class="to-topWrap">
+                <div id="to-top" class="to-top">
+                    <!--回到顶部文字,平时隐藏 -->
+                    <div id="icon-mask" class="icon-mask">
+                        <div class="icon-text">回到顶部</div>
+                    </div>
+                    <!-- 图标 -->
+                    <span id="icon" class="icon"></span>
+                </div>
+            </div>
+        </div>
+        <!-- end Logo and search -->
+        <!-- footer -->
+        <div id="footer">
+            <div class="foot-Wrapper">
+                <!-- <div id="qrcode">
+                <div class="qrcode-item qrcode-item-1">
+                    <div class="qrcode-img">
+                    </div>
+                    <div class="qrcode-text">
+                        <p>
+                            <b>手机百度</b>
+                        </p>
+                        <p>
+                            <span>快人一步</span>
+                        </p>
+                    </div>
+                </div>
+                <div class="qrcode-item qrcode-item-2">
+                    <div class="qrcode-img"></div>
+                    <div class="qrcode-text">
+                        <p>
+                            <b>百度糯米</b>
+                        </p>
+                        <p>
+                            <span>一元大餐</span>
+                        </p>
+                    </div>
+                </div>
+            </div> -->
+                <div id="foot-text">
+                    <!-- <p id="lh">
+                    <a id="setf" href="https://www.baidu.com/cache/sethelp/help.html" title="设为主页" target="_blank">把百度设为主页</a>
+                    <a href="http://home.baidu.com" title="关于百度" target="_blank">关于百度</a>
+                    <a href="http://ir.baidu.com" title="About Baidu" target="_blank">About  Baidu</a>
+                </p> -->
+                    <p id="cp">
+                        <a id="setf" href="https://www.baidu.com/cache/sethelp/help.html" title="设为主页" target="_blank">设为主页</a> &nbsp;&nbsp;&nbsp;
+                        <span>©2016 Baidu</span>
+                        <a href="http://www.baidu.com/duty/" title="用前必读" target="_blank">使用百度前必读</a>
+                        <a class="cp-feedback" href="http://jianyi.baidu.com/" title="意见反馈" target="_blank">意见反馈</a> 京ICP证030173号
+                        <i class="c-icon-icrlogo"></i>
+                    </p>
+                    <p id="jgwab">
+                        <i class="c-icon-jgwablogo"></i> 京公网安备11000002000001号
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--end footer-->
+    <script type="text/javascript" src="./js/sea.js"></script>
+    <script type="text/javascript" src="./js/jquery-3.1.0.js"></script>
+    <script type="text/javascript" src="./js/jquery.cookie.js"></script>
+    <script type="text/javascript" src="./js/index.js"></script>
+    <script type="text/javascript" src="./seajs/lunarCalendar.js"></script>
+</body>
+
+</html>

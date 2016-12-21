@@ -1,0 +1,47 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>双飞翼布局</title>
+    <link rel="stylesheet" href="./stylesheets/index.css">
+</head>
+
+<body>
+    <!-- header -->
+    <div class="header">
+        header
+    </div>
+    <!-- end header -->
+    <!-- article -->
+    <div class="article">
+        <div class="middle">
+            <div class="inner">
+                middle
+                <ul class="explaination">
+                    <li>header,tooter暂时不用管它,关注的是article部分实现的3列布局。</li>
+                    <li>article分为3个部分:left,middle,right,由于我们需要middle在浏览器中最先解析和渲染,在文档流中的书写顺序是middle,left,right,但在页面显示上却希望能够按照left,middle,right的顺序进行显示,下面以3列布局为例子来阐述双飞翼布局。</li>
+                    <li>先让left和middle foloat:left,令right float:right,由于midle在文档流中写在最前面,这样3者就排在了同一行,并且顺序是left,middle,right。如果不给left和right添加文字内容,则需要给left,right设置固定的宽高,不然中间显示的middle会挤压left和right的显示。而对于middle,设置width:100%就行了,但现在middle会被left和right所覆盖,left和right是浮在middle上的,并非正常的3列布局。</li>
+                    <li>在容器article中预留位置给middle和right,设置article的padding-left:150px;和padding-right:100px;就可以了,然后再移动left position:relative;left:-150px; 以及移动right position:relative; right:-100px; 这种方法实现了正常的3列布局,left,middle和right是分开显示的,并且显示顺序是left,middle,right从左到右显示。这种布局方法叫做<span class="bold">圣杯布局</span>。假如有一天left和right的position都改成了absolute,则上面的布局全都乱了。另外对article采用padding会撑大盒子模型。 另外的解决办法:
+                        <span class="bold">双飞翼布局</span>。</li>
+                    <li><span class="bold">双飞翼布局</span>:取消上面给article设置padding及移动left和right的3个步骤,而把middle作为容器,内嵌一个inner作为内容。设置inner:margin-left:150px; margin-right:100px;这样也能达到上面给article设置padding的效果,并且现在不需要给left和right设置定位。</li>
+                    <li>如果在inner中写很多内容,则left,middle,right就不等高了。现在实现3者等高。设置right left和middle(不是inner) 的margin-bottom:-9999px; padding-bottom:9999px; 对article: overflow:hidden;这样就实现了left,middel(不是inner),right的等高。这样就完成了高度的自适应,同时也完成了目标页面布局:在文档中按照middle,left,right的书写顺序,在页面显示上则按照left,middle,right的显示顺序。</li>
+                </ul>
+            </div>
+        </div>
+        <div class="left">
+            left
+        </div>
+        <div class="right">
+            right
+        </div>
+    </div>
+    <!-- end article -->
+    <!-- footer -->
+    <div class="footer">
+        footer 版权所有@copyright
+    </div>
+    <!-- end footer -->
+</body>
+
+</html>

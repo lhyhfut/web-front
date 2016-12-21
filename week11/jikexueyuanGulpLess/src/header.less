@@ -1,0 +1,631 @@
+// header的公共样式
+@import './vars.less';
+#header {
+  img,
+  ul,
+  nav,
+  div,
+  span,
+  a,
+  i,
+  h3 {
+    text-decoration: none;
+    /*下面会导致极客学院logo触底*/
+    vertical-align: middle;
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+    font-family: Verdana, "Lantinghei SC", "Hiragino Sans GB", "Microsoft Yahei", Helvetica, arial, ~"\5b8b\4f53", sans-serif;
+  }
+  .nav-wrapper {
+    position: relative;
+    width: 1000px;
+    height: 60px;
+    line-height: 60px;
+    margin: 0 auto;
+    & .logo {
+      width: 109px;
+      height: 60px;
+      display: inline-block;
+      margin-right: 60px;
+      float: left;
+      & img {
+        float: left;
+        width: 109px;
+        margin-top: 10px;
+        border: 0 none;
+      }
+    }
+  }
+  //nav中间下来菜单
+  .nav {
+    height: 60px;
+    display: inline-block;
+    float: left;
+    & a {
+      color: #333;
+      &:hover {
+        color: @themwColor;
+      }
+    }
+    & ul li {
+      position: relative;
+      font-size: 14px;
+      display: inline-block;
+      margin-right: 50px;
+      cursor: pointer;
+      height: 60px;
+      float: left;
+      &:hover {
+        color: @themwColor;
+        cursor: pointer;
+        & .submenu {
+          display: block;
+          opacity: 1;
+          animation: myfirst 0.8s ease normal;
+          -moz-animation: myfirst 0.8s ease normal;
+          -webkit-animation: myfirst 0.8s ease normal;
+        }
+        @keyframes myfirst {
+          0% {
+            opacity: 0;
+          }
+          100% {
+            opacity: 1;
+          }
+        }
+        @-moz-keyframes myfirst
+          /* Firefox */
+        {
+          0% {
+            opacity: 0;
+          }
+          100% {
+            opacity: 1;
+          }
+        }
+        @-webkit-keyframes myfirst
+          /* Safari and Chrome */
+        {
+          0% {
+            opacity: 0;
+          }
+          100% {
+            opacity: 1;
+          }
+        }
+        @-o-keyframes myfirst
+          /* Opera */
+        {
+          0% {
+            opacity: 0;
+          }
+          100% {
+            opacity: 1;
+          }
+        }
+      }
+      & .arrow-icon {
+        .arrow-icon;
+        margin-bottom: 2px;
+      }
+      & i {
+        margin-left: 5px;
+      }
+    }
+    & .submenu {
+      display: none;
+      opacity: 0;
+      position: absolute;
+      z-index: 1000;
+      background: #fff;
+      font-size: 12px;
+      color: #666;
+      width: 280px;
+      & a {
+        display: block;
+        text-decoration: none;
+        height: 30px;
+        line-height: 30px;
+        padding: 0 15px;
+      }
+      & h3 {
+        margin: 10px 0;
+        padding: 0 15px;
+        background: #fafafa;
+        height: 28px;
+        line-height: 28px;
+        font-weight: 300;
+      }
+    }
+    & .school:hover .arrow-icon,
+    & .vip-hykc:hover .arrow-icon,
+    & .vip-jksq:hover .arrow-icon {
+      /*是-2不是2*/
+      margin-bottom: -2px;
+      display: inline-block;
+      height: 8px;
+      width: 8px;
+      border-top: 1px solid @themwColor;
+      border-left: 1px solid @themwColor;
+      /*旋转方向*/
+      .transform(45deg);
+      /*添加动画*/
+      .animation(1s);
+    }
+    @keyframes rotate {
+      0% {
+        margin-bottom: 2px;
+        .transform(-135deg);
+      }
+      10% {
+        margin-bottom: -2px;
+      }
+      100% {
+        .transform(45deg);
+      }
+    }
+    /*职业学院*/
+    & .school_list i,
+    & .vip-lesson i {
+      background: url(../img/allicon.png) 0 0 no-repeat;
+      background-size: 64px, 64px;
+      width: 14px;
+      height: 14px;
+      display: inline-block;
+      margin-right: 10px !important;
+    }
+    .school_list {
+      & .web-icon {
+        background-position: -15px -27px;
+      }
+      & .python-icon,
+      & .go-icon,
+      & .ios-icon {
+        background: url(../img/allicon3.png) 0 0 no-repeat;
+        background-size: 16px 148px;
+      }
+      & .python-icon {
+        background-position: -2px -2px;
+      }
+      & .go-icon {
+        background-position: -2px -38px;
+      }
+      & .ios-icon {
+        background-position: -2px -82px;
+      }
+    }
+    & .vip-lesson {
+      padding: 10px 0;
+      & a {
+        display: block;
+        height: 40px;
+        line-height: 40px;
+        color: #666;
+        &:hover {
+          display: block;
+          height: 40px;
+          line-height: 40px;
+          background: #fafafa;
+          color: @themwColor;
+        }
+      }
+      & span {
+        color: #bbb;
+        float: right;
+      }
+      /*会员课程*/
+      & .kck-icon {
+        background-position: 0 -13px;
+      }
+      & .zyljt-icon {
+        background-position: -45px 0;
+      }
+      & .zstxt-icon {
+        background-position: -30px -13px;
+      }
+      & .xlkc-icon {
+        background: url(../img/xlkc2.png) 0 0 no-repeat;
+        background-position: 0 0;
+        background-size: 12px 12px;
+      }
+      & .kcbq-icon {
+        background-position: -15px -13px;
+      }
+      & .vip-icon {
+        background-position: -16px 0;
+      }
+      /*极客社区*/
+      & .jswd-icon {
+        background-position: 0 -27px;
+      }
+      & .wiki-icon {
+        background-position: -29px -27px;
+      }
+      & .sq-icon {
+        background-position: 0 2px;
+      }
+      & .zygx-icon {
+        background-position: -30px 0;
+      }
+    }
+  }
+  //右上角搜索框
+  .icon-box{
+    width: 200px;
+    height: 60px;
+    margin-right: 10px;
+    float: right;
+    text-align: right;
+    & span{
+      width: 17px;
+      height: 60px;
+      display: inline-block;
+      margin-left: 25px;
+      cursor: pointer;
+    }
+    //搜索图标
+    & .search-icon {
+      background: url(../img/search-icon.png) 0 0 no-repeat;
+      background-size: 17px 17px;
+      background-position: 0, 0;
+      width: 17px;
+      display: inline-block;
+      &:hover {
+        background: url(../img/search-icon2.png) 0 0 no-repeat;
+        background-size: 17px 17px;
+        background-position: 0, 0;
+      }
+    }
+    //应用二维码
+    & .app-icon {
+      /*这个span是一个父元素,它还有下拉菜单,所以设为relative*/
+      position: relative;
+      background: url(../img/app-icon.png) 0 0 no-repeat;
+      background-size: 17px;
+      background-position: 0;
+      &:hover {
+        position: relative;
+        background: url(../img/app-icon2.png) 0 0 no-repeat;
+        background-size: 17px;
+        background-position: 0;
+      }
+    }
+    //应用二维码和个人中心下拉菜单的公共样式
+    & .loginlist .submenu {
+      display: none;
+      opacity: 0;
+      padding: 10px 0;
+      background: #fff;
+      position: absolute;
+      top: 58px;
+      right: -10px;
+      width: 120px;
+      z-index: 1200;
+      //应用二维码以及个人中心下拉面板的倒三角箭头的公共样式
+      & .top-icon {
+        .transform(45deg);
+        position: absolute;
+        top: -8px;
+        right: 10px;
+        width: 15px;
+        height: 15px;
+        border-top: 1px solid #ececec;
+        border-left: 1px solid #ececec;
+        display: inline-block;
+        background: #fff;
+      }
+    }
+    //应用二维码下拉菜单独立样式
+    & .app-icon .submenu {
+      padding: 0;
+      right: -50px;
+      //应用二维码的下拉菜单倒三角箭头
+      & .top-icon {
+        right: 50px;
+      }
+      & img {
+        width: 100%;
+      }
+    }
+    //个人中心图标
+    & .logged {
+      position: relative;
+      width: 25px ! important;
+      height: 60px ! important;
+      //个人中心的图片
+      & img {
+        width: 25px;
+        height: 25px;
+        margin-top: 13px;
+        display: block;
+        border-radius: 50%;
+        border: 1px solid #ddd;
+        overflow: hidden;
+      }
+      //内嵌的vip图片
+      & .year-icon{
+        position: absolute;
+        top: 28px;
+        left: 15px;
+        display: inline-block;
+        background: url(../img/allicon2.png) 0 0 no-repeat;
+        background-size: 64px 64px;
+        width: 13px;
+        height: 13px;
+        /*下面这个可以省略*/
+        margin-right: 10px;
+        background-position: -1px -32px;
+      }
+      //个人中心下拉面板的倒三角箭头
+      & .top-icon {
+        margin-right: 5px !important;
+      }
+    }
+    //个人中心下拉面板的内容
+    & .loginlist{
+      //submenu其实是dl
+      & .submenu dd {
+        text-align: left;
+        font-size: 12px;
+        line-height: 35px;
+        /*vertical-align貌似要和line-height配合使用*/
+        vertical-align: middle;
+        margin: 0;
+        padding-left: 10px;
+        //用户等级,未认证
+        //rzno-vip类名具有唯一性,放在外面也可以,但放在里面能够表征嵌套关系
+        & .rzno-vip {
+          display: inline-block;
+          margin-right: 10px;
+          width: 45px;
+          height: 14px;
+          background: url(../img/rz-no.png);
+          background-size: 45px 14px;
+        }
+        & .year-vip{
+          background: url(../img/allvipicon.png);
+          background-size: 306px 16px;
+          display: inline-block;
+          width: 45px;
+          height: 14px;
+          background-position: -143px -1px;
+        }
+        //一些a标签内容默认是蓝色
+        & a{
+          color: #666;
+        }
+        //图标
+        & i{
+          background: url(../img/allicon2.png) 0 0 no-repeat;
+          background-size: 64px 64px;
+          width: 12px;
+          height: 12px;
+          margin-right: 10px;
+          display: inline-block;
+        }
+        //学习中心图标
+        & .xxzx-icon {
+          background-position: -16px -15px;
+        }
+        //个人主页图标
+        & .grzy-icon {
+          background-position: -45px -1px;
+        }
+        //消息通知图标
+        & .xxtz-icon {
+          background-position: -16px -30px;
+        }
+        //消息通知中的未读数目
+        & .unread-num {
+          padding-left: 10px;
+        }
+        //账号设置
+        & .zhsz-icon {
+          background-position: -30px -1px;
+        }
+        //退出登录
+        & .tc-icon {
+          background-position: -16px -1px;
+        }
+      }
+      //应用二维码和个人中心的hover显示
+      &:hover .submenu {
+        display: block;
+        opacity: 1;
+        animation: listshow 0.8s ease normal;
+        -moz-animation: listshow 0.8s ease normal;
+        -webkit-animation: listshow 0.8s ease normal;
+      }
+
+      @keyframes listshow {
+        0% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+
+      @-moz-keyframes listshow
+        /* Firefox */
+
+      {
+        0% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+
+      @-webkit-keyframes listshow
+        /* Safari and Chrome */
+
+      {
+        0% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+
+      @-o-keyframes listshow
+        /* Opera */
+
+      {
+        0% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+      //个人中心下拉菜单内容还有hover
+      & .submenu dd:hover {
+        background: #f5f5f5;
+      }
+      & .submenu dd a:hover {
+        color: @themwColor;
+      }
+    }
+  }
+  //平时隐藏的搜索框
+  .searchbox {
+    display: none;
+    opacity: 0;
+    transform: scale(0.1, 1);
+    -webkit-transform: scale(0.1, 1);
+    -moz-transform: scale(0.1, 1);
+    width: 850px;
+    height: 59px;
+    line-height: 59px;
+    background: #fff;
+    z-index: 11000;
+    position: absolute;
+    top: 0;
+    right: 0;
+    //搜索图标
+    & .search-icon {
+      background: url(../img/search-icon.png) 0 0 no-repeat;
+      background-size: 17px 17px;
+      background-position: 0, 0;
+      width: 17px;
+      /*下面这个height会重写#header .icon-box span中的height: 60px;会导致搜索按钮不能居中,尚不知源码如何做到不重写的*/
+      height: 17px;
+      display: inline-block;
+      //搜索图标的hover
+      &:hover {
+        background: url(../img/search-icon2.png) 0 0 no-repeat;
+        background-size: 17px 17px;
+        background-position: 0, 0;
+      }
+    }
+    //搜索输入框
+    & input {
+      width: 400px;
+      height: 40px;
+      line-height: 40px;
+      font-size: 12px;
+      margin-top: 10px;
+      vertical-align: top;
+      margin-left: 10px;
+      /*源码中下面2句在另一个css文件。是去除输入框的边框(border起作用)的*/
+      outline: 0;
+      border: 0;
+    }
+    //标签盒
+    & .tagbox {
+      width: 300px;
+      text-align: right;
+      display: inline;
+      margin-right: 50px;
+      float: right;
+      & a {
+        font-size: 12px;
+        color: #808080;
+        background: #f5f5f5;
+        padding: 3px 5px;
+        margin-left: 10px;
+      }
+    }
+    //关闭按钮
+    & .close-icon {
+      width: 15px;
+      height: 15px;
+      margin-top: 22px;
+      cursor: pointer;
+      background: url(../img/close-icon.png) 0 0 no-repeat;
+      background-size: 100% 100%;
+      position: absolute;
+      right: 0;
+      z-index: 1200;
+    }
+  }
+  //searchbox和scale是并列的class名字,应该写在2个less模块中
+  .scale {
+    transform-origin: right center;
+    -moz-transform-origin: right center;
+    /*display: block!important;*/
+    /*调试*/
+    display: none;
+    transform: scale(1, 1) !important;
+    opacity: 1!important;
+    animation: scalerun 0.8s ease normal;
+    -moz-animation: scalerun 2s ease normal;
+    -webkit-animation: scalerun 0.8s ease normal;
+  }
+  @keyframes scalerun {
+    0% {
+      opacity: 0;
+      transform: scale(0.1, 1);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1, 1);
+    }
+  }
+
+  @-moz-keyframes scalerun
+    /* Firefox */
+
+  {
+    0% {
+      opacity: 0;
+      transform: scale(0.1, 1);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1, 1);
+    }
+  }
+
+  @-webkit-keyframes scalerun
+    /* Safari and Chrome */
+
+  {
+    0% {
+      opacity: 0;
+      transform: scale(0.1, 1);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1, 1);
+    }
+  }
+
+  @-o-keyframes scalerun
+    /* Opera */
+
+  {
+    0% {
+      opacity: 0;
+      transform: scale(0.1, 1);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1, 1);
+    }
+  }
+}

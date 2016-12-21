@@ -1,0 +1,175 @@
+/*清除默认边距*/
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    background-image: url(../images/beijing.gif);
+    font-size: 12px;
+    line-height: 150%;
+    text-decoration: none;
+    /*border: 1px solid #f00;*/
+}
+
+
+/*单元格字体颜色*/
+
+td {
+    color: #333333;
+}
+
+
+/*表单元素设置间距更美观*/
+
+input,
+textarea,
+select {
+    margin: 2px;
+}
+
+
+/*公共样式*/
+
+.header,
+.article,
+.footer {
+    width: 710px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #ffffff;
+}
+
+.header {
+    height: 82px;
+    /*con和header要设为圆角*/
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+}
+
+.header-logo {
+    width: 180px;
+    margin-top: 5px;
+    margin-left: 31px;
+    display: inline-block;
+}
+
+.header-nav {
+    width: 460px;
+    display: inline-block;
+    text-align: right;
+    vertical-align: bottom;
+}
+
+.header_txt {
+    color: #FF0099;
+    margin-right: 10px;
+    text-decoration: none;
+}
+
+.header_txt:hover {
+    color: #CC0000;
+    text-decoration: none
+}
+
+.article {
+    /*这样会导致在一些屏幕下提交按钮会被挤下去*/
+    /*height: 2378px;*/
+}
+
+.aritcle-txt {
+    text-align: center;
+    /*vertical-align: top;*/
+}
+
+.titleinfo {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+
+/*让table居中*/
+
+form {
+    display: -webkit-box;
+    -webkit-box-pack: center;
+    -webkit-box-align: center;
+    /*firefox还有问题,暂时不能解决*/
+    /*display: -moz-box;*/
+    /*-moz-box-pack: center;*/
+    /*-moz-box-align: center;*/
+}
+
+
+/*红色文本*/
+
+.red_txt {
+    color: #FF0000;
+}
+
+
+/*"返回"超链接*/
+
+.link:link {
+    color: #0000cc;
+    font-size: 12px;
+    text-decoration: underline
+}
+
+.link:visited {
+    color: #0000cc;
+    font-size: 12px;
+    text-decoration: underline
+}
+
+.link:hover {
+    color: #ff0000;
+    font-size: 12px;
+    text-decoration: underline
+}
+
+
+/*蓝色标题*/
+
+.dark_blue {
+    color: #003399;
+}
+
+
+/*底部圆角设置*/
+
+.footer {
+    margin: 0 auto;
+    height: 46px;
+    text-align: center;
+    vertical-align: top;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+
+.footer-txt {
+    /*不要写成color:"#666666";了*/
+    color: #666666;
+}
+
+.red {
+    color: #ff0000;
+}
+
+.blue {
+    color: #0000ff;
+}
+
+.titleinfo {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.p13 {
+    font-size: 13px;
+    line-height: 150%;
+    color: #000000;
+}

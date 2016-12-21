@@ -1,0 +1,256 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.box {
+    width: 156px;
+    height: 156px;
+    background-color: white;
+    margin: 100px;
+    /*动画*/
+    /*注意其他前缀*/
+    /*chrome,safari*/
+    -webkit-animation-name: animation;
+    -webkit-animation-timing-function: ease-in-out;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-duration: 3s;
+    /*指定成3D*/
+    -webkit-transform-style: preserve-3d;
+    /*指定当前旋转位置*/
+    /*下面这一句只是调试的时候用到,有动画的时候如果有这一句,立方体就不等宽高了*/
+    /*-webkit-perspective:300;*/
+    /*-webkit-perspective-origin: %75 %25;*/
+    /*%应该在后面*/
+    /*-webkit-perspective-origin: 75% 25%;*/
+    -webkit-transform-origin: 78px 78px 0;
+    /*firefox*/
+    -moz-animation-name: animation;
+    -moz-animation-timing-function: ease-in-out;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-duration: 3s;
+    -moz-transform-style: preserve-3d;
+    -moz-transform-origin: 78px 78px 0;
+    /*opera*/
+    -o-animation-name: animation;
+    -o-animation-timing-function: ease-in-out;
+    -o-animation-iteration-count: infinite;
+    -o-animation-duration: 3s;
+    -o-transform-style: preserve-3d;
+    -o-transform-origin: 78px 78px 0;
+    /*microsoft*/
+    -ms-animation-name: animation;
+    -ms-animation-timing-function: ease-in-out;
+    -ms-animation-iteration-count: infinite;
+    -ms-animation-duration: 3s;
+    -ms-transform-style: preserve-3d;
+    -ms-transform-origin: 78px 78px 0;
+    /*w3c*/
+    animation-name: animation;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-duration: 3s;
+    transform-style: preserve-3d;
+    transform-origin: 78px 78px 0;
+}
+
+.box .A,
+.box .B,
+.box .C,
+.box .D,
+.box .E,
+.box .F {
+    position: absolute;
+    width: 156px;
+    height: 156px;
+}
+
+.box .A .A-style,
+.box .B .B-style,
+.box .C .C-style,
+.box .D .D-style,
+.box .E .E-style,
+.box .F .F-style {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    border: 1px solid #fff;
+    float: left;
+}
+
+.box .A .A-style {
+    background-color: #EE2C2C;
+}
+
+.box .B .B-style {
+    background-color: #FFD700;
+}
+
+.box .C .C-style {
+    background-color: #00FF00;
+}
+
+.box .D .D-style {
+    background-color: #1E90FF;
+}
+
+.box .E .E-style {
+    background-color: #98FB98;
+}
+
+.box .E .E-style {
+    background-color: #98FB98;
+}
+
+.box .F .F-style {
+    background-color: #97FFFF;
+}
+
+.box .A {
+    -webkit-transform: translateZ(78px);
+    -moz-transform: translateZ(78px);
+    -o-transform: translateZ(78px);
+    -ms-transform: translateZ(78px);
+    transform: translateZ(78px);
+}
+
+.box .B {
+    -webkit-transform: rotateX(-90deg) translateZ(78px);
+    -moz-transform: rotateX(-90deg) translateZ(78px);
+    -o-transform: rotateX(-90deg) translateZ(78px);
+    -ms--transform: rotateX(-90deg) translateZ(78px);
+    -transform: rotateX(-90deg) translateZ(78px);
+}
+
+.box .C {
+    -webkit-transform: rotateY(90deg) rotateX(90deg) translateZ(78px);
+    -moz-transform: rotateY(90deg) rotateX(90deg) translateZ(78px);
+    -o-transform: rotateY(90deg) rotateX(90deg) translateZ(78px);
+    -ms-transform: rotateY(90deg) rotateX(90deg) translateZ(78px);
+    transform: rotateY(90deg) rotateX(90deg) translateZ(78px);
+}
+
+.box .D {
+    -webkit-transform: rotateY(180deg) rotateZ(90deg) translateZ(78px);
+    -moz-transform: rotateY(180deg) rotateZ(90deg) translateZ(78px);
+    -o-transform: rotateY(180deg) rotateZ(90deg) translateZ(78px);
+    -ms-transform: rotateY(180deg) rotateZ(90deg) translateZ(78px);
+    transform: rotateY(180deg) rotateZ(90deg) translateZ(78px);
+}
+
+.box .E {
+    -webkit-transform: rotateY(-90deg) rotateZ(90deg) translateZ(78px);
+    -moz-transform: rotateY(-90deg) rotateZ(90deg) translateZ(78px);
+    -o-transform: rotateY(-90deg) rotateZ(90deg) translateZ(78px);
+    -ms-transform: rotateY(-90deg) rotateZ(90deg) translateZ(78px);
+    transform: rotateY(-90deg) rotateZ(90deg) translateZ(78px);
+}
+
+.box .F {
+    -webkit-transform: rotateY(90deg) translateZ(78px);
+    -moz-transform: rotateY(90deg) translateZ(78px);
+    -o-transform: rotateY(90deg) translateZ(78px);
+    -ms-transform: rotateY(90deg) translateZ(78px);
+    transform: rotateY(90deg) translateZ(78px);
+}
+
+@-webkit-keyframes animation {
+    from,
+    to {}
+    16% {
+        -webkit-transform: rotateY(-90deg);
+    }
+    33% {
+        -webkit-transform: rotateY(-90deg) rotateZ(135deg);
+    }
+    50% {
+        -webkit-transform: rotateY(225deg) rotateZ(135deg);
+    }
+    66% {
+        -webkit-transform: rotateY(135deg) rotateX(135deg);
+    }
+    83% {
+        -webkit-transform: rotateX(135deg);
+    }
+}
+
+@-moz-keyframes animation {
+    from,
+    to {}
+    16% {
+        -moz-transform: rotateY(-90deg);
+    }
+    33% {
+        -moz-transform: rotateY(-90deg) rotateZ(135deg);
+    }
+    50% {
+        -moz-transform: rotateY(225deg) rotateZ(135deg);
+    }
+    66% {
+        -moz-transform: rotateY(135deg) rotateX(135deg);
+    }
+    83% {
+        -moz-transform: rotateX(135deg);
+    }
+}
+
+@-o-keyframes animation {
+    from,
+    to {}
+    16% {
+        -o-transform: rotateY(-90deg);
+    }
+    33% {
+        -o-transform: rotateY(-90deg) rotateZ(135deg);
+    }
+    50% {
+        -o-transform: rotateY(225deg) rotateZ(135deg);
+    }
+    66% {
+        -o-transform: rotateY(135deg) rotateX(135deg);
+    }
+    83% {
+        -o-transform: rotateX(135deg);
+    }
+}
+
+@-ms-keyframes animation {
+    from,
+    to {}
+    16% {
+        -ms-transform: rotateY(-90deg);
+    }
+    33% {
+        -ms-transform: rotateY(-90deg) rotateZ(135deg);
+    }
+    50% {
+        -ms-transform: rotateY(225deg) rotateZ(135deg);
+    }
+    66% {
+        -ms-transform: rotateY(135deg) rotateX(135deg);
+    }
+    83% {
+        -ms-transform: rotateX(135deg);
+    }
+}
+
+@keyframes animation {
+    from,
+    to {}
+    16% {
+        transform: rotateY(-90deg);
+    }
+    33% {
+        transform: rotateY(-90deg) rotateZ(135deg);
+    }
+    50% {
+        transform: rotateY(225deg) rotateZ(135deg);
+    }
+    66% {
+        transform: rotateY(135deg) rotateX(135deg);
+    }
+    83% {
+        transform: rotateX(135deg);
+    }
+}

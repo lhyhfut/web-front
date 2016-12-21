@@ -1,0 +1,873 @@
+//pager页面主体部分
+@import './vars.less';
+#pager{
+  //有一些公共样式,通过并列类名section来设置
+  .section {
+    & a {
+      text-decoration: none;
+    }
+    & .h2Container {
+      width: 230px;
+      height: 330px;
+      padding-top: 10px;
+      background: #fff;
+      & h2 {
+        font-size: 19px;
+        height: 35px;
+        line-height: 35px;
+        padding-left: 15px;
+        border-left: 2px solid @themwColor;
+      }
+      & .h2text {
+        font-size: 14px;
+        color: #333;
+        padding-left: 17px;
+        margin-top: 5px;
+        height: 20px;
+        line-height: 20px;
+      }
+      & .h2img {
+        /*此属性可用于文字/图片的水平居中*/
+        text-align: center;
+        height: 155px;
+        & img {
+          margin-top: 38px;
+          width: 120px;
+          height: 88px;
+        }
+      }
+      &>span {
+        display: block;
+        width: 62px;
+        height: 18px;
+        line-height: 16px;
+        margin-left: 17px;
+        margin-bottom: 5px;
+        font-size: 12px;
+        /*颜色一般不用英文字母*/
+        color: gray;
+        border: 1px solid #eee;
+        border-radius: 2px;
+        vertical-align: middle;
+        overflow: hidden;
+      }
+      &>span:before {
+        content: '';
+        display: inline-block;
+        height: 16px;
+        width: 16px;
+        background: #2d85ca url(../img/h2icon_a96e146.png) no-repeat center /15px 14px;
+        vertical-align: middle;
+        position: relative;
+        top: -1px;
+        margin-right: 4px;
+      }
+      &>p {
+        font-size: 12px;
+        color: #666;
+        line-height: 22px;
+        padding-left: 17px;
+      }
+    }
+    &>ul>li:nth-child(n+2):hover {
+      border: 1px solid #ccc;
+      box-shadow: 0 2px 6px #ccc;
+      transition: box-shadow .5s;
+      -moz-transition: box-shadow .5s;
+      -webkit-transition: box-shadow .5s;
+      -o-transition: box-shadow .5s
+    }
+  }
+  //独立样式,通过独立类名设置
+  //选项面板
+  .jkBanner{
+    box-sizing: border-box;
+    position: relative;
+    min-width: 1000px;
+    height: 525px;
+    text-align: center;
+    background: url(../img/sp_56c863c.jpg) no-repeat center/1920px 540px;
+    //视频容器
+    & .videoContainer {
+      display: inline-block;
+      position: relative;
+      width: 100%;
+      height: 525px;
+      overflow: hidden;
+      //视频
+      & .index_video {
+        position: relative;
+        left: 50%;
+        margin-left: -960px;
+      }
+      & .video_mask {
+        display: block;
+        width: 100%;
+        height: 525px;
+        /*下面这个偏移貌似也没用*/
+        position: absolute;
+        left: 0;
+        top: 0;
+        background: rgba(0, 0, 0, .6);
+      }
+    }
+    //信息面板
+    & .bannerInfo {
+      display: block;
+      /*不写宽度会造成不能铺满宽度*/
+      width: 100%;
+      height: 525px;
+      /*下面这个偏移貌似也没用*/
+      position: absolute;
+      left: 0;
+      top: 0;
+      & > h1 {
+        font-size: 35px;
+        color: #fff;
+        margin-top: 45px;
+        margin-bottom: 20px;
+        /*height重写了默认的样式*/
+        height: 45px;
+      }
+      & >p {
+        font-size: 13px;
+        color: #fafafa;
+        line-height: 21px;
+        height: 21px;
+      }
+      & >span {
+        margin-top: 45px;
+        font-size: 12px;
+        color: #fafafa;
+        /*行间元素转换为块级元素*/
+        display: block;
+        height: 18px;
+        /*不设置width的话,width就是屏幕宽度*/
+      }
+      //下载区域
+      & .bannerDownload {
+        height: 44px;
+        margin-top: 48px;
+        & a {
+          display: inline-block;
+          height: 44px;
+          width: 141px;
+        }
+        & .androidDownload {
+          background: url(../img/anddown_92313c1.png) no-repeat center /141px 44px;
+          margin-right: 20px;
+          transition: background .1s;
+          -moz-transition: background .1s;
+          -webkit-transition: background .1s;
+          -o-transition: background .1s;
+          &:hover {
+            background: url(../img/anddownhover_6bed6d5.png) no-repeat center/141px 44px;
+          }
+        }
+        & .iosDownload {
+          background: url(../img/iosdown_0813309.png) no-repeat center/141px 44px;
+          transition: background .1s;
+          -moz-transition: background .1s;
+          -webkit-transition: background .1s;
+          -o-transition: background .1s;
+          &:hover {
+            background: url(../img/iosdownhover_43e4f99.png) no-repeat center/141px 44px;
+          }
+        }
+      }
+      //学习中心
+      & .bannerStatus {
+        margin-top: 15px;
+        height: 38px;
+        & >a {
+          display: inline-block;
+          width: 38px;
+          height: 38px;
+        }
+        & .haveLogin {
+          display: inline-block;
+          width: 120px;
+          height: 38px;
+          background: url(../img/haveloginhover_e5aa155.png) no-repeat center / 120px 30px;
+          transition: background .1s;
+          -moz-transition: background .1s;
+          -webkit-transition: background .1s;
+          -o-transition: background .1s;
+          &:hover {
+            background: url(../img/havelogin_1d29673.png) no-repeat center / 120px 30px;
+          }
+        }
+
+
+      }
+      //选项面板
+      & .bannerCard {
+        /*块级元素设定宽高*/
+        height: 240px;
+        width: 1000px;
+        margin: 0 auto;
+        position: relative;
+        top: 36px;
+        & >div {
+          float: left;
+          width: 320px;
+          height: 240px;
+          background: #fff;
+          margin-right: 20px;
+          &:last-child {
+            margin-right: 0;
+          }
+          & .cardInfo {
+            height: 130px;
+            background: #f9f9f9;
+            & >span {
+              font-size: 18px;
+              display: block;
+              height: 50px;
+              line-height: 50px;
+              color: #333;
+            }
+            & >p {
+              /*顶部灰线*/
+              border-top: 1px solid #eee;
+              height: 80px;
+              line-height: 21px;
+              padding: 10px 17px;
+              text-align: left;
+              font-size: 13px;
+              color: #444;
+              overflow: hidden;
+            }
+          }
+          //职业学院
+          & .collegeClass {
+            padding: 17px 10px;
+            height: 110px;
+            & ul {
+              height: 100%;
+              & li {
+                /*列表项横排需要float,默认是竖排*/
+                float: left;
+                height: 100%;
+                width: 25%;
+                font-size: 12px;
+                color: #666;
+                text-align: center;
+                & a {
+                  display: block;
+                  width: 100%;
+                  height: 100%;
+                }
+                & div {
+                  display: inline-block;
+                  width: 50px;
+                  height: 50px;
+                  border: 1px solid #eee;
+                  border-radius: 50%;
+                  transition: border .5s;
+                  -moz-transition: border .5s;
+                  -webkit-transition: border .5s;
+                  -o-transition: border .5s;
+                }
+                & span {
+                  display: block;
+                  margin-top: 7px;
+                  color: #666;
+                  transition: color .5s;
+                  -moz-transition: color .5s;
+                  -webkit-transition: color .5s;
+                  -o-transition: color .5s
+                }
+                & .webCard {
+                  background: url(../img/cardhtml5_c4de6b8.jpg) no-repeat center/26px 35px;
+                }
+                & .pythonCard {
+                  background: url(../img/cardpython_46dafa5.png) no-repeat center / 35px 35px;
+                }
+                & .goCard {
+                  background: url(../img/cardgo_f7d5603.png) no-repeat center / 25px 35px;
+                }
+                & .iosCard {
+                  background: url(../img/cardios_1b210b7.jpg) no-repeat center / 30px 35px;
+                }
+                &:hover{
+                  span {
+                    color: @themwColor;
+                  }
+                  .webCard {
+                    border: 1px solid #dc4d10;
+                  }
+                  .pythonCard {
+                    border: 1px solid #f9d423;
+                  }
+                  .goCard {
+                    border: 1px solid #6ad7e5;
+                  }
+                  .iosCard {
+                    border: 1px solid #666;
+                  }
+                }
+              }
+            }
+          }
+          //专项课程
+          & .libraryClass {
+            padding: 17px 10px;
+            height: 110px;
+            & li {
+              float: left;
+              height: 100%;
+              width: 50%;
+              font-size: 12px;
+              color: #666;
+              text-align: center;
+              & a {
+                display: block;
+                width: 100%;
+                height: 100%;
+              }
+              & div {
+                display: inline-block;
+                width: 100%;
+                height: 57px;
+                font-size: 13px;
+                color: #444;
+                padding-top: 35px;
+              }
+              & span {
+                display: block;
+                color: #666;
+              }
+              & .videoCard {
+                background: url(../img/cardvideo_744765b.jpg) no-repeat top center / 30px 30px;
+              }
+              & .wikiCard {
+                background: url(../img/cardwiki_5eaea4b.jpg) no-repeat top center / 25px 26px;
+              }
+              &:hover{
+                & .videoCard {
+                  background: url(../img/cardvideohover_a616ae2.png) no-repeat top center / 30px 30px;
+                  color: @themwColor;
+                  transition: background .1s;
+                  -moz-transition: background .1s;
+                  -webkit-transition: background .1s;
+                  -o-transition: background .1s
+                }
+                & .wikiCard {
+                  background: url(../img/cardwikihover_6974141.png) no-repeat top center / 25px 26px;
+                  color: @themwColor;
+                  transition: background .1s;
+                  -moz-transition: background .1s;
+                  -webkit-transition: background .1s;
+                  -o-transition: background .1s
+                }
+              }
+            }
+          }
+          //极客社区
+          & .communityClass {
+            padding: 17px;
+            height: 110px;
+            & li {
+              float: left;
+              height: 100%;
+              width: 33.33%;
+              font-size: 12px;
+              color: #666;
+              text-align: center;
+            }
+            & div {
+              display: inline-block;
+              width: 100%;
+              height: 57px;
+              font-size: 13px;
+              color: #444;
+              padding-top: 35px;
+            }
+            & span {
+              display: block;
+              color: #666;
+            }
+            & .xueCard {
+              background: url(../img/cardxue_99b0a45.jpg) no-repeat top center/33px 28px;
+            }
+            & .jiaoCard {
+              background: url(../img/cardjiao_d70bff6.jpg) no-repeat top center /36px 27px;
+            }
+            & .buCard {
+              background: url(../img/cardbu_1d16287.jpg) no-repeat top center / 22px 30px;
+            }
+          }
+        }
+      }
+
+
+    }
+
+  }
+  //就业学习
+  .jkJiuye {
+    box-sizing: border-box;
+    width: 1000px;
+    margin: 0 auto;
+    margin-top: 140px;
+    height: 330px;
+    position: relative;
+    & ul {
+      height: 100%;
+      width: 100%;
+      & >li {
+        float: left;
+        margin-right: 14px;
+        background: #fff;
+        & img {
+          width: 100%;
+          height: 100%
+        }
+        & a {
+          display: block;
+          height: 100%;
+        }
+        &:last-child,
+        &:nth-child(3) {
+          margin-right: 0
+        }
+        &:nth-child(2),
+        &:nth-child(3) {
+          width: 371px;
+          height: 180px;
+          margin-bottom: 14px;
+        }
+        &:nth-child(4),
+        &:nth-child(5),
+        &:nth-child(6) {
+          width: 243px;
+          height: 135px;
+        }
+        &:last-child {
+          width: 242px;
+        }
+      }
+    }
+    & .h2Container {
+      padding-top: 10px;
+      width: 230px;
+      height: 330px;
+      background: #fff;
+      & >span:before {
+        background: @themwColor url(../img/h2icon_a96e146.png) no-repeat center / 15px 14px;
+      }
+    }
+  }
+  //基础学习
+  .jkBase {
+    box-sizing: border-box;
+    width: 1000px;
+    height: 330px;
+    position: relative;
+    margin: 0 auto;
+    margin-top: 30px;
+    & ul {
+      height: 100%;
+      width: 100%;
+      & .h2Container {
+        width: 230px;
+        height: 330px;
+        padding-top: 10px;
+        background: #fff;
+        & h2 {
+          border-left: 2px solid #2d85ca;
+        }
+        & .h2img img {
+          width: 115px;
+          height: 80px;
+          margin-top: 50px;
+        }
+      }
+      &>li {
+        float: left;
+        background: #fff;
+        margin-right: 14px;
+        width: 243px;
+        height: 158px;
+        & a {
+          display: block;
+          height: 100%;
+        }
+        & img {
+          width: 100%;
+          height: 100%;
+        }
+        &:last-child,
+        &:nth-child(4) {
+          margin-right: 0;
+        }
+        &:nth-child(2),
+        &:nth-child(3),
+        &:nth-child(4) {
+          margin-bottom: 14px
+        }
+        &:nth-child(4),
+        &:last-child {
+          width: 242px;
+        }
+      }
+    }
+  }
+  //专项提高
+  .jkSku {
+    box-sizing: border-box;
+    width: 1000px;
+    height: 330px;
+    margin: 0 auto;
+    margin-top: 30px;
+    position: relative;
+    & ul {
+      width: 100%;
+      height: 100%;
+      & .h2Container {
+        width: 230px;
+        height: 330px;
+        padding-top: 10px;
+        background: #fff;
+        & h2 {
+          border-left: 2px solid #ff5c00;
+        }
+        & >span:before {
+          background: #ff5c00 url(../img/h2icon_a96e146.png) no-repeat center/15px 14px;
+        }
+        & .h2img img {
+          width: 103px;
+          height: 94px;
+          margin-top: 30px;
+        }
+      }
+      & >li {
+        float: left;
+        background: #fff;
+        width: 371px;
+        height: 158px;
+        margin-right: 14px;
+        & img {
+          width: 100%;
+          height: 100%;
+        }
+        & a {
+          display: block;
+          height: 100%;
+        }
+        &:last-child,
+        &:nth-child(3) {
+          margin-right: 0;
+        }
+        &:nth-child(2),
+        &:nth-child(3) {
+          margin-bottom: 14px;
+        }
+      }
+    }
+  }
+  //我是技术大咖
+  .jkDk {
+    box-sizing: border-box;
+    width: 1000px;
+    height: 158px;
+    margin: 0 auto;
+    margin-top: 30px;
+    position: relative;
+    & ul {
+      width: 100%;
+      height: 100%;
+      & .h2Container {
+        width: 230px;
+        height: 158px;
+        padding-top: 10px;
+        background: #fff;
+        & h2 {
+          border-left: 2px solid #ad3a37;
+        }
+        & .h2img {
+          height: 88px;
+          & img {
+            width: 105px;
+            height: 72px;
+            margin-top: 17px;
+          }
+        }
+      }
+      &>li {
+        float: left;
+        margin-right: 14px;
+        background: #fff;
+        width: 371px;
+        height: 158px;
+        & img {
+          width: 100%;
+          height: 100%;
+        }
+        & a {
+          display: block;
+          height: 100%;
+        }
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+  //我是纯小白
+  .jkBai {
+    box-sizing: border-box;
+    width: 1000px;
+    height: 158px;
+    margin: 0 auto;
+    margin-top: 30px;
+    position: relative;
+    & ul {
+      width: 100%;
+      height: 100%;
+      & .h2Container {
+        padding-top: 10px;
+        width: 230px;
+        height: 158px;
+        background: #fff;
+        text-align: left;
+        & h2 {
+          border-left: 2px solid @themwColor;
+        }
+        & .h2img img {
+          margin-top: 17px;
+          width: 95px;
+          height: 72px;
+        }
+      }
+      &>li {
+        float: left;
+        margin-right: 14px;
+        background: #fff;
+        width: 243px;
+        height: 158px;
+        text-align: center;
+        & a {
+          display: block;
+          height: 100%;
+        }
+        & .baiImg {
+          display: block;
+          height: 55px;
+          margin-top: 30px;
+        }
+        & span {
+          display: block;
+          font-size: 18px;
+          color: #333;
+          height: 25px;
+          line-height: 25px;
+          margin-top: 10px;
+        }
+        & p {
+          font-size: 12px;
+          color: #666;
+          height: 16px;
+          line-height: 16px;
+          margin-top: 5px;
+        }
+        &:nth-child(2) img {
+          width: 41px;
+          height: 55px;
+        }
+        &:nth-child(3) img {
+          width: 55px;
+          height: 48px;
+        }
+        &:last-child {
+          margin-right: 0;
+          width: 242px;
+          & img {
+            width: 55px;
+            height: 55px;
+          }
+          &:hover {
+            border: 1px solid #fff;
+            box-shadow: none;
+          }
+        }
+      }
+    }
+
+
+  }
+  //他们的故事
+  .jkStudent {
+    box-sizing: border-box;
+    width: 1000px;
+    height: 500px;
+    margin: 0 auto;
+    margin-top: 30px;
+    position: relative;
+    &>ul {
+      width: 100%;
+      height: 100%;
+      & .h2Container {
+        padding-top: 10px;
+        width: 230px;
+        height: 500px;
+        background: #fff;
+        text-align: left;
+        & >ul {
+          padding-left: 15px;
+          padding-top: 10px;
+          width: 100%;
+          &>li {
+            float: left;
+            width: 56px;
+            height: 56px;
+            background: #ccc;
+            margin-right: 14px;
+            &:nth-child(3n) {
+              margin-right: 0;
+            }
+            &:nth-child(n+4) {
+              margin-top: 14px;
+            }
+            & a {
+              display: block;
+              height: 100%;
+              & img {
+                width: 100%;
+                height: 100%;
+              }
+            }
+          }
+        }
+      }
+      &>li {
+        float: left;
+        margin-right: 14px;
+        background: #fff;
+        width: 243px;
+        height: 243px;
+        text-align: center;
+        padding-top: 30px;
+        & a {
+          display: block;
+          height: 100%;
+        }
+        & .s_pic {
+          /*img也可以设为inline-block*/
+          display: inline-block;
+          width: 60px;
+          height: 60px;
+          border-radius: 50%;
+          border: 1px solid #eee;
+        }
+        & .s_name {
+          display: block;
+          font-size: 16px;
+          color: #666;
+          margin-top: 10px;
+        }
+        & .s_job {
+          font-size: 12px;
+          /*开发中不建议用英文*/
+          color: gray;
+          height: 16px;
+          line-height: 16px;
+          margin-top: 10px;
+        }
+        & .s_status {
+          font-size: 12px;
+          color: gray;
+          height: 16px;
+          margin-top: 35px;
+        }
+        & .s_comp {
+          margin-top: 5px;
+          height: 20px;
+        }
+        &:nth-child(n+5) {
+          margin-top: 14px;
+        }
+        &:nth-child(4),
+        &:last-child {
+          width: 242px;
+          margin-right: 0;
+        }
+
+
+      }
+    }
+  }
+  //让每个人
+  .jkOrganization {
+    box-sizing: border-box;
+    width: 1000px;
+    height: 158px;
+    margin: 0 auto;
+    margin-top: 30px;
+    position: relative;
+    & ul {
+      width: 100%;
+      height: 100%;
+      & .h2Container {
+        padding-top: 10px;
+        width: 230px;
+        height: 158px;
+        background: #fff;
+        text-align: left;
+        & h2 {
+          border-left: 2px solid #ad3a37;
+        }
+      }
+      & >li {
+        float: left;
+        margin-right: 14px;
+        background: #fff;
+        width: 243px;
+        height: 158px;
+        text-align: center;
+        & a {
+          display: block;
+          height: 100%;
+        }
+        & .baiImg {
+          display: block;
+          height: 55px;
+          margin-top: 30px;
+        }
+        & span {
+          display: block;
+          font-size: 18px;
+          color: #333;
+          height: 25px;
+          line-height: 25px;
+          margin-top: 10px;
+          font-weight: 500;
+        }
+        & p {
+          font-size: 12px;
+          color: #666;
+          height: 16px;
+          line-height: 16px;
+          margin-top: 5px;
+        }
+        &:nth-child(2) img {
+          width: 55px;
+          height: 48px;
+        }
+        &:nth-child(3) img {
+          width: 55px;
+          height: 48px;
+        }
+        &:last-child {
+          margin-right: 0;
+          width: 242px;
+        }
+        &:last-child img {
+          width: 55px;
+          height: 48px;
+        }
+      }
+    }
+  }
+}

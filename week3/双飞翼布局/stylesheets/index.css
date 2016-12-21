@@ -1,0 +1,89 @@
+/*公共样式*/
+
+body {
+    font-size: 13px;
+    min-width:800px;
+}
+
+.header,
+.footer,
+.article .left,
+.article .right {
+    display: -webkit-box;
+    -webkit-box-pack: center;
+    -webkit-box-align: center;
+    border-radius: 10px;
+}
+
+
+/*article*/
+
+.article {
+    border-radius: 10px;
+}
+
+.article .middle {
+    text-align: center;
+}
+
+.explaination {
+    text-align: left;
+}
+
+.header {
+    background: orange;
+    height: 150px;
+}
+
+.article {
+    background: green;
+    /*height: 300px;*/
+    min-height:600px;
+    overflow: hidden;
+}
+
+.footer {
+    background: yellow;
+    height: 100px;
+}
+
+.article .left {
+    background: blue;
+    float: left;
+    color: white;
+    opacity: 0.5;
+    width: 150px;
+    margin-left: -100%;
+    margin-bottom: -9999px;
+    padding-bottom: 9999px;
+}
+
+.article .right {
+    background-color: red;
+    width: 100px;
+    float: right;
+    margin-left: -100px;
+    margin-bottom: -9999px;
+    padding-bottom: 9999px;
+}
+
+.article .middle {
+    background-color: aqua;
+    float: left;
+    width: 100%;
+    margin-bottom: -9999px;
+    padding-bottom: 9999px;
+}
+
+.article .middle .inner {
+    margin-left: 150px;
+    margin-right: 100px;
+}
+
+
+/*说明文字特殊字体*/
+
+.bold {
+    font-size: 15px;
+    font-weight: bold;
+}

@@ -1,0 +1,77 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.con {
+    box-sizing: border-box;
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    min-width: 300px;
+    min-height: 300px;
+    background: url(../img/Scenery.jpg) no-repeat;
+    /*使背景图像完全覆盖背景区域*/
+    background-size: cover;
+}
+
+
+/*登录界面容器*/
+
+.formlogin {
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    margin-left: -150px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.4);
+    box-shadow: 1px 1px 2px 2px rgba(100, 100, 100, 0.1);
+    padding: 10px;
+}
+
+
+/*邮箱和密码*/
+
+.row-con {
+    display: block;
+    margin: 20px auto;
+    position: relative;
+    width: 280px;
+    height: 40px;
+}
+
+
+/*remeber me*/
+
+.checkbox-con {
+    text-align: center;
+    margin-top: 40px;
+}
+
+label {
+    font-weight: normal;
+}
+
+
+/*登录按钮*/
+
+.btn {
+    margin-top: 15px;
+    border-radius: 10px;
+}
+
+
+/*注册帐号,忘记密码*/
+
+.submit-info {
+    text-align: center;
+    margin: 10px auto;
+}
+
+.submit-info>a {
+    display: inline-block;
+}

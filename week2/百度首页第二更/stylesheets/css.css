@@ -1,0 +1,567 @@
+/*清零   清除默认边距*/
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+body {
+    /*background: #fff none repeat scroll 0 0;*/
+    font: 12px arial;
+    /*批改:下面2句是为了解决拉伸屏幕右上角和底部元素会被挤到另外一行的问题,但实际貌似没效果*/
+    /*解决屏幕拉伸时候footer，header内容会被挤到一行的问题*/
+    /*min-width: 600px;*/
+    min-width: 700px;
+    overflow: scroll;
+}
+
+body,
+form {
+    position: relative;
+}
+
+img,
+input {
+    border: none;
+    /*ie6,下面会报错*/
+    /*border: 1px solid none;*/
+}
+
+#hd-header {
+    /*设置宽度为定值,为100%的话在拉伸浏览器的时候元素会堆叠在一起,不设为定值,拉伸的时候又不能对齐*/
+    /*width:1260px;*/
+    height: 42px;
+    margin: 0 auto;
+    /*border:1px solid #f00;   /!*红色边框在头部做完以后就可以不要了*!/*/
+    position: relative;
+    /*采用position而非float,解决兼容性问题*/
+}
+
+.u1 a:active {
+    color: #00c;
+}
+
+
+/*position: absolute决定u1在上面*/
+
+.u1 {
+    color: white;
+    margin: 19px 0 5px;
+    padding: 0 96px 0 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 2;
+}
+
+
+/*登录*/
+
+.u1 a.pf,
+.u1 a.pf:visited {
+    color: #333;
+    display: inline-block;
+    float: left;
+    font-size: 13px;
+    line-height: 24px;
+    margin-left: 20px;
+    overflow: hidden;
+    text-decoration: underline;
+}
+
+
+/*设置*/
+
+.u1 a.lb,
+.u1 a.lb:visited {
+    color: #333;
+    display: inline-block;
+    float: left;
+    font-size: 13px;
+    line-height: 24px;
+    margin-left: 20px;
+    text-decoration: underline;
+}
+
+
+/*设置的二级下拉菜单*/
+
+
+/*下拉菜单的容器元素*/
+
+.config {
+    /*position:relative;*/
+    /*设置为块级元素就可以设置宽高,然后和config_list连接起来*/
+    display: inline-block;
+    /*可以不设置*/
+    height: 34px;
+}
+
+
+/*顶部导航，“设置”下方的二级导航*/
+
+.config .config_list {
+    position: absolute;
+    display: none;
+    right: 60px;
+    width: 74px;
+    height: 108px;
+    border: 1px solid #888;
+    text-align: center;
+    padding: 0;
+    /*为了和config连接起来,config_list不要设置margin-top*/
+    /*margin-top: 5px;*/
+    margin-right: 10px;
+    z-index: 998;
+}
+
+
+/*顶部导航，“设置”，设置当鼠标悬停时，显示二级导航*/
+
+.config:hover .config_list,
+.config .config_list:hover {
+    display: block;
+}
+
+
+/*顶部导航，“设置”的二级导航的鼠标悬停样式*/
+
+.config .config_list .config_item:hover {
+    background-color: #358fFE;
+    color: #FFF;
+}
+
+.u1 a.bri,
+.u1 a.bri:visited {
+    background: #38f none repeat scroll 0 0;
+    border-bottom: 1px solid #38f;
+    color: white;
+    display: inline-block;
+    float: left;
+    font-size: 13px;
+    height: 23px;
+    line-height: 24px;
+    margin-left: 19px;
+    margin-right: 2px;
+    overflow: hidden;
+    position: absolute;
+    right: 10px;
+    text-align: center;
+    width: 60px;
+}
+
+.u1 a.mnav,
+.u1 a.mnav:visited {
+    color: #333;
+    float: left;
+    font-size: 13px;
+    font-weight: bold;
+    line-height: 24px;
+    margin-left: 20px;
+    text-decoration: underline;
+}
+
+.u1 a.pf:hover,
+.u1 a.lb:hover,
+.u1 a.mnav:hover {
+    color: #00c;
+}
+
+
+/*更多产品的容器*/
+
+.more {
+    display: none;
+    position: absolute;
+    z-index: 999;
+    top: 0;
+    right: 0;
+    /*下面不写100%反而是全部,写了才是25px,可能被某部分div挤住了*/
+    /*height: 100%;*/
+    width: 84px;
+    background-color: #F7F7F7;
+    border: 1px solid #EEE;
+    border-top: 0;
+}
+
+
+/*整个更多产品头部的“更多产品”文字的样式*/
+
+.nav_more_title {
+    display: block;
+    height: 43px;
+    text-align: center;
+    line-height: 25px;
+    /*下面写在nav_more_title .span里面也是可以的*/
+    color: #333;
+    font-size: 13px;
+}
+
+
+/*包含所有带有icon产品列表的容器*/
+
+.nav_more {
+    font-size: 12px;
+    overflow-y: scroll;
+    display: block;
+}
+
+
+/*icon下方的文字*/
+
+.nav_more span {
+    display: block;
+    margin: 6px 0;
+    color: #333;
+    font-size: 13px;
+}
+
+
+/*icon下方的文字链接*/
+
+.nav_more a {
+    display: inline-block;
+    text-align: center;
+    border-top: 1px solid #EEE;
+    width: 64px;
+    padding-top: 10px;
+    padding-bottom: 6px;
+    background-color: #F7F7F7;
+    text-decoration: none;
+    color: #111;
+}
+
+
+/*更多产品，每个icon是使用列表列出，这里修改列表的样式*/
+
+.nav_more ul li {
+    list-style: none;
+    line-height: 100%;
+}
+
+.nav_more .icon1 {
+    display: inline-block;
+    height: 36px;
+    width: 36px;
+    background: url(../images/icons.png) no-repeat
+}
+
+.nav_more .icon2 {
+    display: inline-block;
+    height: 36px;
+    width: 36px;
+    background: url(../images/icons.png) -36px 0 no-repeat
+}
+
+.nav_more .icon3 {
+    display: inline-block;
+    height: 36px;
+    width: 40px;
+    background: url(../images/icons.png) -72px 0 no-repeat
+}
+
+.nav_more .icon4 {
+    display: inline-block;
+    height: 36px;
+    width: 34px;
+    background: url(../images/icons.png) -112px 0 no-repeat
+}
+
+.nav_more .icon5 {
+    display: inline-block;
+    height: 36px;
+    width: 30px;
+    background: url(../images/icons.png) -150px 0 no-repeat
+}
+
+.nav_more .icon6 {
+    display: inline-block;
+    height: 36px;
+    width: 36px;
+    background: url(../images/icons.png) -184px 0 no-repeat
+}
+
+.nav_more .icon7 {
+    display: inline-block;
+    height: 36px;
+    width: 36px;
+    background: url(../images/icons.png) -220px 0px no-repeat
+}
+
+
+/*悬停在更多产品上时触发显示二级菜单*/
+
+.bri:hover ~ .more,
+.more:hover {
+    display: block;
+}
+
+
+/*end hd-header*/
+
+
+/*middle*/
+
+#middle {
+    text-align: center;
+    height: 100%;
+    min-height: 600px;
+    padding-bottom: 0;
+    /*position: relative;*/
+    /*border:1px solid #1f91ff;*/
+}
+
+.middle_up {
+    position: relative;
+    height: 191px;
+    width: 100%;
+    /*border: 1px solid #ff6600;*/
+}
+
+#form {
+    margin: 22px auto 0;
+    text-align: left;
+    width: 641px;
+    z-index: 100;
+    /*position: relative;*/
+}
+
+
+/*bg s_ipt_wr quickdelete-wrap是文本+voice+capture输入框*/
+
+.input_total {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background: #fff none repeat scroll 0 0;
+    border-color: #b8b8b8 transparent #ccc #b8b8b8;
+    border-image: none;
+    border-style: solid;
+    border-width: 1px 0 1px 1px;
+    display: inline-block;
+    margin-right: 0;
+    overflow: hidden;
+    vertical-align: top;
+    width: 536px;
+    height: 34px;
+}
+
+.input_voice {
+    background: rgba(0, 0, 0, 0) url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAASCAYAAACAa1QyAAAAAXNSR0IArs4c6QAAAAlwSFlzAAALEwAACxMBAJqcGAAAAVlpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IlhNUCBDb3JlIDUuNC4wIj4KICAgPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4KICAgICAgPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIKICAgICAgICAgICAgeG1sbnM6dGlmZj0iaHR0cDovL25zLmFkb2JlLmNvbS90aWZmLzEuMC8iPgogICAgICAgICA8dGlmZjpPcmllbnRhdGlvbj4xPC90aWZmOk9yaWVudGF0aW9uPgogICAgICA8L3JkZjpEZXNjcmlwdGlvbj4KICAgPC9yZGY6UkRGPgo8L3g6eG1wbWV0YT4KTMInWQAAAXlJREFUKBW9kr1Kw1AUx5OYVWiRGqqLiPgIios4qg+QobhI7QdYH6CKk4IPUCRNQhFRHPIAnRykIIqre7cMsUMHp0Jt/J2ShiYWxx44/M/53/N17z2qkhLbtgtQl+g62kWvKpXKExiLFlsYzWbzCLgOw7A2HA6XVFU9Ez/i41A9tjAIutA0rVAqld4j/tl13cJoNLrHf5zEJjpBbvq+/zE5FIz8jWkuYXOfMEFETppPd5qV84ebX5Iu82azWd00zR+Zg+fmEdWZd/M8b6Hf7w9kvKDX661Eg3cdx9mK7DFQdBtDPlkhYRUI5J86uq4fgA4d6nR6sCzrOAiCN8MwduDvhAdF9tFX/lJrYNRbrdZiuVz2SDqHs/P5/EBQfOHlXOIkXsVQGMnicI2OZrFY/BZuWiSBtfLo6FPgZLxGmUymxrwNDj65ww3YzuVycleDQof4Ml6bONlFZdxpUpXF3MU+peIeuIx+McELeFutVjvg/5Jeneno+W3ELz3Rmg23qA6NAAAAAElFTkSuQmCC") no-repeat scroll 0 50% / 13px 18px;
+    /*background:url(../images/voice.png);*/
+    cursor: pointer;
+    display: none;
+    height: 34px;
+    position: absolute;
+    right: 138px;
+    width: 24px;
+    z-index: 1;
+}
+
+.input_voice:hover {
+    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAASCAMAAAC3taQAAAAAhFBMVEX///8zhf8zhf8zhf8zhf8zhf8zhf8zhf8zhf8zhf8zhf8zhf8zhf8zhf8zhf8zhf8zhf8zhf8zhf8zhf8zhf8zhf8zhf8zhf8zhf8zhf8zhf8zhf8zhf8zhf8zhf8zhf8zhf8zhf8zhf8zhf8zhf8zhf8zhf8zhf8zhf8zhf8zhf8zhf+04UQDAAAAK3RSTlMAAQIDBgwNHR43ODs9PkNEVFZaXGZnlpecqaq31NfZ2t3e3+Dl6On5+/z9BL131wAAAHdJREFUCB0FwYcCgQAUAMBTFGWPaCGb9///5w5s+3e/BdgNy8lq2AH6AsUZ8EuQ/AABAhAgAAECECAgUjGCkH49c9cZZlfTh2ZvcymT8rKxb8xvmXX36day25xjm4GsPSGt7od8nB/uVQoW9Ste9QKAAAABAAL4AzokCI8/h6hiAAAAAElFTkSuQmCC");
+    /*background:url(../images/voice_hover.png);*/
+}
+
+.input_camera {
+    background: #fff url("https://ss1.bdstatic.com/5eN1bjq8AAUYm2zgoY3K/r/www/cache/static/protocol/https/soutu/img/camera_new_679c15cc.png") no-repeat scroll 0 0;
+    /*background:url(../images/camera.png);*/
+    cursor: pointer;
+    height: 16px;
+    margin-top: -8px;
+    position: absolute;
+    right: 111px;
+    top: 50%;
+    width: 18px;
+    z-index: 1;
+}
+
+.input_camera:hover {
+    background-position: 0 -20px;
+}
+
+#text_input {
+    background: transparent none repeat scroll 0 0;
+    border: 0 none;
+    font: 16px/18px arial;
+    height: 22px;
+    margin: 6px 0 0 7px;
+    outline: 0 none;
+    padding: 0;
+    width: 465px;
+}
+
+.bd_submit {
+    /*border-bottom: 1px solid transparent;*/
+    /*height: auto;*/
+    /*width: auto;*/
+    height: 36px;
+    width: 100px;
+    /*解决百度一下按钮与输入框有0.5px距离,添加下面,*/
+    margin-left: -3px;
+}
+
+.bd_submit_btn {
+    background: #3385ff none repeat scroll 0 0;
+    border-bottom: 1px solid #2d78f4;
+    color: white;
+    font-size: 15px;
+    height: 36px;
+    letter-spacing: 1px;
+    outline: medium none;
+    width: 100px;
+    /*解决百度一下按钮与输入框有0.5px距离,添加下面,但没有效果,因为bd_submit_btn在bd_submit里面,所以应该修改bd_submit*/
+    /*margin-left :-3px;*/
+}
+
+.bd_submit_btn:hover {
+    background: #317ef3 none repeat scroll 0 0;
+    border-bottom: 1px solid #2868c8;
+    box-shadow: 1px 1px 1px #ccc;
+}
+
+
+/*end middle*/
+
+
+/*footer*/
+
+#footer {
+    bottom: 23px;
+    height: 100px;
+    margin: 0 auto;
+    overflow: hidden;
+    position: absolute;
+    text-align: left;
+    width: 100%;
+    /*这样写在拉伸浏览器的时候div会堆叠*/
+    /*width:1270px;*/
+    /*这样写会造成拉伸的时候不能对齐*/
+    z-index: 0;
+    /*border: 1px solid #68228B;*/
+}
+
+.foot-Wrapper {
+    margin: 0 auto;
+    overflow: hidden;
+    text-align: center;
+}
+
+#qrcode {
+    display: inline-block;
+}
+
+#qrcode .qrcode-item {
+    float: left;
+}
+
+#qrcode .qrcode-item-2 {
+    margin-left: 33px;
+}
+
+
+/*#qrcode .qrcode-item .qrcode-img{*/
+
+#qrcode .qrcode-img {
+    float: left;
+    height: 60px;
+    width: 60px;
+    /*border: 1px solid #f00;*/
+}
+
+#qrcode .qrcode-item-1 .qrcode-img {
+    /*background: url(../mages/zbios_62c636fe.png);*/
+    /*background: url(../images/zbios_62c636fe.png);*/
+    background: rgba(0, 0, 0, 0) url("https://ss1.bdstatic.com/5eN1bjq8AAUYm2zgoY3K/r/www/cache/static/protocol/https/home/img/qrcode/zbios_62c636fe.png") no-repeat scroll 0 0;
+}
+
+#qrcode .qrcode-item-2 .qrcode-img {
+    /*background: url(../images/nuomi_510f7472.png);*/
+    /*background: url(../images/nuomi_510f7472.png);*/
+    background: rgba(0, 0, 0, 0) url("https://ss1.bdstatic.com/5eN1bjq8AAUYm2zgoY3K/r/www/cache/static/protocol/https/home/img/qrcode/nuomi_510f7472.png") no-repeat scroll 0 0;
+}
+
+#qrcode .qrcode-text {
+    color: #999;
+    float: left;
+    line-height: 23px;
+    margin: 8px 0 0 10px;
+}
+
+#qrcode .qrcode-text a {
+    color: #999;
+    text-decoration: none;
+}
+
+#qrcode .qrcode-text p {
+    text-align: left;
+}
+
+#qrcode .qrcode-text b {
+    color: #666;
+    font-weight: bold;
+}
+
+#qrcode .qrcode-text span {
+    letter-spacing: 1px;
+}
+
+#foot-text {
+    display: inline-block;
+    line-height: 22px;
+    margin-left: 33px;
+    position: relative;
+    text-align: left;
+    top: -2px;
+}
+
+#foot-text,
+#foot-text a {
+    color: #999;
+}
+
+
+/*lh*/
+
+#lh a {
+    margin-left: 62px;
+}
+
+#lh #seth,
+#lh #setf {
+    margin-left: 0;
+}
+
+
+/*cp,jgwab*/
+
+#cp .c-icon-icrlogo,
+#jgwab .c-icon-jgwablogo {
+    background: rgba(0, 0, 0, 0) url("https://ss1.bdstatic.com/5eN1bjq8AAUYm2zgoY3K/r/www/cache/static/protocol/https/global/img/icons_0e814c16.png") no-repeat scroll 0 0;
+    /*background:url(../images/icons_0e814c16.png);*/
+    display: inline-block;
+    height: 17px;
+    overflow: hidden;
+    width: 14px;
+}
+
+#cp .c-icon-icrlogo {
+    background-position: -600px -96px;
+    position: relative;
+    top: 3px;
+}
+
+#jgwab .c-icon-jgwablogo {
+    background-position: -623px -96px;
+    margin-right: 6px;
+    position: relative;
+    top: 3px;
+}
+
+
+/*end footer*/

@@ -1,0 +1,95 @@
+// header之前的公共样式,已大最简,不需简化
+@import './vars.less';
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+a,
+a:hover,
+a:link,
+a:visited {
+  border: 0 none;
+}
+
+ol li,
+ul li {
+  list-style: none;
+}
+
+body {
+  //font-family: Verdana, "Lantinghei SC", "Hiragino Sans GB", "Microsoft Yahei", "Helvetica", "arial", "宋体", "sans-serif";
+  font-family: Verdana, @primaryFont;
+  //background: #f5f5f5;
+  background: @primaryBgColor;
+}
+
+
+/*h1等字体的font-weight在common_sync0_libs_4f30de2.css中有改动。*/
+
+button,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+input,
+select,
+textarea {
+  font-size: 100%;
+  font-weight: 400;
+}
+
+
+/*common_sync0_libs_4f30de2.css*/
+
+a,
+dd,
+div,
+dl,
+i,
+img,
+input,
+li,
+p,
+span,
+ul {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -moz-box-sizing: border-box
+}
+
+.arrow-icon {
+  display: inline-block;
+  height: 8px;
+  width: 8px;
+  border-left: 1px solid #c1c1c1;
+  border-top: 1px solid #c1c1c1;
+  .transform(-135deg);
+  .transform-origin(4px, 4px, 0);
+}
+.transform(@angle) {
+  transform: rotate(@angle);
+  -webkit-transform: rotate(@angle);
+  -moz-transform: rotate(@angle);
+  -ms-transform: rotate(@angle);
+  -o-transform: rotate(@angle);
+}
+
+.animation(@time) {
+  animation: rotate @time ease normal;
+  -moz-animation: rotate @time ease normal;
+  -webkit-animation: rotate @time ease normal;
+  -o-animation: rotate @time ease normal;
+  -ms-animation: rotate @time ease normal;
+}
+
+.transform-origin(@coordinate1, @coordinate2, @coordinate3) {
+  transform-origin: @coordinate1, @coordinate2, @coordinate3;
+  -webkit-transform-origin: @coordinate1, @coordinate2, @coordinate3;
+  -moz-transform-origin: @coordinate1, @coordinate2, @coordinate3;
+  -ms-transform-origin: @coordinate1, @coordinate2, @coordinate3;
+  -o-transform-origin: @coordinate1, @coordinate2, @coordinate3;
+}

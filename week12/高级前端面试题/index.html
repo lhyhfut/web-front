@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>高级前端面试题</title>
+    <link rel="stylesheet" type="text/css" href="./css/bootstrap-responsive.min.css" />
+    <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="./css/index.css" />
+</head>
+
+<body>
+    <!--导航栏-->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <!--导航按钮-->
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">
+                    <!--这个图标用div还是span都是可以的-->
+                    <div class="glyphicon glyphicon-cloud"></div>
+                    <span>高级前端面试题</span>
+                </a>
+            </div>
+            <!--右上角列表-->
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#">HTML</a></li>
+                    <li><a href="#">CSS</a></li>
+                    <li><a href="#">Javascript</a></li>
+                </ul>
+                <!--input表单一定要放在form容器中-->
+                <form class="navbar-form navbar-right">
+                    <input type="text" class="form-control" placeholder="Search..." />
+                </form>
+            </div>
+        </div>
+    </nav>
+    <!--end 导航栏--->
+    <!--页面主体-->
+    <div class="container-fluid">
+        <!--下面要用到栅格系统-->
+        <!--不定义row,则列col也不会显示-->
+        <div class="row">
+            <!--侧边-->
+            <div class="col-sm-3 col-md-2 sidebar">
+                <ul class="nav nav-sidebar">
+                    <li class="active"><a href="#2">HTML相关</a></li>
+                    <li><a href="#3">1.1.1. 对WEB标准以及W3C的理解与认识</a></li>
+                    <li><a href="#4">1.1.2. Doctype作用? 严格模式与混杂模式-如何触发这两种模式，区分它们有何意义?</a></li>
+                    <li><a href="#5">1.1.3. 浏览器标准模式和怪异模式之间的区别是什么？</a></li>
+                    <li><a href="#6">1.1.4. 火狐一直工作在标准模式下，但IE（6，7，8）标准模式与怪异模式差别很大，主要体现在对盒子模型的解释上，这个很重要，下面就重点说这个。那么浏览器究竟该采用哪种模式渲染呢？这就引出的DTD，既是网页的头部声明，浏览器会通过识别DTD而采用相对应的渲染模式：</a></li>
+                    <li><a href="#7">1.1.5. 如何设置为怪异模式：</a></li>
+                    <li><a href="#8">1.1.6. 如何设置为标准模式：</a></li>
+                    <li><a href="#9">1.1.7. XHTML1.0提供了三种DOCTYPE可选择：</a></li>
+                    <li><a href="#10">1.1.8. 如何判定现在是标准模式还是怪异模式：</a></li>
+                    <li><a href="#11">1.1.9. 语义化的理解？</a></li>
+                    <li><a href="#12">1.1.10. 你如何对网站的文件和资源进行优化?期待的解决方案包括：</a></li>
+                    <li><a href="#13">1.1.11. 前端页面有哪三层构成，分别是什么?作用是什么?</a></li>
+                    <li><a href="#14">1.1.12. 你做的页面在哪些流览器测试过?这些浏览器的内核分别是什么?</a></li>
+                    <li><a href="#15">1.1.13. 行内元素有哪些？块级元素有哪些？ 空(void)元素有那些？</a></li>
+                    <li><a href="#16">1.1.14. 标签上title与alt属性的区别是什么?</a></li>
+                    <li><a href="#17">1.1.15. xhtml和html有什么区别</a></li>
+                    <li><a href="#18">1.1.16. 使用XHTML的局限有那些？</a></li>
+                    <li><a href="#19">1.1.17. 如果页面使用'application/xhtml+xml'会有什么问题吗？</a></li>
+                    <li><a href="#20">1.1.18. 如果网页内容需要支持多语言，你会怎么做？</a></li>
+                    <li><a href="#21">1.1.19. 在设计和开发多语言网站时，有哪些问题你必须要考虑？</a></li>
+                    <li><a href="#22">1.1.20. 在HTML5的页面中可以使用XHTML的语法吗？</a></li>
+                    <li><a href="#23">1.1.21. 在HTML5中如何使用XML？</a></li>
+                    <li><a href="#24">1.1.22. 'data-'属性的作用是什么？</a></li>
+                    <li><a href="#25">1.1.23. 如果把HTML5看作做一个开放平台，那它的构建模块有那些？</a></li>
+                    <li><a href="#26">1.1.24. 请描述一下cookies，sessionStorage和localStorage的区别？</a></li>
+                </ul>
+                <ul class="nav nav-sidebar">
+                    <li class="active"><a href="#27">CSS相关</a></li>
+                    <li><a href="#28">1.2.1. .link 和@import 的区别是?</a></li>
+                    <li><a href="#29">1.2.2. CSS 选择符有哪些？哪些属性可以继承？</a></li>
+                    <li><a href="#30">1.2.3. CSS优先级算法如何计算？ CSS3新增伪类有那些？</a></li>
+                    <li><a href="#31">1.2.4. 描述css reset的作用和用途。</a></li>
+                    <li><a href="#32">1.2.5. 描述下浮动和它的工作原理。</a></li>
+                    <li><a href="#33">1.2.6. 清除浮动的几种方式，各自的优缺点</a></li>
+                    <li><a href="#34">1.2.7. 解释css sprites，如何使用。</a></li>
+                    <li><a href="#35">1.2.8. 写出几种IE6 BUG的解决方法</a></li>
+                    <li><a href="#36">1.2.9. 你最喜欢的图片替换方法是什么，你如何选择使用。</a></li>
+                    <li><a href="#37">1.2.10. 讨论CSS hacks，条件引用或者其他。</a></li>
+                    <li><a href="#38">1.2.11. 如何为有功能限制的浏览器提供网页。</a></li>
+                    <li><a href="#39">1.2.12. 你会使用那些技术和处理方法。</a></li>
+                    <li><a href="#40">1.2.13. 如何视觉隐藏网页内容，只让它们在屏幕阅读器中可用。</a></li>
+                </ul>
+                <ul class="nav nav-sidebar">
+                    <li class="active"><a href="#41">JavaScript相关</a></li>
+                    <li><a href="#42">1.3.1. 介绍js的基本数据类型。</a></li>
+                    <li><a href="#43">1.3.2. 介绍js有哪些内置对象？</a></li>
+                    <li><a href="#44">1.3.3. 说几条写JavaScript的基本规范？</a></li>
+                    <li><a href="#45">1.3.4. JavaScript原型，原型链 ? 有什么特点？</a></li>
+                    <li><a href="#46">1.3.5. JavaScript有几种类型的值？，你能画一下他们的内存图吗？</a></li>
+                    <li><a href="#47">1.3.6. Javascript如何实现继承？</a></li>
+                    <li><a href="#48">1.3.7. JavaScript继承的几种实现方式？</a></li>
+                    <li><a href="#49">1.3.8. javascript创建对象的几种方式？</a></li>
+                    <li><a href="#50">1.3.9. Javascript作用链域?</a></li>
+                    <li><a href="#51">1.3.10. 谈谈This对象的理解。</a></li>
+                    <li><a href="#52">1.3.11. eval是做什么的？</a></li>
+                    <li><a href="#53">1.3.12. 什么是window对象? 什么是document对象?</a></li>
+                    <li><a href="#54">1.3.13. null，undefined 的区别？</a></li>
+                    <li><a href="#55">1.3.1. 写一个通用的事件侦听器函数。</a></li>
+                    <li><a href="#56">1.3.2. ["1", "2", "3"].map(parseInt) 答案是多少？</a></li>
+                    <li><a href="#57">1.3.3. 事件是？IE与火狐的事件机制有什么区别？ 如何阻止冒泡？</a></li>
+                    <li><a href="#58">1.3.4. 什么是闭包（closure），为什么要用它？</a></li>
+                    <li><a href="#59">1.3.5. javascript 代码中的"use strict";是什么意思 ? 使用它区别是什么？</a></li>
+                    <li><a href="#60">1.3.6. 如何判断一个对象是否属于某个类？</a></li>
+                    <li><a href="#61">1.3.7. new操作符具体干了什么呢?</a></li>
+                    <li><a href="#62">1.3.8. 用原生JavaScript的实现过什么功能吗？</a></li>
+                    <li><a href="#63">1.3.9. Javascript中，有一个函数，执行时对象查找时，永远不会去查找原型，这个函数是？</a></li>
+                    <li><a href="#64">1.3.10. JSON 的了解？</a></li>
+                    <li><a href="#65">1.3.11. [].forEach.call($$("*"),function(a){a.style.outline="1px solid #"+(~~(Math.random()*(1<<24))).toString(16)}) 能解释一下这段代码的意思吗？</a></li>
+                    <li><a href="#66">1.3.12. js延迟加载的方式有哪些？</a></li>
+                    <li><a href="#67">1.3.13. Ajax 是什么? 如何创建一个Ajax？</a></li>
+                    <li><a href="#68">1.3.9. 同步和异步的区别?</a></li>
+                    <li><a href="#69">1.3.10. 如何解决跨域问题?</a></li>
+                    <li><a href="#70">1.3.11. 页面编码和被请求的资源编码如果不一致如何处理？</a></li>
+                </ul>
+            </div>
+            <!--end侧边-->
+            <!--正文-->
+            <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+                <h1 id="1">高级前端面试题</h1>
+                <h2 id="2">一、HTML相关</h2>
+                <h3 id="3">1.1.1. 对WEB标准以及W3C的理解与认识</h3>
+                <blockquote>
+                    <p>标签闭合、标签小写、不乱嵌套、提高搜索机器人搜索几率、使用外 链css和js脚本、结构行为表现的分离、文件下载与页面速度更快、内容能被更多的用户所访问、内容能被更广泛的设备所访问、更少的代码和组件，容易维 护、改版方便，不需要变动页面内容、提供打印版本而不需要复制内容、提高网站易用性；</p>
+                </blockquote>
+                <h3 id="4">1.1.2. Doctype作用? 严格模式与混杂模式-如何触发这两种模式，区分它们有何意义?</h3>
+                <blockquote>
+                    <p>（1）、!DOCTYPE 声明位于文档中的最前面，处于 &lt;html> 标签之前。告知浏览器的解析器，用什么文档类型 规范来解析这个文档。
+                        <br/> （2）、严格模式的排版和 JS 运作模式是 以该浏览器支持的最高标准运行。
+                        <br/> （3）、在混杂模式中，页面以宽松的向后兼容的方式显示。模拟老式浏览器的行为以防止站点无法工作。
+                        <br/> （4）、DOCTYPE不存在或格式不正确会导致文档以混杂模式呈现。 </p>
+                </blockquote>
+                <h3 id="5">1.1.3. 浏览器标准模式和怪异模式之间的区别是什么？</h3>
+                <blockquote>
+                    <p>由于历史的原因，各个浏览器在对页面的渲染上存在差异，甚至同一浏览器在不同版本中，对页面的渲染也不同。在W3C标准出台以前，浏览器在对页面的渲染上没有统一规范，产生了差异(Quirks mode或者称为Compatibility Mode)；由于W3C标准的推出，浏览器渲染页面有了统一的标准(CSScompat或称为Strict mode也有叫做Standars mode，这就是二者最简单的区别。 W3C标准推出以后，浏览器都开始采纳新标准，但存在一个问题就是如何保证旧的网页还能继续浏览，在标准出来以前，很多页面都是根据旧的渲染方法编写的，如果用的标准来渲染，将导致页面显示异常。为保持浏览器渲染的兼容性，使以前的页面能够正常浏览，浏览器都保留了旧的渲染方法（如：微软的IE）。这样浏览器渲染上就产生了Quircks mode和Standars mode，两种渲染方法共存在一个浏览器上。</p>
+                    <h3 id="6">1.1.4. 火狐一直工作在标准模式下，但IE（6，7，8）标准模式与怪异模式差别很大，主要体现在对盒子模型的解释上，这个很重要，下面就重点说这个。那么浏览器究竟该采用哪种模式渲染呢？这就引出的DTD，既是网页的头部声明，浏览器会通过识别DTD而采用相对应的渲染模式：</h3>
+                    <ol>
+                        <li>浏览器要使老旧的网页正常工作，但这部分网页是没有doctype声明的，所以浏览器对没有doctype声明的网页采用quirks mode解析。 </li>
+                        <li>对于拥有doctype声明的网页，什么浏览器采用何种模式解析，这里有一张详细列表可参考：http://hsivonen.iki.fi/doctype。 </li>
+                        <li>对于拥有doctype声明的网页，这里有几条简单的规则可用于判断：对于那些浏览器不能识别的doctype声明，浏览器采用strict mode解析。 </li>
+                        <li>在doctype声明中，没有使用DTD声明或者使用HTML4以下（不包括HTML4）的DTD声明时，基本所有的浏览器都是使用quirks mode呈现，其他的则使用strict mode解析。 </li>
+                        <li>可以这么说，在现有有doctype声明的网页，绝大多数是采用strict mode进行解析的。 </li>
+                        <li>在ie6中，如果在doctype声明前有一个xml声明(比如:
+                            <?xml version=”1.0″ encoding=”iso-8859-1″?>)，则采用quirks mode解析。这条规则在ie7中已经移除了。 </li>
+                    </ol>
+                    <h3 id="7">1.1.5. 如何设置为怪异模式：</h3>
+                    <p>方法一：在页面项部加
+                        <!DOCTYPE HTML PUBLIC “-//W3C//DTD HTML 4.01 Transitional//EN”>
+                        <br/> 方法二：什么也不加。
+                    </p>
+                    <h3 id="8">1.1.6. 如何设置为标准模式：</h3>
+                    <p>加入以下任意一种：HTML4提供了三种DOCTYPE可选择：
+                        <!DOCTYPE HTML PUBLIC “-//W3C//DTD HTML 4.01 Transitional//EN” “http://www.w3.org/TR/html4/loose.dtd”>
+                        <br/>
+                        <!DOCTYPE HTML PUBLIC “-//W3C//DTD HTML 4.01//EN” “http://www.w3.org/TR/html4/strict.dtd”>
+                        <br/>
+                        <!DOCTYPE HTML PUBLIC “-//W3C//DTD HTML 4.01 Frameset//EN” “http://www.w3.org/TR/html4/frameset.dtd”> </p>
+                    <h3 id="9">1.1.7. XHTML1.0提供了三种DOCTYPE可选择：</h3>
+                    <p>(1)过渡型（Transitional ）
+                        <br/>
+                        <!DOCTYPE html PUBLIC “-//W3C//DTD XHTML 1.0 Transitional//EN” “http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd”>
+                        <br/> (2)严格型（Strict ）
+                        <br/>
+                        <!DOCTYPE html PUBLIC “-//W3C//DTD XHTML 1.0 Strict//EN” “http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd”>
+                        <br/> (3)框架型（Frameset ）
+                        <br/>
+                        <!DOCTYPE html PUBLIC “-//W3C//DTD XHTML 1.0 Frameset//EN” “http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd”> </p>
+                    <h3 id="10">1.1.8. 如何判定现在是标准模式还是怪异模式：</h3>
+                    <p>方法一：执行以下代码 alert(window.top.document.compatMode) ;
+                        <br/> //BackCompat 表示怪异模式
+                        <br/> //CSS1Compat 表示标准模式 </p>
+                    <p>方法二：jquery为我们提供的方法，如下：
+                        <br/> alert($.boxModel)
+                        <br/> alert($.support.boxModel)
+                    </p>
+                </blockquote>
+                <h3 id="11">1.1.9. 语义化的理解？</h3>
+                <blockquote>
+                    <p>html语义化就是让页面的内容结构化，便于对浏览器、搜索引擎解析；
+                        <br/> 在没有样式CCS情况下也以一种文档格式显示，并且是容易阅读的。
+                        <br/> 搜索引擎的爬虫依赖于标记来确定上下文和各个关键字的权重，利于 SEO。
+                        <br/> 使阅读源代码的人对网站更容易将网站分块，便于阅读维护理解。
+                    </p>
+                </blockquote>
+                <h3 id="12">1.1.10. 你如何对网站的文件和资源进行优化?期待的解决方案包括：</h3>
+                <blockquote>
+                    <p>文件合并
+                        <br/> 文件最小化/文件压缩
+                        <br/> 使用CDN托管
+                        <br/> 缓存的使用
+                    </p>
+                </blockquote>
+                <h3 id="13">1.1.11. 前端页面有哪三层构成，分别是什么?作用是什么?</h3>
+                <blockquote>
+                    <p>结构层 Html 表示层 CSS 行为层 js</p>
+                </blockquote>
+                <h3 id="14">1.1.12. 你做的页面在哪些流览器测试过?这些浏览器的内核分别是什么?</h3>
+                <p>Ie(Ie内核) 火狐（Gecko） 谷歌（webkit） opear(Presto)</p>
+                <h3 id="15">1.1.13. 行内元素有哪些？块级元素有哪些？ 空(void)元素有那些？</h3>
+                <blockquote>
+                    <p>（1）CSS规范规定，每个元素都有display属性，确定该元素的类型，每个元素都有默认的display值，比如div默认display属性值为“block”，成为“块级”元素；span默认display属性值为“inline”，是“行内”元素。
+                        <br/> （2）行内元素有：a b span img input select strong（强调的语气）
+                        <br/> （3）块级元素有：div ul ol li dl dt dd h1 h2 h3 h4…p
+                        <br/> （4）知名的空元素： br hr img input link meta
+                        <br/> 鲜为人知的是： area base col command embed keygen param source track wbr</p>
+                </blockquote>
+                <h3 id="16">1.1.14. 标签上title与alt属性的区别是什么?</h3>
+                <blockquote>
+                    <p>Alt 当图片不显示是 用文字代表。 Title 为该属性提供信息</p>
+                </blockquote>
+                <h3 id="17">1.1.15. xhtml和html有什么区别</h3>
+                <blockquote>
+                    <p>HTML是一种基本的WEB网页设计语言，XHTML是一个基于XML的置标语言 XHTML 元素必须被正确地嵌套。
+                        <br/> XHTML 元素必须被关闭。
+                        <br/> XHTML标签名必须用小写字母。
+                        <br/> XHTML 文档必须拥有根元素。 </p>
+                </blockquote>
+                <h3 id="18">1.1.16. 使用XHTML的局限有那些？</h3>
+                <blockquote>
+                    <p>XHTML要求严格。元素必须被正确地嵌套，元素必须被关闭，空标签也必须被关闭，标签名和属性对大小写敏感，
+                        <br/>属性名称必须小写，属性值必须加引号等。
+                        <br/>一旦遇到错误，立刻停止解析，并显示错误信息。
+                    </p>
+                </blockquote>
+                <h3 id="19">1.1.17. 如果页面使用'application/xhtml+xml'会有什么问题吗？</h3>
+                <blockquote>
+                    <p>
+                        IE6，7，8不支持，IE6，7，8支持text/html。
+                    </p>
+                </blockquote>
+                <h3 id="20">1.1.18. 如果网页内容需要支持多语言，你会怎么做？</h3>
+                <blockquote>
+                    <p>编码使用UTF-8，空间域名需要支持多浏览地址，准备多套模板。(对多语言这方面不熟悉)
+                    </p>
+                </blockquote>
+                <h3 id="21">1.1.19. 在设计和开发多语言网站时，有哪些问题你必须要考虑？</h3>
+                <blockquote>
+                    <p>见<a href="http://www.nomensa.com/blog/2010/7-tips-for-multi-lingual-website-accessibility">
+                        7 Tips and Techniques For Multi-lingual Website Accessibility
+                    </a>
+                    </p>
+                </blockquote>
+                <h3 id="22">1.1.20. 在HTML5的页面中可以使用XHTML的语法吗？</h3>
+                <blockquote>
+                    <p>HTML5将向后兼容作为了一个很重要的原则。HTML5确实引入了许多新的特性，
+                        <br/>但是它最重要的一个特性是，不会break已有的网页。你可以将任何已有的网页的
+                        <br/>第一行改成
+                        <!DOCTYPE html>，它就成也一个HTML5页面，
+                        <br/>并且可以照样在浏览器里正常的展示。
+                    </p>
+                </blockquote>
+                <h3 id="23">1.1.21. 在HTML5中如何使用XML？</h3>
+                <p>见<a href="http://www.ibm.com/developerworks/cn/xml/x-think45/">
+                        Thinking XML: XML 样式的 HTML5
+                    </a>
+                    <br/>这个暂时也没找到答案,不知道是否与xhtml有关系。
+                </p>
+                <h3 id="24">1.1.22. 'data-'属性的作用是什么？</h3>
+                <blockquote>
+                    <p>
+                        在元素上存放数据。
+                    </p>
+                </blockquote>
+                <h3 id="25">1.1.23. 如果把HTML5看作做一个开放平台，那它的构建模块有那些？</h3>
+                <blockquote>
+                    <p>
+                        <ul>
+                            <li>标签及属性</li>
+                            <li>地理位置</li>
+                            <li>画布</li>
+                            <li>视频</li>
+                            <li>音频</li>
+                            <li>微数据</li>
+                            <li>应用缓存</li>
+                            <li>Web存储</li>
+                            <li>web workers</li>
+                            <li>服务器发送事件</li>
+                        </ul>
+                    </p>
+                </blockquote>
+                <h3 id="26">1.1.24. 请描述一下cookies，sessionStorage和localStorage的区别？</h3>
+                <blockquote>
+                    <p>cookies 和 ＊Storage 的区别
+                        <ul>
+                            <li>cookies会在服务器端和客户端间传递的；sessionStorage 和 localStorage
+                                <br/>存放在客户端的，不会发送至服务器端</li>
+                            <li>cookies的兼容主流浏览器,包括IE6+;IE6，IE7不支持sessionStorage 和 localStorage</li>
+                            <li>sessionStorage 和 localStorage中能存的数据比cookie大</li>
+                        </ul>
+                        <br/>sessionStorage 和 localStorage的区别：
+                        <br/>sessionStorage存的数据在每次关闭浏览器后被删除，localStorage不会。
+                    </p>
+                </blockquote>
+                <h2 id="27">二、CSS相关</h2>
+                <h3 id="28">1.2.1. .link 和@import 的区别是?</h3>
+                <blockquote>
+                    <p>（1）、link属于XHTML标签，而@import是CSS提供的;
+                        <br/> （2）、页面被加载的时，link会同时被加载，而@import引用的CSS会等到页面被加载完再加载;
+                        <br/> （3）、import只在IE5以上才能识别，而link是XHTML标签，无兼容问题;
+                        <br/> （4）、link方式的样式的权重 高于@import的权重.</p>
+                </blockquote>
+                <h3 id="29">1.2.2. CSS 选择符有哪些？哪些属性可以继承？</h3>
+                <blockquote>
+                    <p>1.id选择器（ # myid）
+                        <br/> 2.类选择器（.myclassname）
+                        <br/> 3.标签选择器（div, h1, p）
+                        <br/> 4.相邻选择器（h1 + p）
+                        <br/> 5.子选择器（ul &lt; li）
+                        <br/> 6.后代选择器（li a）
+                        <br/> 7.通配符选择器（ * ）
+                        <br/> 8.属性选择器（a[rel = "external"]）
+                        <br/> 9.伪类选择器（a: hover, li: nth - child）
+                        <br/> 可继承： font-size font-family color, UL LI DL DD DT;
+                        <br/> 不可继承 ：border padding margin width height;
+                        <br/> 优先级就近原则，样式定义最近者为准;
+                        <br/> 载入样式以最后载入的定位为准; </p>
+                </blockquote>
+                <h3 id="30">1.2.3. CSS优先级算法如何计算？ CSS3新增伪类有那些？</h3>
+                <blockquote>
+                    <p>!important > id > class > tag
+                        <br/> important 比 内联优先级高</p>
+                    <p>p:first-of-type 选择属于其父元素的首个 p 元素的每个 p 元素。
+                        <br/> p:last-of-type 选择属于其父元素的最后 p 元素的每个 p 元素。
+                        <br/> p:only-of-type 选择属于其父元素唯一的 p 元素的每个 p 元素。
+                        <br/> p:only-child 选择属于其父元素的唯一子元素的每个 p 元素。
+                        <br/> p:nth-child(2) 选择属于其父元素的第二个子元素的每个 p 元素。
+                        <br/> :enabled、:disabled 控制表单控件的禁用状态。
+                        <br/> :checked，单选框或复选框被选中。 </p>
+                </blockquote>
+                <h3 id="31">1.2.4. 描述css reset的作用和用途。</h3>
+                <blockquote>
+                    <p>因为浏览器的品种很多，每个浏览器的默认样式也是不同的，比如&lt;button>标签，在IE浏览器、Firefox浏览器以及Safari浏览器中的样式都是不同的，所以，通过重置button标签的CSS属性，然后再将它统一定义，就可以产生相同的显示效果。</p>
+                </blockquote>
+                <h3 id="32">1.2.5. 描述下浮动和它的工作原理。</h3>
+                <blockquote>
+                    <p>
+                        详见<a href="https://github.com/paddingme/Front-end-Web-Development-Interview-Question/blob/master/%E5%89%8D%E7%AB%AF%E8%AF%95%E9%A2%98/6.md">
+                        前端面试题-6
+                        </a>
+                    </p>
+                </blockquote>
+                <h3 id="33">1.2.6. 清除浮动的几种方式，各自的优缺点</h3>
+                <blockquote>
+                    <p>1.使用空标签清除浮动 clear:both（理论上能清楚任何标签，，，增加无意义的标签）
+                        <br/> 2.使用overflow:auto（空标签元素清除浮动而不得不增加无意代码的弊端,使用zoom:1用于兼容IE）
+                        <br/> 3.是用afert伪元素清除浮动(用于非IE浏览器)
+                    </p>
+                </blockquote>
+                <h3 id="34">1.2.7. 解释css sprites，如何使用。</h3>
+                <blockquote>
+                    <p>Css 精灵 把一堆小的图片整合到一张大的图片上，减轻服务器对图片的请求数量</p>
+                </blockquote>
+                <h3 id="35">1.2.8. 写出几种IE6 BUG的解决方法</h3>
+                <blockquote>
+                    <p>1.双边距BUG float引起的 使用display
+                        <br/> 2.3像素问题 使用float引起的 使用dislpay:inline -3px
+                        <br/> 3.超链接hover 点击后失效 使用正确的书写顺序 link visited hover active 4.Ie z-index问题 给父级添加position:relative 5.Png 透明 使用js代码 改 6.Min-height 最小高度 ！Important 解决’ 7.select 在ie6下遮盖 使用iframe嵌套 8.为什么没有办法定义1px左右的宽度容器（IE6默认的行高造成的，使用over:hidden,zoom:0.08 line-height:1px）</p>
+                </blockquote>
+                <h3 id="36">1.2.9. 你最喜欢的图片替换方法是什么，你如何选择使用。</h3>
+                <blockquote>
+                    <p>
+                        <br/>一些图标是使用before和after伪元素;
+                        <br/>还有一些使用iconfont;
+                        <br/>使用sprite图;
+                        <br/>用背景图片代替图片。
+                        <br/>举个栗子：
+                        <br/><code>  
+                           &lt;h1 class="nir"&gt;[content]&lt;/h1&gt;
+                        </code>
+                        <br/>
+                        <code>.nir {
+                            height: 100px; /* height of replacement image */
+                             <br/>padding: 0;
+                             <br/>margin: 0;
+                             <br/>overflow: hidden;
+                             <br/>}
+
+                             <br/>.nir:before {
+                                 <br/>content: url(image.gif);
+                                <br/> display: block;
+                            }
+                            </code>
+                        <br/>详细可阅读：<a href="http://nicolasgallagher.com/css-image-replacement-with-pseudo-elements/">
+                    CSS image replacement with pseudo-elements
+                    </a>
+                    </p>
+                </blockquote>
+                <h3 id="37">1.2.10. 讨论CSS hacks，条件引用或者其他。</h3>
+                <blockquote>
+                    <p>
+                        详见<a href="https://github.com/paddingme/Front-end-Web-Development-Interview-Question/blob/master/%E5%89%8D%E7%AB%AF%E8%AF%95%E9%A2%98/6.md">
+                        前端面试题-6
+                        </a>
+                    </p>
+                </blockquote>
+                <h3 id="38">1.2.11. 如何为有功能限制的浏览器提供网页。</h3>
+                <blockquote>
+                    <p>功能限制的浏览器，比如 IE 低版本、手机浏览器、奇葩国内浏览器，
+                        <br/>会在很多功能上不符合 Web 标准，而应对的方式有这么几种：
+                        <ul>
+                            <li>只提供符合 Web 标准的页面；</li>
+                            <li>提供另一个符合那些浏览器标准的页面(例如说移动端一套css,电脑端一套css);</li>
+                            <li>兼容：这里有两种思路，一个是渐进增强，一个优雅降级。 渐进增强的思路就是提供一个可用的原型，
+                                <br/>后来再为高级浏览器提供优化。优雅降级的思路是根据高级浏览器提供一个版本，
+                                <br/>然后有功能限制的浏览器只需要一个刚好能用的版本。当然，工作中的标准都是尽量满足设计，
+                                <br/>如果不能满足的话就尽量贴近，不得已（性能之类的问题）才会砍掉某个浏览器版本上的需求。
+                            </li>
+                        </ul>
+                        <br/>相关技术:
+                        <ul>
+                            <li>Media Query</li>
+                            <li>CSS hack</li>
+                            <li>
+                                <code>
+                                 &lt;!--[if !IE]&gt;&lt;!--&gt;除IE外都可识别 &lt;!--&lt;![endif]--&gt;
+                                 </code>
+                            </li>
+                        </ul>
+                    </p>
+                </blockquote>
+                <h3 id="39">1.2.12. 你会使用那些技术和处理方法。</h3>
+                <blockquote>
+                    <p>如上
+                    </p>
+                </blockquote>
+                <h3 id="40">1.2.13. 如何视觉隐藏网页内容，只让它们在屏幕阅读器中可用。</h3>
+                <blockquote>
+                    <p>有哪些的隐藏内容的方法（如果同时还要保证屏幕阅读器可用呢？）</p>
+                    <p><code>display:none</code>看不见也摸不着，屏幕阅读器更会忽略其内容；
+                        <br/>而<code>visibility:hidden</code>虽然看得见但是摸不着，占据了一定的物理空间， 屏幕阅读器也会忽略。如果想要在读屏设备中让这些内容可见。
+                        <br/>解决方案的基本思路都是将这些内容放到屏幕、视线意外的地方，或者就是将大小设置成 0。
+                        <br/>比如 <code>text-indent: -9999em;</code>、<code>overflow: hidden;</code>、<code>height: 0</code>。</p>
+                    <pre><code>    .texthidden {
+                      display:block;/*统一转化为块级元素*/
+                      overflow: hidden;
+                      width: 0;
+                      height: 0;
+                     }
+                </code></pre>
+                    <p>更详细的方法可以参考这篇文章
+                        <a href="http://snook.ca/archives/html_and_css/hiding-content-for-accessibility">HIDING CONTENT FOR ACCESSIBILITY</a></p>
+                    <p>不过既然这是了读屏而优化的，那么可以用 media query 来完成，media speech 用于语音输出的读屏设备。</p>
+                    <pre><code>@media speech {
+                        /* media-specify rules */
+                    }
+                    </code></pre>
+                    <p>以上转自<a href="http://witcher42.github.io/2014/06/06/what-are-the-different-ways-to-visually-hide-content-and-make-it-available-only-for-screen-readers/">Witcher42</a>给出的答案。</p>
+                </blockquote>
+                <h3 id="41">JavaScript相关。</h3>
+                <h3 id="42">1.3.1. 介绍js的基本数据类型。</h3>
+                <blockquote>
+                    <p>Undefined、Null、Boolean、Number、String、Symbol(new in ECMAScript 2015)</p>
+                </blockquote>
+                <h3 id="43">1.3.2. 介绍js有哪些内置对象？</h3>
+                <blockquote>
+                    <p>Object 是 JavaScript 中所有对象的父对象</p>
+                    <p>数据封装类对象：Object、Array、Boolean、Number 和 String</p>
+                    <p>其他对象：Function、Arguments、Math、Date、RegExp、Error</p>
+                </blockquote>
+                <h3 id="44">1.3.3. 说几条写JavaScript的基本规范？</h3>
+                <blockquote>
+                    <p>1.不要在同一行声明多个变量。</p>
+                    <p>2.请使用 ===/!==来比较true/false或者数值</p>
+                    <p>3.使用对象字面量替代new Array这种形式</p>
+                    <p>4.不要使用全局函数。</p>
+                    <p>5.Switch语句必须带有default分支</p>
+                    <p>6.函数不应该有时候有返回值，有时候没有返回值。</p>
+                    <p>7.For循环必须使用大括号</p>
+                    <p>8.If语句必须使用大括号</p>
+                    <p>9.for-in循环中的变量 应该使用var关键字明确限定作用域，从而避免作用域污染。</p>
+                </blockquote>
+                <h3 id="45">1.3.4. JavaScript原型，原型链 ? 有什么特点？</h3>
+                <blockquote>
+                    <p>每个对象都会在其内部初始化一个属性，就是prototype(原型)，当我们访问一个对象的属性时，</p>
+                    <p>如果这个对象内部不存在这个属性，那么他就会去prototype里找这个属性，这个prototype又会有自己的prototype，</p>
+                    <p>于是就这样一直找下去，也就是我们平时所说的原型链的概念。</p>
+                    <p>关系：instance.constructor.prototype = instance.__proto__</p>
+
+                    <p>特点：</p>
+                    <p>JavaScript对象是通过引用来传递的，我们创建的每个新对象实体中并没有一份属于自己的原型副本。当我们修改原型时，与之相关的对象也会继承这一改变。</p>
+                    <p>当我们需要一个属性的时，Javascript引擎会先看当前对象中是否有这个属性， 如果没有的话，</p>
+                    <p>就会查找他的Prototype对象是否有这个属性，如此递推下去，一直检索到 Object 内建对象。</p>
+                    <pre><code>     function Func(){}
+                    Func.prototype.name = "Sean";
+                    Func.prototype.getInfo = function() {
+                    return this.name;
+                    }
+                    var person = new Func();//现在可以参考var person = Object.create(oldObject);
+                    console.log(person.getInfo());//它拥有了Func的属性和方法
+                    //"Sean"
+                    console.log(Func.prototype);
+                    // Func { name="Sean", getInfo=function()}</code></pre>
+                    <p>数据封装类对象：Object、Array、Boolean、Number 和 String</p>
+                    <p>其他对象：Function、Arguments、Math、Date、RegExp、Error</p>
+                </blockquote>
+                <h3 id="46">1.3.5. JavaScript有几种类型的值？，你能画一下他们的内存图吗？</h3>
+                <blockquote>
+                    <p>栈：原始数据类型（Undefined，Null，Boolean，Number、String）</p>
+                     <p>堆：引用数据类型（对象、数组和函数）</p>
+
+                     <p>两种类型的区别是：存储位置不同；</p>
+                     <p>原始数据类型直接存储在栈(stack)中的简单数据段，占据空间小、大小固定，属于被频繁使用数据，所以放入栈中存储；</p>
+                     <p>引用数据类型存储在堆(heap)中的对象,占据空间大、大小不固定,如果存储在栈中，将会影响程序运行的性能；引用数据类型在栈中存储了指针，该</p>
+                     <p>向堆中该实体的起始地址。当解释器寻找引用值时，会首先检索其</p>
+                     <p>在栈中的地址，取得地址后从堆中获得实体</p>
+                </blockquote>
+            </div>
+            <!--end正文-->
+        </div>
+    </div>
+    <!--end 页面主体-->
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+</body>
+
+</html>
